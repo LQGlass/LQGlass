@@ -1,8 +1,8 @@
-const LQGIcon = () =>{
-    return <div>
-    <img src="..\public\images\iconoLQG.png" />
-</div>
-}
+
+
+
+const LQGIcon = () => <img className="logo" src="/images\iconoLQG.png" />
+
 
 
 export default LQGIcon;

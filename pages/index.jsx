@@ -6,9 +6,9 @@ import Navbar from "../components/Navbar";
 function HomePage (){
 
     return (
-        <div>
+        <div >
 
-        <Navbar/>
+        <Navbar />
 
 
             <Header title = "Al cuidado de tu salud" />
