@@ -1,7 +1,20 @@
 
+import styles from "../styles/main.module.scss";
+import Link from "next/link";
 
 
-const LQGIcon = () => <img className="logo" src="/images\iconoLQG.png" />
+const LQGIcon = () =>{
+
+
+
+    return(
+        <Link href="/">
+            <a><img className={styles.logo}src="/images\iconoLQG.png" /></a>
+        </Link>
+    
+        ) 
+}
+    
 
 
 

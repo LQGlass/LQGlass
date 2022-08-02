@@ -1,7 +1,8 @@
-import { useState } from "react";
 import Header from "../components/Header";
-import LQGIcon from "../components/LQGIcon";
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import CategoryIndex from "../components/CategoryIndex";
+
 
 function HomePage (){
 
@@ -9,9 +10,11 @@ function HomePage (){
         <div >
 
         <Navbar />
+        <Hero/>
+        <CategoryIndex />
+        
+        
 
-
-            <Header title = "Al cuidado de tu salud" />
         </div>
     )
     
