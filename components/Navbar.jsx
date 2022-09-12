@@ -1,17 +1,18 @@
+import Link from "next/link";
 import LQGIcon from "./LQGIcon";
 
 const Navbar = () => {
     return (
         
-        <nav>
+        <nav className="navBar">
                <LQGIcon/> 
 
         <ul>
-            <li>Estudios</li>
-            <li>Sucursales</li>
-            <li>Blog</li>
-            <li>Nosotros</li>
-            <li>Resultados</li>
+            <li><Link className="linkNav" href={"/estudios"}>Estudios</Link></li>
+            <li><Link className="linkNav" href={"/sucursales"}>Sucursales</Link></li>
+            <li><Link className="linkNav" href={"/blog"}>Blog</Link></li>
+            <li><Link className="linkNav" href={"/nosotros"}>Nosotros</Link></li>
+            <li><Link className="linkNav" href={"/resultados"}>Resultados</Link></li>
         </ul>
     </nav>
         )
