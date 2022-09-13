@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LQGIcon from "./LQGIcon";
+import Link from "next/link";
 
 const Navbar = () => {
     return (

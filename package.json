@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+    "dev": "next dev"
   },
   "author": "",
   "license": "ISC",
@@ -28,4 +29,6 @@
   },
   "homepage": "https://github.com/Yerif/LQGlass#readme",
   "description": ""
+    "sass": "^1.54.0"
+  }
 }

@@ -1,7 +1,8 @@
-import { useState } from "react";
 import Blog from "../components/Blog";
 import Header from "../components/Header";
+import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+
 
 
   //Get Method
@@ -22,6 +23,7 @@ function HomePage() {
       <Blog content={entradas} />
     </div>
   );
+    
 }
 
 export default HomePage;
