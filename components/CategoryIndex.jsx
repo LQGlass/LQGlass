@@ -1,21 +1,7 @@
-import { fetcher } from "../lib/api";
 import styles from "../styles/main.module.scss";
-import TarjetaDescriptiva from "./tarjetaDescriptiva";
-
-export async function getStaticProps(){
-    const tarjetasResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/categorias-de-estudios`);
-    console.log(tarjetasResponse);
-    return {
-        props: {
-            categorias-de-estudio : tarjetasResponse,
-        },
-    };
-
-}
 
 
-
-const CategoryIndex = ({categorias-de-estudio}) => {
+const CategoryIndex = () => {
     return (
         
         
@@ -25,13 +11,8 @@ const CategoryIndex = ({categorias-de-estudio}) => {
             </div>
             <div className={styles.gridTarjetas}>
 
-         
-           {categorias-de-estudio.map(tarjeta => (
-            <div key= {tarjeta.id}>
-                <h3>{tarjeta.Categoria}</h3>
-
             </div>
-           ))}
+           
 
                 
             

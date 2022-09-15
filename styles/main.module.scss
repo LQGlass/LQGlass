@@ -9,6 +9,29 @@ $primary-font : 'Montserrat', sans-serif;
     padding-right: 15%;
 }
 
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #071D49;
+    color: white;
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+
+    }
+    li{
+        background-color: #45B8AC   ;
+    }
+    
+
+
+}
+
 .header {
     display: flex;
     padding: 8px 64px 4px 224px;
@@ -17,6 +40,7 @@ $primary-font : 'Montserrat', sans-serif;
     justify-content: space-between;    
     align-items: center;
     box-shadow: #071D49 1px 1px 10px;
+
 
     .navLinks li {
         display: inline-block;
@@ -57,25 +81,25 @@ $primary-font : 'Montserrat', sans-serif;
 }
 
 .hero{
+    height: 50vh;
     display: flex;
-    height: 65vh;
-    align-items: center;
-}
-
-.heroText{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    h1 {
-        font-size: 4rem;
-    }
-}
-
-.heroImg{
-    display: flex;
-    width: 50%;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    h1{
+        align-items: center;
+        padding: 10%;
+        font-size: 4rem;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    }
+
+    .heroImage{
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
 }
 
 .categoryIndex {
@@ -130,5 +154,37 @@ $primary-font : 'Montserrat', sans-serif;
         margin-left: 0;
     }
 
+}
+
+.blogHome {
+    background-color: $primary-color;
+    color:white;
+    margin: 0;
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .blogHomeWrapper {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        justify-items: center;
+        gap: 25px;
+
+        .casillaBlog {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 5px 5px 5px black;
+
+            h3{
+                text-align: center;
+            }
+        }
+    }
 }
 

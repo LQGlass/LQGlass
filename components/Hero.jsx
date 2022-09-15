@@ -1,5 +1,4 @@
 import styles from "../styles/main.module.scss";
-import Header from "./Header";
 import HeroImg from "./HeroImg";
 import HeroText from "./HeroText";
 

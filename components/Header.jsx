@@ -1,9 +1,9 @@
-import Image from "next/image";
+import styles from "../styles/main.module.scss";
+
 function Header({title}){
     return (
-        <div className="hero">
+        <div className={styles.hero}>
             <h1>{title ? title : "Default title"}</h1>
-            <Image className="heroImage"  layout="fill" src="/images/microscopio.jpg"/>
         </div>
     );
 
