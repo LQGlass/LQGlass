@@ -18,8 +18,8 @@ function Blog(props) {
       <div className={styles.blogHomeWrapper}>
         <CasillaBlog
           key={1}
-          titulo={"Hola"}
-          descripcion={"Hola esta es la descripcion"}
+          titulo={"Titulo Nota"}
+          descripcion={"Lorem ullamco amet excepteur aute nisi sunt sit laborum qui ex proident cillum nulla amet. Sit ut minim amet Lorem exercitation ad tempor proident ut. Magna minim consectetur cupidatat minim. Aliqua fugiat reprehenderit in est."}
         />
       </div>
     </div>

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+.nosotros {
+    padding:0 10%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+
+    .textoNosotros {
+        width:50%
+    }
+}

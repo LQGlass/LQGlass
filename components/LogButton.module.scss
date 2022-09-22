@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+.logIn:hover{
+    background-color: $primary-color;
+
+    a{
+        color: $secondary-color;
+    }
+}
+
+
+.signIn {
+    background-color: $primary-color;
+    a {
+        color:$secondary-color;
+    }
+
+}
+
+.signIn:hover {
+    background-color: $secondary-color;
+    a {
+        color:$primary-color;
+    }
+
+}

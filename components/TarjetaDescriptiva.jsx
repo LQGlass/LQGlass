@@ -1,4 +1,5 @@
-import styles from "../styles/main.module.scss";
+import Link from "next/link";
+import styles from "./TarjetaDescriptiva.module.scss";
 
 const TarjetaDescriptiva = (props) => {
 
@@ -8,6 +9,7 @@ const TarjetaDescriptiva = (props) => {
     <dl className={styles.tarjetaD}>
         <dt className={styles.tituloTarjeta}>{props.nombreCategoria}</dt>
         <dd className={styles.contenidoTarjeta}>{props.descripcion}</dd>
+        <Link href={"/detalles"}>Ver más</Link>
     </dl>
 
 

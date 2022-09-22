@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+.buttonOutline {
+        background-color:rgb(149, 103, 103, 0);
+        border: $secondary-color 2px solid;
+        color: $secondary-color;
+        margin: 50px 0;
+
+        a {
+                color: $secondary-color;
+                text-decoration: none;
+        }
+
+}

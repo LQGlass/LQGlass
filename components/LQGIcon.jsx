@@ -9,7 +9,7 @@ const LQGIcon = () =>{
 
     return(
         <Link href="/">
-            <a><img className={styles.logo}src="/images\iconoLQG.png" /></a>
+            <img className={styles.logo}src="/images\iconoLQG.png" />
         </Link>
     
         ) 

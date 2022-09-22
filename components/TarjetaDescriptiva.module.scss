@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+.tarjetaD {
+    background-color: white;
+  
+    color: $primary-color;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 10%;
+  
+    .tituloTarjeta {
+      cursor: pointer;
+      margin-bottom: 5%;
+      height: auto;
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      font-weight: bold;
+    }
+  
+    .contenidoTarjeta {
+      font-family: $primary-font;
+      font-size: 0.8rem;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    a {
+      font-family: sans-serif;
+      text-decoration: none;
+      color: #45b8ac;
+    }
+  
+  }

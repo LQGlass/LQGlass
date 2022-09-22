@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+.blogSeccion {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 5%;
+    }
+
+}
+
+.blogWrapper {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 100px;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+
+}
+

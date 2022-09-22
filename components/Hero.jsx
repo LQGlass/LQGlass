@@ -1,13 +1,14 @@
 import styles from "../styles/main.module.scss";
 import HeroImg from "./HeroImg";
 import HeroText from "./HeroText";
+import Image from "next/image";
 
 const Hero = ()=>{
     return(
         <div className={`${styles.hero} ${styles.container}`}>
+        
             <HeroText
             title= "Al cuidado de tu salud."
-            text ="Lorem, ipsum dolor sit amet consectetur adipisicing elit. "
             />
             <HeroImg
                 src="/images/logo.png"
