@@ -11,12 +11,13 @@ $primary-font : 'Montserrat', sans-serif;
     margin: 10px;
     border-radius: 6px;
     padding: 10%;
+    transition: all 0.5s;
   
     .tituloTarjeta {
       cursor: pointer;
       margin-bottom: 5%;
       height: auto;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-family: $primary-font;
       font-weight: bold;
     }
@@ -34,4 +35,12 @@ $primary-font : 'Montserrat', sans-serif;
       color: #45b8ac;
     }
   
+  }
+
+  .tarjetaD:hover {
+    background-color: $secondary-color;
+    color: white;
+    a{
+      color: white;
+    }
   }

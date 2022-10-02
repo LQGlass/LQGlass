@@ -92,61 +92,6 @@ $primary-font: "Montserrat", sans-serif;
   }
 }
 
-.categoryIndex {
-  background-color: $primary-color;
-
-  padding-left: 15%;
-  padding-right: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h2 {
-    padding: 50px 0;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-  }
-
-}
-
-.gridTarjetas {
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-}
-
-.tarjetaD {
-  background-color: white;
-
-  color: $primary-color;
-  margin: 10px;
-  border-radius: 6px;
-  padding: 10%;
-
-  .tituloTarjeta {
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 5%;
-    height: auto;
-    font-size: 1.5rem;
-    font-family: $primary-font;
-    font-weight: bold;
-  }
-
-  .contenidoTarjeta {
-    font-family: $primary-font;
-    font-size: 0.8rem;
-    margin-left: 0;
-  }
-
-  a {
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #45b8ac;
-  }
-
-}
-
 .blogHome {
   background-color: $primary-color;
   color: white;
@@ -180,12 +125,12 @@ $primary-font: "Montserrat", sans-serif;
 }
 
 .vermas {
-    a{
-        text-decoration: none;
-        color: #45b8ac;
-        font-family: sans-serif ;
-    }
-    a:hover{
-        color: white;
-    }
+  a {
+    text-decoration: none;
+    color: #45b8ac;
+    font-family: sans-serif;
+  }
+  a:hover {
+    color: white;
+  }
 }

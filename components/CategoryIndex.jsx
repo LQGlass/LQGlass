@@ -1,29 +1,30 @@
 import ButtonOutline from "./ButtonOutline";
-import styles from "../styles/main.module.scss";
-import TarjetaDescriptiva from "./TarjetaDescriptiva"
+import styles from "./CategoryIndex.module.scss";
+import TarjetaDescriptiva from "./TarjetaDescriptiva";
 
+const CategoryIndex = (props) => {
+  //function for the creation of the description blocks for the category section
+  const renderTarjetas = (categories) => {
+    return categories.map((categorie) => (
+      <TarjetaDescriptiva
+        key={categorie.title}
+        nombreCategoria={categorie ? categorie.title : "Cargando"}
+        descripcion={categorie ? categorie.description : "Cargando"}
+      />
+    ));
+  };
+  return (
+    <section className={styles.categoryIndex}>
+      <div>
+        <h2>Estudios clinicos para cuidar tu salud.</h2>
+      </div>
+      <div className={styles.gridTarjetas}>
+        {renderTarjetas(props.contenido.categories)}
+      </div>
 
-const CategoryIndex = () => {
-    return (
-        
-        
-        <section className={styles.categoryIndex}>
-            <div>
-                <h2>Estudios clinicos para cuidar tu salud.</h2>
-            </div>
-            <div className={styles.gridTarjetas}>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-            </div>
-
-            <ButtonOutline url="/estudios" content="Ver todas" />
-        </section>
-
-    );
-}
+      <ButtonOutline url="/estudios" content="Ver todas" />
+    </section>
+  );
+};
 
 export default CategoryIndex;

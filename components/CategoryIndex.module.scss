@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+
+.categoryIndex {
+    background-color: $primary-color;
+  
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h2 {
+      padding: 50px 0;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+  }
+  
+  .gridTarjetas {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+  }

@@ -5,18 +5,17 @@ import Navbar from "../components/Navbar";
 import DireccionesSeccion from "../components/DireccionesSeccion.jsx";
 import BlogSeccion from "../components/BlogSeccion";
 import Footer from "../components/Footer";
-import "../firebase";
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
-//Get Method
-
-function HomePage() {
+function HomePage(categories) {
   return (
     <div>
       <Navbar />
 
       <Hero />
 
-      <CategoryIndex />
+      <CategoryIndex contenido={categories} />
 
       <InformesSeccion />
 
@@ -25,9 +24,26 @@ function HomePage() {
       <BlogSeccion />
 
       <Footer />
-
     </div>
   );
 }
+
+//NextJS function to get the static props from the firestore database
+
+export const getStaticProps = async () => {
+  let categories = [];
+
+  const querySnapshot = await getDocs(collection(db, "categories"));
+  querySnapshot.forEach((doc) => {
+    categories.push(doc.data());
+  });
+
+  return {
+    //return the props as "categories"
+    props: {
+      categories,
+    },
+  };
+};
 
 export default HomePage;
