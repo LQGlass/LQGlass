@@ -1,4 +1,4 @@
-import styles from "../styles/main.module.scss";
+import styles from "./CasillaBlog.module.scss";
 import Image from "next/image";
 function CasillaBlog (props){
     return(

@@ -1,28 +1,44 @@
-import Header from "../components/Header"
-import Navbar from "../components/Navbar"
-import styles from "./nosotros.module.scss"
-import Image from "next/image"
-import Footer from "../components/Footer"
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import styles from "./nosotros.module.scss";
+import Image from "next/image";
+import Footer from "../components/Footer";
 
 const nosotros = () => {
-    return <div>
-        <Navbar />
-        <Header  title = "Nosotros"/>
+  return (
+    <div>
+      <Navbar />
+      <Header title="Nosotros" />
 
-        <div className={styles.nosotros}>
-            <div className={styles.imagenNosotros}>
-                <Image src="/images/logo.png" width={600} height={250} />
-            </div>
-            <div className={styles.textoNosotros}>
-                <h2>Laboratorios Quimicos Glass</h2>
-                <p>
-                    Minim Lorem eu occaecat commodo. Sunt Lorem cillum quis tempor sint reprehenderit deserunt fugiat dolor proident. Laboris deserunt in nisi officia fugiat ut nulla reprehenderit. Cillum cillum proident qui veniam adipisicing non voluptate Lorem laboris velit aute elit. Cupidatat nisi ex officia ex sit. Anim cupidatat fugiat commodo consequat et nostrud mollit velit dolor adipisicing magna. Pariatur id ut in nulla eu ea adipisicing proident nulla ut.
-                </p>
-            </div>
+      <div className={styles.nosotros}>
+        <div className={styles.imagenNosotros}>
+          <Image src="/images/logo.png" width={600} height={250} />
         </div>
-        <Footer />
-        
+        <div className={styles.textoNosotros}>
+          <h2>Laboratorios Quimicos Glass</h2>
+          <p>
+            Aplicamos los procedimientos recomendados por la Organización
+            Mundial de la Salud y las normativas mexicanas aplicables en la toma
+            de muestra. <br /> <br />
+            Para el análisis de las muestras se ocupan los procedimientos
+            documentados en nuestro sistema de gestión de calidad conforme lo
+            establece la norma internacional ISO 15189. En el caso de análisis
+            que se requieran realizar en otros laboratorios se comunica a
+            nuestros clientes tal hecho en el entendido de que los laboratorios
+            contratados son supervisados en su calidad y confiabilidad analítica
+            y que Laboratorios Químicos Glass permanece como responsable directo
+            de los resultados analíticos proporcionados. <br /> <br />
+            Los informes de resultados son proporcionados sin interpretación ni
+            comentarios diagnósticos, en el entendido de que el médico tratante
+            o solicitante tiene la responsabilidad de proporcionar la
+            interpretación diagnóstica de los resultados proporcionados por
+            nuestro laboratorio.
+          </p>
+        </div>
+      </div>
+      <Footer />
     </div>
-}
+  );
+};
 
 export default nosotros;

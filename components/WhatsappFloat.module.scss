@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+
+.whatsappFloat {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #45B8AC;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
+
+.whatsappFloat:hover {
+    cursor: pointer;
+    opacity: .8;
+    border: 2px solid white;
+}

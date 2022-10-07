@@ -15,4 +15,12 @@ $primary-font: "Montserrat", sans-serif;
                 text-decoration: none;
         }
 
+        
+
+}
+
+.buttonOutline:hover {
+        cursor: pointer;
+        background-color: #45b8ac;
+        color: $primary-color;
 }

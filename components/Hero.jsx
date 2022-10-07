@@ -1,7 +1,6 @@
-import styles from "../styles/main.module.scss";
+import styles from "./Hero.module.scss";
 import HeroImg from "./HeroImg";
 import HeroText from "./HeroText";
-import Image from "next/image";
 
 const Hero = ()=>{
     return(

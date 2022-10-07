@@ -5,12 +5,16 @@ const TarjetaDescriptiva = (props) => {
 
     return (
 
-    
+        <Link href={"/analisis"}>
+            
     <dl className={styles.tarjetaD}>
         <dt className={styles.tituloTarjeta}>{props.nombreCategoria}</dt>
-        <dd className={styles.contenidoTarjeta}>{props.descripcion}</dd>
-        <Link href={"/detalles"}>Ver más</Link>
+        <Link href={"/analisis"}>Ver más</Link>
     </dl>
+        </Link>
+
+    
+
 
 
 

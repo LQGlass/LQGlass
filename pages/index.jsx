@@ -7,11 +7,16 @@ import BlogSeccion from "../components/BlogSeccion";
 import Footer from "../components/Footer";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import WhatsappFloat from "../components/WhatsappFloat";
+
 
 function HomePage(categories) {
+  
   return (
     <div>
       <Navbar />
+
+      <WhatsappFloat />
 
       <Hero />
 
@@ -34,6 +39,7 @@ export const getStaticProps = async () => {
   let categories = [];
 
   const querySnapshot = await getDocs(collection(db, "categories"));
+  
   querySnapshot.forEach((doc) => {
     categories.push(doc.data());
   });

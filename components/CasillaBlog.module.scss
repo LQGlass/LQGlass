@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+    .casillaBlog {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        border: 1px solid $secondary-color;
+        transition: all .3s;
+        
+  
+        h3 {
+          text-align: center;
+          color:#071D49;
+        }
+
+    }
+
+    .casillaBlog:hover {
+        background-color: $secondary-color;
+        cursor: pointer;
+    }

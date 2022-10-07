@@ -3,11 +3,9 @@ import Link from "next/link";
 
 function ButtonOutline(props) {
   return (
-    <div>
-      <button className={styles.buttonOutline}>
-        <Link href={props.url}>{props.content}</Link>
-      </button>
-    </div>
+      <Link href={props.url}><button className={styles.buttonOutline}>
+        {props.content}
+      </button></Link>
   );
 }
 

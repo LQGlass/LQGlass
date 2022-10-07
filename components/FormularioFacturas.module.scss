@@ -1,0 +1,15 @@
+.formularioFacturas{
+    padding: 10%;
+    display: flex;
+    justify-content: space-around;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    button {
+        align-self: center;
+    }
+}

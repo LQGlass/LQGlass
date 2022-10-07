@@ -7,7 +7,6 @@ $primary-font : 'Montserrat', sans-serif;
 
 .categoryIndex {
     background-color: $primary-color;
-  
     padding-left: 15%;
     padding-right: 15%;
     display: flex;
@@ -15,7 +14,7 @@ $primary-font : 'Montserrat', sans-serif;
     align-items: center;
   
     h2 {
-      padding: 50px 0;
+      padding: 20px 0;
       color: white;
       font-size: 2rem;
       text-align: center;
@@ -25,5 +24,6 @@ $primary-font : 'Montserrat', sans-serif;
   
   .gridTarjetas {
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 0 100px;
   }

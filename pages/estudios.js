@@ -7,7 +7,6 @@ import Navbar from "../components/Navbar"
 const estudios = () => {
     return <div>
         <Navbar />
-        <Header  title = "Estudios"/>
         <CategoryIndexExpanded />
         <Footer />
     </div>

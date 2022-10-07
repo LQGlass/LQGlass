@@ -1,30 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-$primary-color: #071D49;
-$secondary-color:#45B8AC;
-$primary-font : 'Montserrat', sans-serif;
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
 
-.logIn:hover{
-    background-color: $primary-color;
-
-    a{
-        color: $secondary-color;
-    }
+.logIn {
+    font-weight: bold;
 }
 
+.logIn:hover {
+  background-color: $primary-color;
+  cursor: pointer;
+  color: $secondary-color;
+}
 
 .signIn {
-    background-color: $primary-color;
-    a {
-        color:$secondary-color;
-    }
-
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: bold;
 }
 
 .signIn:hover {
-    background-color: $secondary-color;
-    a {
-        color:$primary-color;
-    }
-
+  background-color: $secondary-color;
+  cursor: pointer;
+  color: $primary-color;
 }

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+
+.crearCuentaForm {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input {
+        border: 2px solid $secondary-color;
+        border-radius: 20px;
+        padding: 10px;
+        font-family: sans-serif;
+
+    }
+
+    label {
+        font-family: sans-serif;
+        color: red;
+        font-variant: small-caps;
+    }
+    
+    button {
+        margin: 50px 0;
+        align-self: center;
+        font-weight: bold;
+        width: 300px;
+        height: auto;
+        padding: 20px;
+        font-size: 1.5rem;
+        color: $primary-color;
+    }
+
+
+
+}

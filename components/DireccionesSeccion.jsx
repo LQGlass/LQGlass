@@ -5,21 +5,14 @@ function DireccionesSeccion (){
         <section className={styles.direccionesSeccion}>
         <div>
           <h2>
-            Visitanos en nuestras sucursales
+            Visitanos en nuestra sucursal
           </h2>
         </div>
         <div className={styles.direccionWrapper}>
           <div className={styles.direccionCasilla}>
-            <h2>Dirección 1</h2>
-            <address>Av. Prueva, Test 545</address>
-          </div>
-          <div className={styles.direccionCasilla}>
-            <h2>Dirección 2</h2>
-            <address>Av. Prueva, Test 545</address>
-          </div>
-          <div className={styles.direccionCasilla}>
-           <h2>Dirección 3</h2>
-           <address>Av. Prueva, Test 545</address>
+            <h2>Naucalpan</h2>
+            <address>Av. Adolfo López Mateos No. 22 Local G, Plaza Santa Cruz, Col. Santa Cruz del Monte, Naucalpan estado
+de México,</address>
           </div>
         </div>
       </section>
