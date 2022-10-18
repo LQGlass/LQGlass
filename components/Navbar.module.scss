@@ -1,41 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-$primary-color: #071D49;
-$secondary-color:#45B8AC;
-$primary-font : 'Montserrat', sans-serif;
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
 
-.nav {
+.cintilla {
+  background-image: linear-gradient(#45b8ac, #53dfd1);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  padding: 5px 100px;
+  justify-content: space-between;
+  align-items: center;
+
+  .tituloCintilla {
     display: flex;
-    padding: 8px 64px 4px 224px;
-    height: 12%;
-    background-color: white;
-    justify-content: space-between;    
     align-items: center;
-    box-shadow: #071D49 1px 1px 10px;
-    
-    a {
-        text-decoration: none;
-        color: $primary-color;
-        transition: all 0.3s ease;
-        font-family: $primary-font;
-        font-weight: bold;
-
-    }
-    a:hover {
-        color:$secondary-color;
+    p {
+      color: white;
+      font-family: $primary-font;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
     }
 
-    .logo {
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
+    .iconoWhatsapp {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 10px;
+      cursor: pointer;
     }
+  }
 
+  .idiomas {
+    display: flex;
+    gap: 5px;
+  }
+  .flag {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+}
+.nav {
+  display: flex;
+  padding: 10px 100px;
+  height: 5%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: #071d49 1px 1px 5px;
+
+  div {
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary-color;
+    transition: all 0.3s ease;
+    font-family: $primary-font;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  div:hover {
+    color: $secondary-color;
+    text-shadow: 1px -1px 1px gray;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    cursor: pointer;
+    width: 40px;
+    height: 50px;
+  }
 }
 
-@media only screen and ( max-width: 1080px){
-    
-
-      
-      
+@media only screen and (max-width: 1080px) {
 }

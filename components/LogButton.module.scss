@@ -6,12 +6,25 @@ $primary-font: "Montserrat", sans-serif;
 
 .logIn {
     font-weight: bold;
+    font-size: .8rem;
+    height: auto;
+    width: auto;
+    padding: 1rem;
+    border-radius: 100px;
+    box-shadow: 3px 3px 5px black;
+    transition: all .3s;
 }
 
 .logIn:hover {
   background-color: $primary-color;
   cursor: pointer;
   color: $secondary-color;
+}
+
+.logIn:active {
+  background-color: $secondary-color;
+  color: $primary-color;
+  box-shadow: none;
 }
 
 .signIn {
@@ -24,4 +37,9 @@ $primary-font: "Montserrat", sans-serif;
   background-color: $secondary-color;
   cursor: pointer;
   color: $primary-color;
+}
+
+.logButtons button {
+  background-color: #071d49;
+  box-shadow: 5px 5px 5px black;
 }

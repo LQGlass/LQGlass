@@ -8,12 +8,17 @@ import Footer from "../components/Footer";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import WhatsappFloat from "../components/WhatsappFloat";
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function HomePage(categories) {
   
   return (
+
     <div>
+
       <Navbar />
 
       <WhatsappFloat />

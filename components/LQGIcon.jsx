@@ -1,5 +1,5 @@
 
-import styles from "../styles/main.module.scss";
+import styles from "./LQGIcon.module.scss";
 import Link from "next/link";
 
 
@@ -9,7 +9,7 @@ const LQGIcon = () =>{
 
     return(
         <Link href="/">
-            <img className={styles.logo}src="/images\iconoLQG.png" />
+            <img className={styles.logo}src="/images\logo.png" />
         </Link>
     
         ) 

@@ -27,12 +27,7 @@ const nosotros = () => {
             nuestros clientes tal hecho en el entendido de que los laboratorios
             contratados son supervisados en su calidad y confiabilidad analítica
             y que Laboratorios Químicos Glass permanece como responsable directo
-            de los resultados analíticos proporcionados. <br /> <br />
-            Los informes de resultados son proporcionados sin interpretación ni
-            comentarios diagnósticos, en el entendido de que el médico tratante
-            o solicitante tiene la responsabilidad de proporcionar la
-            interpretación diagnóstica de los resultados proporcionados por
-            nuestro laboratorio.
+            de los resultados analíticos proporcionados.
           </p>
         </div>
       </div>

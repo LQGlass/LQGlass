@@ -6,8 +6,8 @@ $primary-font: "Montserrat", sans-serif;
 
 .direccionWrapper {
     display: flex;
-    justify-content: space-evenly;
-    height: 200px;
+    justify-content: center;
+    height: 400px;
     align-items: center;
 }
 
@@ -25,4 +25,9 @@ $primary-font: "Montserrat", sans-serif;
 .direccionCasilla {
     color: white;
     width: 30%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
 }
+

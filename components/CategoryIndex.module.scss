@@ -18,6 +18,9 @@ $primary-font : 'Montserrat', sans-serif;
       color: white;
       font-size: 2rem;
       text-align: center;
+      font-family: $primary-font;
+      font-weight: bold;
+      padding: 10% 0;
     }
   
   }
@@ -25,5 +28,5 @@ $primary-font : 'Montserrat', sans-serif;
   .gridTarjetas {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
-    gap: 0 100px;
+    gap: 0 2%;
   }

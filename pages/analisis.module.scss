@@ -11,19 +11,19 @@ $primary-font : 'Montserrat', sans-serif;
     padding: 10%;
 
     .analisisWrapper{
-        display: grid;
-        grid-template-columns: 3fr 3fr 3fr;
-        gap: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         margin-bottom: 200px;
     }
     .casillaAnalisis{
         background-color: white;
         color: $primary-color;
-        padding: 5%;
+        padding: 10px 50px;
         border-radius: 6px;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-around;
+        align-items: center;
         transition: all .3s;
 
         dt {
@@ -35,9 +35,26 @@ $primary-font : 'Montserrat', sans-serif;
             margin:20px 0;
         }
 
-        p{
+        .costoAntes{
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: red;
+            justify-self: center;
+            text-decoration: line-through;
+        }
+
+        .costoAhora {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $primary-color;
+            justify-self: center;
+        }
+
+        .costoAhorro {
+            font-size: 1.5rem;
             font-weight: bold;
             color: $secondary-color;
+            justify-self: center;
         }
     }
 

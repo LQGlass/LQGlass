@@ -8,6 +8,7 @@ const CategoryIndex = (props) => {
     return categories.map((categorie) => (
       <TarjetaDescriptiva
         key={categorie.title}
+        image={"./images/medicalIcons/medical-history.png"}
         nombreCategoria={categorie ? categorie.title : "Cargando"}
         descripcion={categorie ? categorie.description : "Cargando"}
       />

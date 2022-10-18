@@ -9,6 +9,7 @@ $primary-font: "Montserrat", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.regionofwaterloo.ca%2Fen%2Fliving-here%2Fresources%2FImages%2FMedical-Exemption-WEB.jpg&f=1&nofb=1&ipt=db0eaf29d22dc945d15e3cfe7b5cc351ee1e2cfa53a3d95fc8b085a252b0afa0&ipo=images");
 
     h2{
         color: white;
@@ -18,15 +19,16 @@ $primary-font: "Montserrat", sans-serif;
     .informesWrapper{
         background-image: linear-gradient(to bottom right, $primary-color , $secondary-color);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         border-radius: 20px;
         width: 80%;
-        padding: 5%;
+        height: 20vh;
+        padding: 5px;
     }
 
     .imagenCorreo {
-        width: 50%;
+        width: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -34,20 +36,21 @@ $primary-font: "Montserrat", sans-serif;
 
     .informes {
         display: flex;
-        flex-direction: column;
 
     }
 
     input {
         border-radius: 10px;
-        padding: 20px;
+        padding: 5px;
         border: none;
-        margin-bottom: 20px;
-        width: 50%;
+        margin-right: 2rem;
+        width: 20%;
+
     }
 
     button {
         background-color: #071d49;
         color: white;
+        border-radius: 20px;
     }
 }

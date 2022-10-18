@@ -4,8 +4,12 @@ $primary-color: #071D49;
 $secondary-color:#45B8AC;
 $primary-font : 'Montserrat', sans-serif;
 
-.container {
-    height: 30vh;
-    padding: 5% 10%;
-    display: flex;
+
+.carousel {
+    z-index:-2;
+    position: relative;
+    img {
+        height: 60vh;
+        object-fit: cover;
+    }
 }
