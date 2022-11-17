@@ -1,15 +1,50 @@
-
 import CategoryIndexExpanded from "../components/CategoryIndexExpanded";
 import Footer from "../components/Footer";
-import Header from "../components/Header"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 
-const estudios = () => {
-    return <div>
-        <Navbar />
-        <CategoryIndexExpanded />
-        <Footer />
+import firebaseApp from "../firebase/firebase";
+import {
+  getFirestore,
+  collectionGroup,
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+const db = getFirestore(firebaseApp);
+
+const estudios = ({ categories }) => {
+  return (
+    <div>
+      <Navbar />
+      <CategoryIndexExpanded categories={categories} />
+      <Footer />
     </div>
+  );
+};
+
+export async function getStaticProps() {
+  //se declara un array vacio para almacenar los datos
+  let categories = [];
+  //se llama a todas las categorias con subcoleccion de examenes
+  const collectionRef = collection(db, "categorias");
+  //se genera un snapshor con todos los documentos
+  const snapshot = await getDocs(collectionRef);
+  //se mapea cada documento para hacer push de
+  //sus datos en el array categorias
+  snapshot.forEach((doc) => {
+    console.log(doc.id);
+    categories.push(doc.id);
+  });
+  console.log(categories);
+
+  return {
+    //return the props as "categories"
+    props: {
+      categories,
+    },
+  };
 }
 
 export default estudios;

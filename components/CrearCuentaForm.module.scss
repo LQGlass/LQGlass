@@ -5,6 +5,17 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 
+.signInWrapper {
+    h2{
+        text-align: center;
+        padding: 3%;
+        font-weight: bold;
+        color: $primary-color;
+
+    }
+}
+
+
 .crearCuentaForm {
     display: flex;
     justify-content: center;
@@ -24,6 +35,10 @@ $primary-font: "Montserrat", sans-serif;
 
     }
 
+    p {
+        text-align: center;
+    }
+
     label {
         font-family: sans-serif;
         color: red;
@@ -31,7 +46,7 @@ $primary-font: "Montserrat", sans-serif;
     }
     
     button {
-        margin: 50px 0;
+        margin: 10px 0;
         align-self: center;
         font-weight: bold;
         width: 300px;
@@ -39,8 +54,13 @@ $primary-font: "Montserrat", sans-serif;
         padding: 20px;
         font-size: 1.5rem;
         color: $primary-color;
+        box-shadow: 2px 2px 2px black;
     }
 
+    .botonSecundario {
+        background-color: #071d49;
+        color: #45b8ac;
+    }
 
 
 }

@@ -5,14 +5,13 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .blogSeccion {
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 10%;
 
     h2 {
         font-size: 3rem;
-        margin-bottom: 5%;
+        text-align: left;
+        font-weight: bold;
+        color: $primary-color;
     }
 
 }
@@ -31,5 +30,18 @@ $primary-font: "Montserrat", sans-serif;
     }
 
 
+}
+
+.lineaSubrayado {
+    width: 80%;
+    height: 5px;
+    background-color: #071D49;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 

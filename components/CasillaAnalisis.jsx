@@ -1,21 +1,25 @@
-import styles from "../pages/analisis.module.scss";
+import styles from "../pages/[categorieId]/index.module.scss";
+import Link from "next/link";
 
-function CasillaAnalisis() {
+function CasillaAnalisis({nombre, descripcion, indicaciones, precio}) {
   return (
-    <div className={styles.casillaAnalisis}>
+    <Link href={"/examenes/"+nombre}>
+      <div className={styles.casillaAnalisis}>
+      <div className={styles.imagenCasillaAnalisis}>
+        <img className={styles.imagenAnalisis} src="/images/microscopio.jpg" alt="" width={200} />
+      </div>
       <div className={styles.textosCasilla}>
-        <dt>Nombre de Estudio</dt>
+        <dt>{nombre}</dt>
         <dd>
-          Recomendaciones para el usuario: <br /> <br />
-          Adipisicing in labore elit officia nisi mollit.
+        <strong>Descripcion:</strong> <br />
+          {descripcion}
         </dd>
       </div>
       <div className={styles.precios}>
-        <p className={styles.costoAntes}>Antes a: $5.000</p>
-        <p className={styles.costoAhora}>Costo: $5.000</p>
-        <p className={styles.costoAhorro}>Ahorra: $5.000</p>
+        Precio: <br /> ${precio}
       </div>
     </div>
+    </Link>
   );
 }
 

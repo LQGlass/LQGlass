@@ -1,15 +1,33 @@
-.formularioFacturas{
-    padding: 10%;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+.formularioFacturas {
+  padding: 10%;
+  display: flex;
+  justify-content: space-around;
+
+  form {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .direccion {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  input {
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    padding: 10px 5px;
+    background-color: $secondary-color;
+    color: white;
+  }
 
-    button {
-        align-self: center;
-    }
+  button {
+    align-self: center;
+  }
 }

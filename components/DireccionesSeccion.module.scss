@@ -17,9 +17,12 @@ $primary-font: "Montserrat", sans-serif;
 
     h2 {
         color:white;
-        text-align: center;
     }
 
+}
+
+.tituloDireccion {
+    font-weight: bold;
 }
 
 .direccionCasilla {
@@ -31,3 +34,8 @@ $primary-font: "Montserrat", sans-serif;
     justify-content: center;
 }
 
+.lineaSubrayado {
+    width: 80%;
+    height: 5px;
+    background-color: white;
+}

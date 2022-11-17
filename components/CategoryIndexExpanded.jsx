@@ -1,40 +1,30 @@
 import styles from "./CategoryIndexExpanded.module.scss";
-import TarjetaDescriptiva from "./TarjetaDescriptiva"
-
-
-const CategoryIndexExpanded = () => {
-    return (
-        
-        
-        <section className={styles.categoryIndex}>
-            <div>
-                <h1>Estudios clinicos para cuidar tu salud.</h1>
-            </div>
-
-            <input type="text" name="busqueda" className="barraBusqueda" placeholder="Busqueda por categoria" />
-            <div className={styles.gridTarjetas}>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-                <TarjetaDescriptiva nombreCategoria="Categoria" descripcion="Sunt dolor eu cillum ea. Do minim ullamco nulla sint velit velit eiusmod dolor nisi voluptate mollit eiusmod non. Ad occaecat elit adipisicing incididunt quis. Sunt aute consectetur quis anim nulla amet ut id."/>
-            </div>
-        </section>
-
-    );
-}
+import TarjetaDescriptiva from "./TarjetaDescriptiva";
+const CategoryIndexExpanded = ({ categories }) => {
+  const renderTarjetas = (categorias) => {
+    return categorias.map((categorie, index) => (
+      <TarjetaDescriptiva
+        key={index}
+        image={"./images/medicalIcons/medical-history.png"}
+        nombreCategoria={categorie ? categorie : "Cargando"}
+        descripcion={categorie ? categorie : "Cargando"}
+      />
+    ));
+  };
+  return (
+    <div className={styles.container}>
+      <div className={styles.subtitulo}>
+        <h2>Estudios clinicos para cuidar tu salud.</h2>
+        <div className={styles.lineaSubrayado}></div>
+      </div>
+      <section className={styles.categoryIndex}>
+        <div className={styles.gridTarjetas}>
+          {categories && renderTarjetas(categories)}
+          {!categories && <h2>Cargando...</h2>}
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default CategoryIndexExpanded;

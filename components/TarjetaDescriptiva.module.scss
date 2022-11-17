@@ -5,7 +5,7 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .tarjetaD {
-  background-color: white;
+  background-color: rgba($color: #ffffff, $alpha: .5);
   color: $primary-color;
   border-radius: 6px;
   padding: 10%;

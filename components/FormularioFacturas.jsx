@@ -19,6 +19,14 @@ function FormularioFacturas() {
         <input type="radio" id="moral" name="razon-social" value="Persona Moral" />
         <label htmlFor="moral">Persona Moral</label>
         </div>
+        
+        <div className={styles.direccion}>
+        <input type="text" name="calle" id="calle" placeholder="Calle y numero" />
+        <input type="text" name="Colonia" id="Colonia" placeholder="Colonia" />
+        <input type="text" name="codigopostal" id="codigopostal" placeholder="Código postal" />
+        <input type="text" name="municipio" id="municipio" placeholder="Municipio/Delegación" />
+        </div>
+        <input type="text" name="cfdi" id="cfdi" placeholder="Uso de CFDI" />
         <button type="submit">Enviar</button>
       </form>
     </div>

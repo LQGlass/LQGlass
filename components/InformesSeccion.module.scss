@@ -5,19 +5,20 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .informesSeccion{
+    background-image: linear-gradient(to bottom right, $primary-color , $secondary-color);
     padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.regionofwaterloo.ca%2Fen%2Fliving-here%2Fresources%2FImages%2FMedical-Exemption-WEB.jpg&f=1&nofb=1&ipt=db0eaf29d22dc945d15e3cfe7b5cc351ee1e2cfa53a3d95fc8b085a252b0afa0&ipo=images");
-
+    background-color: whitesmoke;
     h2{
-        color: white;
+        color: $primary-color;
+        font-weight: bold;
         font-size: 2rem;
     }
 
     .informesWrapper{
-        background-image: linear-gradient(to bottom right, $primary-color , $secondary-color);
+        background: rgba($color: white, $alpha: .5);
         display: flex;
         justify-content: space-evenly;
         align-items: center;

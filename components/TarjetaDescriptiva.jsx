@@ -1,13 +1,13 @@
 import Link from "next/link";
 import styles from "./TarjetaDescriptiva.module.scss";
 
-const TarjetaDescriptiva = (props) => {
+const TarjetaDescriptiva = ({image, nombreCategoria}) => {
   return (
-    <Link href={"/analisis"}>
+    <Link href={`/${nombreCategoria}`}>
       <dl className={styles.tarjetaD}>
-        <img src={props.image} alt="icono medico"/>
-        <dt className={styles.tituloTarjeta}>{props.nombreCategoria}</dt>
-        <Link href={"/analisis"}>Ver más</Link>
+        <img src={image} alt="icono medico"/>
+        <dt className={styles.tituloTarjeta}>{nombreCategoria}</dt>
+        <Link href={`/${nombreCategoria}`}>Ver más</Link>
       </dl>
     </Link>
   );

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+.container {
+  background-image: url("https://laboratorioechevarne.com/wp-content/uploads/2019/02/industria-quimica-1920x1280.jpg");
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.wrapperAnalisis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font;
+  color: white;
+  box-sizing: border-box;
+  padding: 5% 10%;
+}
+
+.descripcionAnalisis {
+  background-color: rgba($color: #45b8ac, $alpha: 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 4px 4px 10px black;
+  border: 2px solid white;
+  padding: 5%;
+
+  .descripcion {
+    width: 50%;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+  strong {
+    color: #071d49;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px white;
+  }
+
+  .precio p {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+
+.indicaciones {
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba($color: #45b8ac, $alpha: 1);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  p {
+    color: white;
+  }
+}
+
+.indicaciones:active {
+  box-shadow: 0 0 0 black;
+}
+
+.titulo {
+  width: 70%;
+
+  background-color: rgba($color: #ffff, $alpha: 0.7);
+  padding: 1rem 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  h1 {
+    color: #071d49;
+  }
+}
+
+.descripcionProcedimiento {
+  background-color: rgba($color: white, $alpha: 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 4px 4px 10px black;
+  border: 2px solid #45b8ac;
+  padding: 5%;
+
+  p {
+    font-size: 1.5rem;
+  }
+  strong {
+    color: #071d49;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px white;
+  }
+
+  .precio p {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 2px black;
+  }
+}
