@@ -1,7 +1,6 @@
 import { Button, Container, Form } from "react-bootstrap";
 import { useState } from "react";
 import loginEmailPassword from "../functions/loginEmailPassword";
-import styles from "./IniciarSesionForm.module.scss";
 
 function InicarSesionForm() {
   const [Logged, setLogged] = useState(null);
@@ -9,18 +8,18 @@ function InicarSesionForm() {
     e.preventDefault();
     const correo = document.getElementById("formCorreo").value;
     const contra = e.target.formContra.value;
-    await loginEmailPassword (correo, contra);
+    await loginEmailPassword(correo, contra);
   }
   return (
     <Container>
       <h1>Inicia sesión, por favor</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group id="formCorreo">
+        <Form.Group controlId="formCorreo">
           <Form.Label>Correo</Form.Label>
           <Form.Control type="email" placeholder="Ingresa tu correo" />
         </Form.Group>
 
-        <Form.Group id="formContra">
+        <Form.Group controlId="formContra">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control type="password" placeholder="Contraseña" />
         </Form.Group>
