@@ -1,17 +1,8 @@
 import CategoryIndexExpanded from "../components/CategoryIndexExpanded";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
 import firebaseApp from "../firebase/firebase";
-import {
-  getFirestore,
-  collectionGroup,
-  collection,
-  getDocs,
-  query,
-  orderBy,
-  limit,
-} from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
 const estudios = ({ categories }) => {

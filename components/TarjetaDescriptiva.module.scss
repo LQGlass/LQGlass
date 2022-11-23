@@ -5,7 +5,7 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .tarjetaD {
-  background-color: rgba($color: #ffffff, $alpha: .5);
+  background-color: rgba($color: #ffffff, $alpha: .8);
   color: $primary-color;
   border-radius: 6px;
   padding: 10%;
@@ -14,6 +14,7 @@ $primary-font: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 5px 5px 5px black;
 
   .tituloTarjeta {
     cursor: pointer;
@@ -21,6 +22,7 @@ $primary-font: "Montserrat", sans-serif;
     margin-bottom: 5%;
     font-family: $primary-font;
     font-weight: bold;
+    transition: all .3s;
   }
 
 
@@ -35,13 +37,73 @@ $primary-font: "Montserrat", sans-serif;
     width: 10rem;
     height: auto;
     align-self: center;
+    transition: all .3s;
+  }
+}
+.tarjetaDPaquetes {
+  background-color: rgba($color: #071d49, $alpha: .8);
+  color: white;
+  border-radius: 6px;
+  padding: 10%;
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px black;
+
+  .tituloTarjeta {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+    font-family: $primary-font;
+    font-weight: bold;
+    transition: all .3s;
+  }
+
+
+  a {
+    font-size: .8rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #45b8ac;
+  }
+
+  img {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    transition: all .3s;
   }
 }
 
+.tarjetaDPaquetes:hover {
+  background-color: $secondary-color;
+  cursor: pointer;
+  .tituloTarjeta{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+  img {
+    width: 3rem;
+  }
+  a {
+    color: white;
+  }
+}
 .tarjetaD:hover {
   background-color: $secondary-color;
-  color: white;
   cursor: pointer;
+  .tituloTarjeta{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+  img {
+    width: 3rem;
+  }
   a {
     color: white;
   }

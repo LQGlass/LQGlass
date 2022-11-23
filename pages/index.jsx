@@ -7,6 +7,7 @@ import BlogSeccion from "../components/BlogSeccion";
 import Footer from "../components/Footer";
 import WhatsappFloat from "../components/WhatsappFloat";
 import firebaseApp from "../firebase/firebase";
+import CheckupIndex from "../components/CheckupIndex";
 import {
   getFirestore,
   collectionGroup,
@@ -20,37 +21,19 @@ const db = getFirestore(firebaseApp);
 
 function HomePage({
   categories,
-  biologia,
-  covid,
-  coagulacion,
-  coprologia,
-  endocrinologia,
-  hematologia,
-  inmunologia,
-  microbiologia,
-  parasitologia,
-  patologia,
-  pruebasEspeciales,
-  quimicaClinicaBioquimica,
-  toxicologia,
-  uroanalisis,
+  paquetes
 }) {
+  console.log(paquetes)
   return (
     <div>
       <Navbar />
-
       <WhatsappFloat />
-
       <Hero />
-
+      <CheckupIndex contenido = {paquetes}/>
       <CategoryIndex contenido={categories} />
-
       <InformesSeccion />
-
       <DireccionesSeccion />
-
       <BlogSeccion />
-
       <Footer />
     </div>
   );
@@ -61,6 +44,7 @@ function HomePage({
 export const getStaticProps = async () => {
   //se declara un array vacio para almacenar los datos
   let categories = [];
+  let paquetes = [];
   /* let biologia = [];
   let covid = [];
   let coagulacion = [];
@@ -78,12 +62,17 @@ export const getStaticProps = async () => {
   let sobrantes = []; */
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = collection(db, "categorias");
+  const collectionRef2 = collection(db, "grupo-paquetes");
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
+  const snapshot2 = await getDocs(collectionRef2);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
   snapshot.forEach((doc) => {
     categories.push(doc.id)
+  });
+  snapshot2.forEach((doc) => {
+    paquetes.push(doc.id)
    /* console.log(doc.data())
     switch (doc.data().categoria) {
       case "Biología molecular":
@@ -135,11 +124,13 @@ export const getStaticProps = async () => {
     } */
   });
   console.log(categories)
+  console.log("paquetes: "+paquetes)
 
   return {
     //return the props as "categories"
     props: {
-      categories,/* 
+      categories,
+      paquetes,/* 
       biologia,
       covid,
       coagulacion,

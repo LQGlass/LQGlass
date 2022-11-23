@@ -1,4 +1,5 @@
 import styles from "../styles/main.module.scss";
+import HeroImg from "./HeroImg.jsx"
 
 function Header({title}){
     return (

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+.analisisSection {
+  background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
+  color: white;
+  font-family: $primary-font;
+  padding: 5% 10%;
+
+  .nameBox {
+    background-color: rgba($color: #ffff, $alpha: 1.0);
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .lineaSubrayado {
+      width: 80%;
+      background-color: #071d49;
+      height: 2%;
+    }
+    h1 {
+      color: $primary-color;
+    }
+
+    
+  }
+
+  .casillaAnalisis {
+    background-image: linear-gradient(
+      to bottom right,
+      $secondary-color,
+      white,
+      $secondary-color
+    );
+    color: $primary-color;
+    padding: 5%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+    .casillaAnalisis:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+
+    dt {
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 80%;
+      text-shadow: 1px 1px 2px $primary-color;
+    }
+
+    dd {
+      margin: 20px 0;
+      width: 80%;
+      border: 1px solid $primary-color;
+      padding: 10px;
+    }
+
+    .costoAntes {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: red;
+      justify-self: center;
+      text-decoration: line-through;
+    }
+
+    .precios {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-left: auto;
+      text-shadow: 2px 2px 2px $secondary-color;
+    }
+
+    .costoAhorro {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+
+    .imagenCasillaAnalisis img {
+      width: 100px;
+      height: 100px;
+      margin-right: 100px;
+    }
+  }
+}
+
+.casillaAnalisis:hover {
+  background-image: linear-gradient(to bottom right, $secondary-color, white);
+}

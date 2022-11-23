@@ -42,7 +42,7 @@ function CrearCuentaForm() {
         ) : (
           <>
             <p>No tienes cuenta aun?</p>{" "}
-            <button className={styles.botonSecundario} onClick={() => setcrear(!crear)}>Crea una</button>
+            <button className={styles.botonSecundario} onClick={() => setcrear(!crear)}>Crear cuenta</button>
           </>
         )}
       </form>

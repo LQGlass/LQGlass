@@ -26,6 +26,7 @@ function analisis(props) {
       <div className={styles.analisisSection}>
         <div className={styles.nameBox}>
           <h1>{categorieName}</h1>
+          <div className={styles.lineaSubrayado}></div>
         </div>
         {props.studies.map((el) => {
           return (
@@ -66,7 +67,7 @@ export const getStaticProps = async (context) => {
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
     collectionGroup(db, "examenes"),
-    where("categoria", "==", categorieName),
+    where("nombre-paquete", "array-contains", "paquete uno"),
     limit(5)
   );
   //se genera un snapshor con todos los documentos
@@ -76,6 +77,7 @@ export const getStaticProps = async (context) => {
   snapshot.forEach((doc) => {
     studies.push(doc.data());
   });
+  console.log(studies);
 
   return {
     props: {

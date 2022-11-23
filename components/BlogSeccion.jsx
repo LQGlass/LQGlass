@@ -13,9 +13,6 @@ function BlogSeccion (){
           <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
           <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
           <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
-          <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
-          <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
-          <CasillaBlog titulo="Titulo de la Nota" descripcion="Consequat duis tempor fugiat sunt voluptate sit consequat do. Sint qui irure voluptate ad dolore ipsum duis incididunt. Aliquip ullamco consequat tempor veniam velit do irure. " />
         </div>
 
         <ButtonOutline url="/blog" content="Ver más" />

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$primary-color: #071D49;
+$secondary-color:#45B8AC;
+$primary-font : 'Montserrat', sans-serif;
+
+.casillaAnalisis{
+    background: rgba($color: #ffff, $alpha: .8);
+    color: $primary-color;
+    font-family: $primary-font;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 5px black;
+
+    .textosCasilla {
+        dt{
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+    }
+
+    .incluyeEl {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .incluyeEl:hover {
+        color:$secondary-color;
+    }
+
+    dd {
+        margin: 30px 0;
+
+    }
+
+    .precios {
+        align-self: center;
+        font-size: 3rem;
+        font-weight: bold;
+        color: $secondary-color;
+        text-shadow: 2px 2px 5px $primary-color;
+    }
+}

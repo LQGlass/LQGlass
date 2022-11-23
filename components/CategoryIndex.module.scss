@@ -7,7 +7,6 @@ $primary-font : 'Montserrat', sans-serif;
 
 .categoryIndex {
     background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
- 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +26,37 @@ $primary-font : 'Montserrat', sans-serif;
       text-align: left;
       font-family: $primary-font;
       font-weight: bold;
+    }
+  
+  }
+.checkupIndex {
+    background-image: url("http://www.diariosigloxxi.com/images/showid/3710200");
+  
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .subtitulo{
+      width: 100%;
+      background-color: white;
+      padding: 5%;
+      margin: 0 0 100px;
+    }
+  
+    h2 {
+      padding: 20px 0;
+      color: $secondary-color;
+      font-size: 2rem;
+      text-align: left;
+      font-family: $primary-font;
+      font-weight: bold;
+    }
+
+    .gridTarjetas {
+      padding: 0 10%;
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr;
+      gap: 0 2%;
     }
   
   }

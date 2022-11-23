@@ -18,7 +18,7 @@ const CategoryIndex = ({contenido}) => {
     
     <section className={styles.categoryIndex}>
       <div className={styles.subtitulo}>
-        <h2>Estudios clinicos para cuidar tu salud.</h2>
+        <h2>Categorias de estudios.</h2>
         <div className={styles.lineaSubrayado}></div>
       </div>
       <div className={styles.gridTarjetas}>

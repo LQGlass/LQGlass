@@ -36,26 +36,26 @@ const Navbar = () => {
         <Link href={"/estudios"}>
           <div className={styles.linkNavDiv}>Estudios</div>
         </Link>
-        <Link href={"/paquetes"}>
-          <div className={styles.linkNavDiv}>|Paquetes</div>
+        <Link href={"#paquetes"}>
+          <div className={styles.linkNavDiv}>Paquetes</div>
         </Link>
         <Link href={"/promociones"}>
-          <div className={styles.linkNavDiv}>|Promociones</div>
+          <div className={styles.linkNavDiv}>Promociones</div>
         </Link>
         <Link href={"/sucursales"}>
-          <div className={styles.linkNavDiv}>|Sucursales</div>
+          <div className={styles.linkNavDiv}>Sucursales</div>
         </Link>
         <Link href={"/blog"}>
-          <div className={styles.linkNavDiv}>|Blog</div>
+          <div className={styles.linkNavDiv}>Blog</div>
         </Link>
         <Link href={"/nosotros"}>
-          <div className={styles.linkNavDiv}>|Nosotros</div>
+          <div className={styles.linkNavDiv}>Nosotros</div>
         </Link>
         <Link href={"/resultados"}>
-          <div className={styles.linkNavDiv}>|Resultados</div>
+          <div className={styles.linkNavDiv}>Resultados</div>
         </Link>
         <Link href={"/perfil/facturacion"}>
-          <div className={styles.linkNavDiv}>|Factura</div>
+          <div className={styles.linkNavDiv}>Factura</div>
         </Link>
         <LogButtons />
       </nav>

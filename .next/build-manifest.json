@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/estudios": [
+    "/blog": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/estudios.js"
-    ],
-    "/examenes/[examenId]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/examenes/[examenId].js"
+      "static/chunks/pages/blog.js"
     ]
   },
   "ampFirstPages": []
