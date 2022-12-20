@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link href={"/estudios"}>
           <div className={styles.linkNavDiv}>Estudios</div>
         </Link>
-        <Link href={"#paquetes"}>
+        <Link href={"/#paquetes"}>
           <div className={styles.linkNavDiv}>Paquetes</div>
         </Link>
         <Link href={"/promociones"}>

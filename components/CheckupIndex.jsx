@@ -7,7 +7,7 @@ const CheckupIndex = ({ contenido }) => {
     return paquetes.map((paquete, index) => (
       <TarjetaDescriptivaPaquetes
         key={index}
-        image={"./images/medicalImages/" + index + ".jpg"}
+        image={"./images/medicalImages/" + paquete + ".jpg"}
         nombreCategoria={paquete ? paquete : "Cargando"}
         descripcion={paquete ? paquete : "Cargando"}
       />

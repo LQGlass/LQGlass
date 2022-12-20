@@ -11,8 +11,8 @@ const Hero = ()=>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/Slide1.png"
-          alt="First slide"
+          src="./images/slider/slide1.jpg"
+          alt="Primer imagen"
         />
         {/* <Carousel.Caption>
           <h3>First slide label</h3>
@@ -22,15 +22,22 @@ const Hero = ()=>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/Slide2.png"
-          alt="Second slide"
+          src="./images/slider/slide2.jpg"
+          alt="Segunda imagen"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/Slide3.png"
-          alt="Third slide"
+          src="./images/slider/slide3.jpg"
+          alt="Tercera imagen"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="./images/slider/slide4.jpg"
+          alt="Cuarta imagen"
         />
       </Carousel.Item>
     </Carousel>

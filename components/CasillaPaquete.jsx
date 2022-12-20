@@ -29,7 +29,7 @@ function CasillaPaquete({
         <dd>
           <strong>Incluye: </strong>
           <ul>
-            {incluye.map((el) => (
+            {incluye?.map((el) => (
               <Link href={"/examenes/" + el}>
                 <li className={styles.incluyeEl}>{el}</li>
               </Link>

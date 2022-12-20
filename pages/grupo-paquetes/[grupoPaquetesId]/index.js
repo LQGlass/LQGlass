@@ -56,7 +56,6 @@ export async function getStaticPaths() {
   snapshot.forEach((doc) => {
     grupoPaquetes.push(doc.data());
   });
-  console.log("paths: " + grupoPaquetes);
   return {
     fallback: false,
     paths: grupoPaquetes.map((grupoP) => ({
@@ -71,8 +70,7 @@ export const getStaticProps = async (context) => {
   //se llama a todas las grupo-paquetes con subcoleccion de examenes
   const collectionRef = query(
     collectionGroup(db, "paquetes"),
-    where("grupo-paquetes", "==", grupoName),
-    limit(5)
+    where("grupo-paquetes", "==", grupoName)
   );
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
@@ -81,7 +79,6 @@ export const getStaticProps = async (context) => {
   snapshot.forEach((doc) => {
     paquetes.push(doc.data());
   });
-  console.log(paquetes);
 
   return {
     props: {
