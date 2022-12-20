@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import HomeCMS from "../../../components/CMSComponents/HomeCMS";
 import { useState } from "react";
 import InicarSesionForm from "../../../components/IniciarSesionForm";
 import firebaseApp from "../../../firebase/firebase";
@@ -19,7 +18,7 @@ function cms() {
   return (
     <Container fluid>
       <hr />
-      {usuario ? <HomeCMS /> : <InicarSesionForm />}
+      {usuario ? <h2>Informacion personal de usuario</h2> : <InicarSesionForm />}
     </Container>
   );
 }

@@ -2,7 +2,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { useState } from "react";
 import loginEmailPassword from "../functions/loginEmailPassword";
 
-function InicarSesionForm() {
+function IniciarSesionForm() {
   const [Logged, setLogged] = useState(null);
   async function submitHandler(e) {
     e.preventDefault();
@@ -31,7 +31,7 @@ function InicarSesionForm() {
   );
 }
 
-export default InicarSesionForm;
+export default IniciarSesionForm;
 
 /* <div className={styles.crearCuentaForm}>
       <form action="/perfil" type="submit">

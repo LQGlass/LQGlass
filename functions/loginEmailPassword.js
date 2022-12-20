@@ -1,4 +1,4 @@
-import firebaseApp from "../firebase/firebase";
+import {firebaseApp} from "../firebase/firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 const auth = getAuth(firebaseApp);
 
@@ -11,3 +11,5 @@ async function loginEmailPassword(email, password) {
     return error;
   }
 }
+
+export default loginEmailPassword;

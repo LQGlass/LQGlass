@@ -76,7 +76,6 @@ export const getStaticProps = async (context) => {
   snapshot.forEach((doc) => {
     studies.push(doc.data());
   });
-  console.log(studies);
 
   return {
     props: {

@@ -18,7 +18,6 @@ const db = getFirestore(firebaseApp);
 export default function examenDetalles({ studio }) {
   const router = useRouter();
   const examenName = router.query.procedimientoId;
-  console.log(studio);
   return (
     <div>
       <Navbar />

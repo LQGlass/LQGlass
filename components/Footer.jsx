@@ -37,9 +37,9 @@ function Footer() {
         <Link href={"/politica-privacidad"}>Politica de Privacidad</Link>
       </div>
       <div>
-        <select name="informes" onChange={informesHandler} id="informes">
+        <select name="informes" onChange={informesHandler} id="informes" defaultValue={"value2"}>
           <option value="value1">Quejas</option>
-          <option value="value2" selected>
+          <option value="value2">
             Informes
           </option>
         </select>

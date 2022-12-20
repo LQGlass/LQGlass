@@ -36,7 +36,7 @@ export default function examenDetalles({ studio }) {
 
 export async function getStaticPaths() {
   let examenes = [];
-  const collectionRef = query(collectionGroup(db, "examenes"));
+  const collectionRef = query(collectionGroup(db, `examenes`));
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
   snapshot.forEach((doc) => {
