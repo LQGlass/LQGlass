@@ -1,21 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/blog": "pages/blog.js",
-  "/crear-cuenta": "pages/crear-cuenta.js",
-  "/nosotros": "pages/nosotros.js",
-  "/iniciar-sesion": "pages/iniciar-sesion.js",
-  "/perfil/cms/cms": "pages/perfil/cms/cms.js",
-  "/perfil/facturacion": "pages/perfil/facturacion.js",
-  "/perfil": "pages/perfil.js",
-  "/promociones": "pages/promociones.js",
-  "/resultados": "pages/resultados.js",
-  "/sucursales": "pages/sucursales.js",
-  "/[categorieId]": "pages/[categorieId].js",
-  "/grupo-paquetes/[grupoPaquetesId]": "pages/grupo-paquetes/[grupoPaquetesId].js",
-  "/": "pages/index.js",
-  "/procedimiento/[procedimientoId]": "pages/procedimiento/[procedimientoId].js",
-  "/_document": "pages/_document.js",
-  "/estudios": "pages/estudios.js",
-  "/examenes/[examenId]": "pages/examenes/[examenId].js"
+  "/_document": "pages/_document.js"
 }

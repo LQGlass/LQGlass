@@ -6,8 +6,8 @@ import DireccionesSeccion from "../components/DireccionesSeccion.jsx";
 import BlogSeccion from "../components/BlogSeccion";
 import Footer from "../components/Footer";
 import WhatsappFloat from "../components/WhatsappFloat";
-import firebaseApp from "../firebase/firebase";
 import CheckupIndex from "../components/CheckupIndex";
+import firebaseApp from "../firebase/firebase";
 import {
   getFirestore,
   collection,
@@ -54,7 +54,6 @@ export const getStaticProps = async () => {
   snapshot2.forEach((doc) => {
     paquetes.push(doc.id)
   });
-
   return {
     //return the props as "categories"
     props: {
