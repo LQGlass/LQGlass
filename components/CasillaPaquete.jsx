@@ -22,10 +22,12 @@ function CasillaPaquete({
       </div>
       <div className={styles.textosCasilla}>
         <dt>{nombre}</dt>
-        <dd>
-          <strong>Descripcion:</strong> <br />
-          {descripcion}
-        </dd>
+        {descripcion && (
+          <dd>
+            <strong>Descripcion:</strong> <br />
+            {descripcion}
+          </dd>
+        )}
         <dd>
           <strong>Incluye: </strong>
           <ul>

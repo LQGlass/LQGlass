@@ -1,17 +1,25 @@
 import styles from "./Hero.module.scss";
-import HeroImg from "./HeroImg";
-import HeroText from "./HeroText";
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
-const Hero = ()=>{
-    return(
-        
-        <Carousel className={styles.carousel}>
+const Hero = () => {
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  return (
+    <Carousel fade
+    controls={false}
+      activeIndex={index}
+      onSelect={handleSelect}
+      className={styles.carousel}
+    >
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/slider/slide1.jpg"
+          src="./images/slider/slide1.png"
           alt="Primer imagen"
         />
         {/* <Carousel.Caption>
@@ -22,7 +30,7 @@ const Hero = ()=>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/slider/slide2.jpg"
+          src="./images/slider/slide2.png"
           alt="Segunda imagen"
         />
       </Carousel.Item>
@@ -36,13 +44,12 @@ const Hero = ()=>{
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/slider/slide4.jpg"
+          src="./images/slider/slide4.png"
           alt="Cuarta imagen"
         />
       </Carousel.Item>
     </Carousel>
-        
-    )
-}
+  );
+};
 
 export default Hero;

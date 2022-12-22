@@ -8,7 +8,6 @@ $primary-font: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
     align-items: center;
     
 }
@@ -29,11 +28,7 @@ $primary-font: "Montserrat", sans-serif;
 
 .direccionCasilla {
     color: white;
-    width: 30%;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
+    margin: 5rem 0;
 }
 
 .lineaSubrayado {
@@ -41,3 +36,14 @@ $primary-font: "Montserrat", sans-serif;
     height: 5px;
     background-color: white;
 }
+
+.ubicacion {
+    transition: all .3s;
+}
+
+.ubicacion:hover {
+    cursor: pointer;
+    scale: 120%;
+}
+
+

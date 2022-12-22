@@ -21,9 +21,8 @@ $primary-font: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 5%;
+    padding: 2rem 4rem;
     background-color: $primary-color;
-    width: 20%;
     height: 70vh;
 
     .menuOptions {
@@ -32,11 +31,14 @@ $primary-font: "Montserrat", sans-serif;
         text-decoration: none;
         color: $secondary-color;
         font-weight: bold;
+        font-size: 1.5rem;
     }
-    
-    a:hover {
+
+    .menuOptions:hover {
         text-decoration: underline;
+        color: white;
     }
+
 }
 
 .navMenuPerfil {

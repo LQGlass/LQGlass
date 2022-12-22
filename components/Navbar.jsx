@@ -36,11 +36,11 @@ function Navbar({ paquetes, categories }) {
       <nav className={styles.nav}>
         <LQGIcon />
         <DropDownMenu categorias={categories} titulo={"Estudios"} />
-        <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
+        <DropDownMenu titulo={"Paquetes"} />
         <Link href={"/promociones"}>
           <div className={styles.linkNavDiv}>Promociones</div>
         </Link>
-        <Link href={"/sucursales"}>
+        <Link href={"/#sucursales"}>
           <div className={styles.linkNavDiv}>Sucursales</div>
         </Link>
         <Link href={"/blog"}>

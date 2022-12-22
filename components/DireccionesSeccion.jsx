@@ -2,7 +2,7 @@ import styles from "./DireccionesSeccion.module.scss";
 
 function DireccionesSeccion() {
   return (
-    <section className={styles.direccionesSeccion}>
+    <section id={"sucursales"} className={styles.direccionesSeccion}>
       <div>
         <h2 className={styles.tituloDireccion}>Visitanos en nuestra sucursal</h2>
         <div className={styles.lineaSubrayado}></div>
@@ -15,7 +15,7 @@ function DireccionesSeccion() {
             Cruz del Monte, Naucalpan estado de México,
           </address>
         </div>
-          <img src="/images/ubicacion.png" width={400} alt="mapa" />
+          <a target={"_blank"} href="https://goo.gl/maps/uJBYXhB8yJGBTHVz7"><img className={styles.ubicacion} src="/images/ubicacion.png" width={600} alt="mapa" /></a>
       </div>
     </section>
   );
