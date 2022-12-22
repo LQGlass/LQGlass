@@ -16,7 +16,7 @@ function FormularioFacturas() {
         <div className="radio">
         <input type="radio" id="fisica" name="razon-social" value="Persona Física" />
         <label htmlFor="fisica">Persona Fisica</label>
-        <input type="radio" id="moral" name="razon-social" value="Persona Moral" />
+        <input className={styles.radio} type="radio" id="moral" name="razon-social" value="Persona Moral" />
         <label htmlFor="moral">Persona Moral</label>
         </div>
         

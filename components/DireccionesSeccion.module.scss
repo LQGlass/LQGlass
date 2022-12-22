@@ -6,9 +6,11 @@ $primary-font: "Montserrat", sans-serif;
 
 .direccionWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 400px;
     align-items: center;
+    
 }
 
 .direccionesSeccion{

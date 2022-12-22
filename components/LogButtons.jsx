@@ -4,7 +4,7 @@ import styles from "./LogButton.module.scss";
 const LogButtons = () => {
     return (
         <div className="logButtons">
-            <Link href={"/iniciar-sesion"}><button className={styles.logIn}>Iniciar Sesion</button></Link>
+            <Link href={"/perfil"}><button className={styles.logIn}>Iniciar Sesion</button></Link>
         </div>
     )
 }

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
+
+.logComponent {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+        color: $primary-color;
+    }
+    .signButton {
+        margin: 2rem 0;
+        align-self: center;
+        background-color: #45b8ac;
+    }
+
+    input {
+        background-color: $secondary-color ;
+    }
+
+    input::placeholder {
+        color:#071d49;
+    }
+}

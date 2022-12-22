@@ -4,27 +4,40 @@ $primary-color: #071d49;
 $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 .formularioFacturas {
-  padding: 10%;
   display: flex;
   justify-content: space-around;
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+    width: 50%;
   }
   .direccion {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     flex-wrap: wrap;
   }
 
   input {
     border: 1px solid $primary-color;
     border-radius: 20px;
-    padding: 10px 5px;
-    background-color: $secondary-color;
+    padding: 1rem 2rem;
+    color:#071d49;
+    background-color: rgba($color: #071d49, $alpha: .5);
+  }
+
+  input::placeholder {
     color: white;
+  }
+
+  .radio{
+    margin-left: 3rem;
+  }
+
+  label {
+    font-weight: bold;
+    color: $primary-color;
   }
 
   button {

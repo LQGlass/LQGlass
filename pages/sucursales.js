@@ -7,6 +7,7 @@ const sucursales = () => {
     return <div className={styles.sucursales}>
         <Navbar />
         <Header  title = "Sucursales"/>
+        <section id={styles.sucursales}>
         <div className={styles.sucursal}>
             <h4>Direccion 1</h4>
             <address>Av test, direccion prueba, 543</address>
@@ -19,6 +20,7 @@ const sucursales = () => {
             <h4>Direccion 3</h4>
             <address>Av test, direccion prueba, 543</address>
         </div>
+        </section>
 
         <Footer />
 

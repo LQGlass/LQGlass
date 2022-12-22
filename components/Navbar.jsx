@@ -15,7 +15,7 @@ function Navbar({ paquetes, categories }) {
         <div className={styles.tituloCintilla}>
           CDMX y Area Metropolitana | Haz tu cita : 5539847270
         </div>
-        <div className={styles.idiomas}>
+        {/* <div className={styles.idiomas}>
           <img
             className={styles.flag}
             src="/images/flags/mexico.png"
@@ -31,7 +31,7 @@ function Navbar({ paquetes, categories }) {
             src="/images/flags/china.png"
             alt="bandera de china"
           />
-        </div>
+        </div> */}
       </div>
       <nav className={styles.nav}>
         <LQGIcon />
@@ -49,10 +49,10 @@ function Navbar({ paquetes, categories }) {
         <Link href={"/nosotros"}>
           <div className={styles.linkNavDiv}>Nosotros</div>
         </Link>
-        <Link href={"/resultados"}>
+        <Link href={"/perfil"}>
           <div className={styles.linkNavDiv}>Resultados</div>
         </Link>
-        <Link href={"/perfil/facturacion"}>
+        <Link href={"/perfil"}>
           <div className={styles.linkNavDiv}>Factura</div>
         </Link>
         <LogButtons />

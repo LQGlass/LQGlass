@@ -12,7 +12,7 @@ const nosotros = () => {
 
       <div className={styles.nosotros}>
         <div className={styles.imagenNosotros}>
-          <Image src="/images/logo.png" width={600} height={250} />
+          <img src="/images/nosotros.jpg" width={600}/>
         </div>
         <div className={styles.textoNosotros}>
           <h2>Laboratorios Quimicos Glass</h2>

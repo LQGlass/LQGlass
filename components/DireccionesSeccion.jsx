@@ -15,7 +15,7 @@ function DireccionesSeccion() {
             Cruz del Monte, Naucalpan estado de México,
           </address>
         </div>
-          <img src="/images/ubicacion.png" width={300} alt="mapa" />
+          <img src="/images/ubicacion.png" width={400} alt="mapa" />
       </div>
     </section>
   );

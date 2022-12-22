@@ -30,9 +30,8 @@ $primary-font: "Montserrat", sans-serif;
 
 .header {
   display: flex;
-  padding: 8px 64px 4px 224px;
-  height: 12%;
-  background-color: white;
+  padding: 1rem 2rem;
+  color: $primary-color;
   justify-content: space-between;
   align-items: center;
   box-shadow: #071d49 1px 1px 10px;
@@ -74,16 +73,17 @@ $primary-font: "Montserrat", sans-serif;
 
 .hero {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  background: url("http://mobiliariomedicoenlima.com/wp-content/uploads/2020/12/equipos-de-laboratorio-1.jpg");
+  background-color: #071d49;
+  box-shadow: 5px 5px 5px black;
+  padding: 0;
   h1 {
     align-items: center;
-    padding: 2%;
     font-size: 4rem;
     color: white;
-    text-shadow: 2px 2px 5px black;
     font-weight: bold;
+    margin: 4rem 0 0 0;
   }
 
   img {
@@ -120,3 +120,5 @@ $primary-font: "Montserrat", sans-serif;
     color: white;
   }
 }
+
+

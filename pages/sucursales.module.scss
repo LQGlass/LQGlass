@@ -7,11 +7,13 @@ $primary-font : 'Montserrat', sans-serif;
 
 .sucursal {
     display: flex;
-    background-color: #071D49;
-    color: white;
-    width: 100%;
-    justify-content: center;
+    color: $primary-color;
+    justify-content: flex-start;
     flex-direction: column;
     height: 200px;
     align-items: center;
+}
+
+#sucursales {
+    margin-top: -200px;
 }

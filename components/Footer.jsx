@@ -25,14 +25,14 @@ function Footer() {
         <Link href={"/sucursales"}>Sucursales</Link>
         <Link href={"/blog"}>Blog</Link>
         <Link href={"/nosotros"}>Nosotros</Link>
-        <Link href={"/resultados"}>Resultados</Link>
+        <Link href={"/perfil"}>Resultados</Link>
       </div>
       <div className={styles.footerPagina}>
         <h4>Cuenta</h4>
 
         <Link href={"/perfil"}>Perfil</Link>
-        <Link href={"/resultados"}>Mis Resultados</Link>
-        <Link href={"/facturas"}>Facturas</Link>
+        <Link href={"/perfil"}>Mis Resultados</Link>
+        <Link href={"/perfil"}>Facturas</Link>
         <Link href={"/legal"}>Legal</Link>
         <Link href={"/politica-privacidad"}>Politica de Privacidad</Link>
       </div>

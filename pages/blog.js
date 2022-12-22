@@ -1,6 +1,5 @@
 import Header from "../components/Header"
 import Navbar from "../components/Navbar"
-import Blog from "../components/Blog"
 import Footer from "../components/Footer"
 import BlogSeccionExpanded from "../components/BlogSeccionExpanded"
 
