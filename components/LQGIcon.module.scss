@@ -5,15 +5,15 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .logo {
-    width: 250px;
-    height: auto;
-    cursor: pointer;
-    transition: all .3s;
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .logo:hover {
-    scale:80%;
-    border: 2px solid $primary-color;
-    border-radius: 5rem;
-    padding: 2rem;
+  scale: 80%;
+  border: 2px solid $primary-color;
+  border-radius: 5em;
+  padding: 1em;
 }

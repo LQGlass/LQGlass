@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-$primary-color: #071D49;
-$secondary-color:#45B8AC;
-$primary-font : 'Montserrat', sans-serif;
-
+$primary-color: #071d49;
+$secondary-color: #45b8ac;
+$primary-font: "Montserrat", sans-serif;
 
 .carousel {
-    z-index:-2;
-    position: relative;
-    img {
-        height: 75vh;
-        object-fit: cover;
-    }
+  z-index: -2;
+  height: 70vh;
+  img {
+    object-fit: contain;
+  }
 }

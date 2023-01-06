@@ -15,7 +15,7 @@ function Navbar({ paquetes, categories }) {
         <div className={styles.tituloCintilla}>
           CDMX y Area Metropolitana | Haz tu cita : 5539847270
         </div>
-        {/* <div className={styles.idiomas}>
+        <div className={styles.idiomas}>
           <img
             className={styles.flag}
             src="/images/flags/mexico.png"
@@ -26,35 +26,57 @@ function Navbar({ paquetes, categories }) {
             src="/images/flags/united-states.png"
             alt="bandera de estados unidos"
           />
-          <img
+          {/*   <img
             className={styles.flag}
             src="/images/flags/china.png"
             alt="bandera de china"
-          />
-        </div> */}
+          /> */}
+        </div>
       </div>
       <nav className={styles.nav}>
         <LQGIcon />
         <DropDownMenu categorias={categories} titulo={"Estudios"} />
-        <DropDownMenu titulo={"Paquetes"} />
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
+        <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
         <Link href={"/promociones"}>
           <div className={styles.linkNavDiv}>Promociones</div>
         </Link>
-        <Link href={"/#sucursales"}>
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
+        <Link href={"/sucursales"}>
           <div className={styles.linkNavDiv}>Sucursales</div>
         </Link>
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
         <Link href={"/blog"}>
           <div className={styles.linkNavDiv}>Blog</div>
         </Link>
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
         <Link href={"/nosotros"}>
           <div className={styles.linkNavDiv}>Nosotros</div>
         </Link>
-        <Link href={"/perfil"}>
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
+        <Link href={"/resultados"}>
           <div className={styles.linkNavDiv}>Resultados</div>
         </Link>
-        <Link href={"/perfil"}>
+        <div>
+          <p className={styles.separador}>|</p>
+        </div>
+        <Link href={"/perfil/facturacion"}>
           <div className={styles.linkNavDiv}>Factura</div>
         </Link>
+
         <LogButtons />
       </nav>
     </Fragment>
@@ -73,10 +95,10 @@ export const getStaticProps = async () => {
   const snapshot2 = await getDocs(collectionRef2);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     categories.push(doc.id);
   });
-  snapshot2.forEach((doc) => {
+  snapshot2.forEach(doc => {
     paquetes.push(doc.id);
   });
 

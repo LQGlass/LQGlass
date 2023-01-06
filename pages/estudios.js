@@ -1,6 +1,7 @@
 import CategoryIndexExpanded from "../components/CategoryIndexExpanded";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Head from "next/head";
 import firebaseApp from "../firebase/firebase";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
@@ -8,6 +9,9 @@ const db = getFirestore(firebaseApp);
 const estudios = ({ categories }) => {
   return (
     <div>
+    <Head>
+      <title>Categorias</title>
+    </Head>
       <Navbar />
       <CategoryIndexExpanded categories={categories} />
       <Footer />

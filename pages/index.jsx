@@ -8,23 +8,20 @@ import Footer from "../components/Footer";
 import WhatsappFloat from "../components/WhatsappFloat";
 import CheckupIndex from "../components/CheckupIndex";
 import firebaseApp from "../firebase/firebase";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-} from "firebase/firestore";
+import Head from "next/head";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
-function HomePage({
-  categories,
-  paquetes
-}) {
+function HomePage({ categories, paquetes }) {
   return (
     <div>
+      <Head>
+        <title>Laboratorios Quimicos Glass</title>
+      </Head>
       <Navbar />
       <WhatsappFloat />
       <Hero />
-      <CheckupIndex contenido = {paquetes}/>
+      <CheckupIndex contenido={paquetes} />
       <CategoryIndex contenido={categories} />
       <InformesSeccion />
       <DireccionesSeccion />
@@ -48,11 +45,11 @@ export const getStaticProps = async () => {
   const snapshot2 = await getDocs(collectionRef2);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  snapshot.forEach((doc) => {
-    categories.push(doc.id)
+  snapshot.forEach(doc => {
+    categories.push(doc.id);
   });
-  snapshot2.forEach((doc) => {
-    paquetes.push(doc.id)
+  snapshot2.forEach(doc => {
+    paquetes.push(doc.id);
   });
   return {
     //return the props as "categories"

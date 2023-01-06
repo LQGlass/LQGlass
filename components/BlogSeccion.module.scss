@@ -5,43 +5,25 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .blogSeccion {
-    padding: 5rem 10% 5rem;
-
-    h2 {
-        font-size: 3rem;
-        text-align: left;
-        font-weight: bold;
-        color: $primary-color;
-    }
-
+  background-image: url("https://fitivate.com/wp-content/uploads/2019/05/bigstock-206844388.jpg");
 }
 
 .blogWrapper {
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    gap: 100px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 100px;
 
-    h3{
-        font-size: 2rem;
-    }
+  h3 {
+    font-size: 2rem;
+  }
 
-    img {
-        border-radius: 10px;
-    }
-
-
-}
-
-.lineaSubrayado {
-    width: 80%;
-    height: 5px;
-    background-color: #071D49;
-    margin-bottom: 50px;
+  img {
+    border-radius: 10px;
+  }
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-

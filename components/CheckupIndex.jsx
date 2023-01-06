@@ -1,9 +1,10 @@
 import styles from "./CategoryIndex.module.scss";
 import TarjetaDescriptivaPaquetes from "./TarjetaDescriptivaPaquetes";
+import TituloDivisor from "./TituloDivisor";
 
 const CheckupIndex = ({ contenido }) => {
   //function for the creation of the description blocks for the category section
-  const renderTarjetas = (paquetes) => {
+  const renderTarjetas = paquetes => {
     return paquetes.map((paquete, index) => (
       <TarjetaDescriptivaPaquetes
         key={index}
@@ -15,10 +16,7 @@ const CheckupIndex = ({ contenido }) => {
   };
   return (
     <section id="paquetes" className={styles.checkupIndex}>
-      <div className={styles.subtitulo}>
-        <h2>Estudios clinicos para cuidar tu salud.</h2>
-        <div className={styles.lineaSubrayado}></div>
-      </div>
+      <TituloDivisor titulo="Estudios clinicos para cuidar tu salud." />
       <div className={styles.gridTarjetas}>{renderTarjetas(contenido)}</div>
     </section>
   );

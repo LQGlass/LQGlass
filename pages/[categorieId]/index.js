@@ -28,7 +28,7 @@ function analisis(props) {
           <h1>{categorieName}</h1>
           <div className={styles.lineaSubrayado}></div>
         </div>
-        {props.studies.map((el) => {
+        {props.studies.map(el => {
           return (
             <CasillaAnalisis
               nombre={el.nombre}
@@ -50,18 +50,18 @@ export async function getStaticPaths() {
   const snapshot = await getDocs(collectionRef);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     categories.push(doc.data());
   });
   return {
     fallback: false,
-    paths: categories.map((categorie) => ({
+    paths: categories.map(categorie => ({
       params: { categorieId: categorie.nombre },
     })),
   };
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async context => {
   let studies = [];
   const categorieName = context.params.categorieId;
   //se llama a todas las categorias con subcoleccion de examenes
@@ -73,7 +73,7 @@ export const getStaticProps = async (context) => {
   const snapshot = await getDocs(collectionRef);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     studies.push(doc.data());
   });
 

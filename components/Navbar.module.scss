@@ -1,24 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 
 .cintilla {
-  background-image: linear-gradient(#45b8ac, #00554c);
+  background-color: $primary-color;
   width: auto;
   height: 7vh;
   display: flex;
-  padding: 5px 10%;
+  padding: 5px 5rem;
   justify-content: space-between;
   align-items: center;
 
   .tituloCintilla {
-
-      color: white;
-      font-family: $primary-font;
-      font-weight: bold;
-    
+    color: white;
+    font-family: $primary-font;
+    font-weight: bold;
   }
 
   .idiomas {
@@ -34,13 +28,14 @@ $primary-font: "Montserrat", sans-serif;
 .nav {
   display: flex;
   padding: 10px 5%;
-  height: 18vh;
+  height: 15vh;
   background-color: white;
   justify-content: space-between;
   align-items: center;
   box-shadow: #071d49 1px 1px 5px;
 
-  .linkNavDiv, li {
+  .linkNavDiv,
+  li {
     cursor: pointer;
     text-decoration: none;
     color: $primary-color;
@@ -50,11 +45,13 @@ $primary-font: "Montserrat", sans-serif;
     font-weight: bold;
   }
 
-
-  .linkNavDiv:hover, li:hover {
+  .linkNavDiv:hover {
     color: $secondary-color;
-    text-shadow: 1px -1px 1px gray;
-    font-size: 1.5rem;
+    scale: 150%;
+  }
+  li:hover {
+    color: $secondary-color;
+    scale: 110%;
   }
 
   .logo {
@@ -63,23 +60,30 @@ $primary-font: "Montserrat", sans-serif;
     height: 5rem;
   }
 
-  
+  .separador {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .separador {
+    cursor: default;
+  }
 }
 
 .dropMenuWrapper {
   position: relative;
-  
 }
 
-
 .dropDownMenu {
-  border: 1px solid $primary-color;
+  border: 1px solid $secondary-color;
   border-radius: 1rem;
-  background-color: white;
   position: absolute;
   width: auto;
   padding: 2rem 3rem;
   box-shadow: 3px 3px 10px black;
+  background: $primary-color;
+  z-index: 2;
 
   ul {
     display: grid;
@@ -87,12 +91,11 @@ $primary-font: "Montserrat", sans-serif;
     gap: 2rem;
   }
 
-  ul, li{
+  ul,
+  li {
+    color: white;
     margin-left: 0;
     padding-left: 0;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
-
-
-
