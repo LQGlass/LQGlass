@@ -1,58 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 
 .perfil {
-    display: flex;
+  display: flex;
 
-    .datosPerfil {
-        padding: 3rem 5rem;
-        li{
-            padding: 1rem;
-            font-weight: bold;
-        }
+  .datosPerfil {
+    padding: 3rem 5rem;
+    li {
+      padding: 1rem;
+      font-weight: bold;
     }
+  }
 }
 
 .menuPerfil {
-    font-family: $primary-font;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 4rem;
-    background-color: $primary-color;
-    height: 70vh;
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 4rem;
+  background-color: $primary-color;
+  height: 70vh;
 
-    .menuOptions {
-        cursor: pointer;
-        padding: 10px;
-        text-decoration: none;
-        color: $secondary-color;
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
+  .menuOptions {
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
 
-    .menuOptions:hover {
-        text-decoration: underline;
-        color: white;
-    }
-
+  .menuOptions:hover {
+    text-decoration: underline;
+  }
 }
 
 .navMenuPerfil {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 1rem 5rem;
-    border-bottom: 1px solid #071d49;
-    button {
-        border-radius: 1rem;
-        padding: .5rem;
-        margin: 0;
-        font-weight: bold;
-        height: 5rem;
-    }
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 5rem;
+  border-bottom: 1px solid #071d49;
+  button {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    font-weight: bold;
+    height: 5rem;
+  }
 }

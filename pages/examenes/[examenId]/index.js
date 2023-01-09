@@ -53,7 +53,7 @@ export async function getStaticProps(context) {
   const examenName = context.params.examenId;
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
-    collectionGroup(db, "examenes"),
+    collectionGroup(db, "examenes"), limit(5),
     where("nombre", "==", examenName)
   );
   //se genera un snapshor con todos los documentos

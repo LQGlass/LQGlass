@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 .formularioFacturas {
   display: flex;
   justify-content: space-around;
@@ -10,7 +6,7 @@ $primary-font: "Montserrat", sans-serif;
   form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 50%;
   }
   .direccion {
@@ -21,14 +17,13 @@ $primary-font: "Montserrat", sans-serif;
 
   input {
     border: 1px solid $primary-color;
-    border-radius: 20px;
-    padding: 1rem 2rem;
+    border-radius: 2em;
+    padding: 1rem 1rem;
     color:#071d49;
-    background-color: rgba($color: #071d49, $alpha: .5);
   }
 
   input::placeholder {
-    color: white;
+    color: $primary-color;
   }
 
   .radio{
