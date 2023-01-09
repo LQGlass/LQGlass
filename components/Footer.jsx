@@ -12,7 +12,7 @@ function Footer() {
     <section className={styles.footer}>
       <div>
         <div>
-          <LQGIcon />
+          <Link href={"/"}><img src="../images/logo-invert.png" width={200} alt="Logo" /></Link>
         </div>
         <div>
           <p>Copyrigth 2022</p>

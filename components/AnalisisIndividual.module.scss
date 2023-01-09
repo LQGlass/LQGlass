@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 
 .container {
   background-image: url("https://laboratorioechevarne.com/wp-content/uploads/2019/02/industria-quimica-1920x1280.jpg");
@@ -24,7 +20,7 @@ $primary-font: "Montserrat", sans-serif;
 }
 
 .descripcionAnalisis {
-  background-color: rgba($color: #45b8ac, $alpha: 0.8);
+  background-color: rgba($color: $primary-color, $alpha: 0.9);
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -39,18 +35,17 @@ $primary-font: "Montserrat", sans-serif;
 
   p {
     font-size: 1.5rem;
+    color: white;
   }
   strong {
-    color: #071d49;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 1px white;
+    color: #45b8ac;
   }
 
   .precio p {
     color: white;
     font-weight: bold;
     font-size: 2.5rem;
-    text-shadow: 2px 2px 2px black;
   }
 }
 
@@ -87,7 +82,7 @@ $primary-font: "Montserrat", sans-serif;
 }
 
 .descripcionProcedimiento {
-  background-color: rgba($color: white, $alpha: 0.8);
+  background-color: rgba($color: white, $alpha: 0.9);
   width: 100%;
   display: flex;
   justify-content: flex-start;

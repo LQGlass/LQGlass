@@ -50,7 +50,7 @@ $primary-font: "Montserrat", sans-serif;
       font-weight: bold;
       font-size: 1.5rem;
       width: 80%;
-      text-shadow: 1px 1px 2px $primary-color;
+      /* text-shadow: 1px 1px 2px $primary-color; */
     }
 
     dd {
@@ -73,7 +73,7 @@ $primary-font: "Montserrat", sans-serif;
       font-weight: bold;
       color: $primary-color;
       margin-left: auto;
-      text-shadow: 2px 2px 2px $secondary-color;
+      /* text-shadow: 2px 2px 2px $secondary-color; */
     }
 
     .costoAhorro {
@@ -91,5 +91,7 @@ $primary-font: "Montserrat", sans-serif;
 }
 
 .casillaAnalisis:hover {
-  background-image: linear-gradient(to bottom right, $secondary-color, white);
+ /*  background-image: linear-gradient(to bottom right, $secondary-color, white); */
+ background-color: rgba($color: $secondary-color, $alpha: 0.8);
+  scale: 105%;
 }

@@ -10,6 +10,7 @@ import CheckupIndex from "../components/CheckupIndex";
 import firebaseApp from "../firebase/firebase";
 import Head from "next/head";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import CliengoScript from "../components/CliengoScript";
 const db = getFirestore(firebaseApp);
 
 function HomePage({ categories, paquetes }) {
@@ -20,6 +21,7 @@ function HomePage({ categories, paquetes }) {
       </Head>
       <Navbar />
       <WhatsappFloat />
+      <CliengoScript/>
       <Hero />
       <CheckupIndex contenido={paquetes} />
       <CategoryIndex contenido={categories} />

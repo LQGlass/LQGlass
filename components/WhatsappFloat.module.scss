@@ -5,26 +5,24 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .whatsappFloat {
-  width: 80px;
-  height: 80px;
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
   background-color: #45b8ac;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0.8;
+  right: 1em;
+  bottom: 7em;
   transition: all 0.3s;
   z-index: 3;
+  box-shadow: 1px 1px 5px black;
 }
 
-.whatsappFloat:hover {
+/* .whatsappFloat:hover {
   width: 100px;
   height: 100px;
   opacity: 1;
-}
+} */
 
 .whatsappFloat:hover {
   cursor: pointer;
-  opacity: 1;
-  border: 2px solid white;
 }

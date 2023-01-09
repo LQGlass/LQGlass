@@ -1,71 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 
 .footer {
-    background-color: $secondary-color;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 5%;
-    
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 5%;
 
-    p{
-        color: white;
-    }
+  img {
+    scale:100%;
+    transition: all .3s;
+    margin-bottom: 2em;
+  }
 
-    input {
-        background-color: rgba($color: #ffff, $alpha: .5);
-        border-style: none;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 5px 0;
-    }
+  img:hover {
+    cursor: pointer;
+    scale: 80%;
+    border: 1px solid white;
+    border-radius: 3em;
+    padding: 1em;
+  }
 
-    input::placeholder{
-        color: white;
-    }
-
-    ul {
-        list-style:none;
-        text-align: left;
-        font-family: $primary-font;
-    }
-
-    button {
-        background-color: $primary-color;
-        border: 2px solid $primary-color;
-        color: white;
-        margin: 5px 0;
-    }
-    select {
-        background-color: #071d49;
-        border-style: none;
-        color: white;
-        padding: 10px;
-    }
-
-}
-
-
-
-.footerPagina{
+  form {
     display: flex;
     flex-direction: column;
+  }
 
-    a {
-        text-decoration: none;
-        font-family: $primary-font;
-        color: white;
-        margin-bottom: 10px;
+  p {
+    color: white;
+  }
 
-    }
+  input {
+    background-color: rgba($color: #ffff, $alpha: 0.5);
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  input::placeholder {
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    text-align: left;
+    font-family: $primary-font;
+  }
+
+  button {
+    background-color: $secondary-color;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    margin: 5px 0;
+  }
+  select {
+    background-color: $secondary-color;
+    border-style: none;
+    color: $primary-color;
+    padding: 10px;
+  }
 }
 
+.footerPagina {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    font-family: $primary-font;
+    color: white;
+    margin-bottom: 10px;
+  }
+}
