@@ -1,21 +1,28 @@
 import styles from "./Footer.module.scss";
-import LQGIcon from "./LQGIcon";
 import Link from "next/link";
 import { useState } from "react";
 
 function Footer() {
   const [informes, setinformes] = useState(false);
-  const informesHandler=()=>{
-    setinformes(!informes)
+  const informesHandler = () => {
+    setinformes(!informes);
+  };
+  let year = 1999;
+  function getYearFooter() {
+    const d = new Date();
+    year = d.getFullYear();
   }
+  getYearFooter();
   return (
     <section className={styles.footer}>
       <div>
         <div>
-          <Link href={"/"}><img src="../images/logo-invert.png" width={200} alt="Logo" /></Link>
+          <Link href={"/"}>
+            <img src="../images/logo-invert.png" width={200} alt="Logo" />
+          </Link>
         </div>
         <div>
-          <p>Copyrigth 2022</p>
+          <p>©️ Copyright {year}</p>
           <p>Todos los derechos reservados</p>
         </div>
       </div>
@@ -37,11 +44,14 @@ function Footer() {
         <Link href={"/politica-privacidad"}>Politica de Privacidad</Link>
       </div>
       <div>
-        <select name="informes" onChange={informesHandler} id="informes" defaultValue={"value2"}>
+        <select
+          name="informes"
+          onChange={informesHandler}
+          id="informes"
+          defaultValue={"value2"}
+        >
           <option value="value1">Quejas</option>
-          <option value="value2">
-            Informes
-          </option>
+          <option value="value2">Informes</option>
         </select>
         <form>
           <input placeholder="Nombre" type="text" />

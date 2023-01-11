@@ -16,14 +16,17 @@ const CategoryIndex = ({ contenido }) => {
     ));
   };
   return (
-    <section className={styles.categoryIndex}>
-      <TituloDivisor titulo="Categorias de estudio." />
-      <div className={styles.gridTarjetas}>
-        {renderTarjetas(contenido.slice(0, 6))}
-      </div>
-
-      <Button url="/estudios" content="Ver todas" />
-    </section>
+    <>
+      <section id={"categorias"} className={styles.categoryIndex}>
+        <TituloDivisor titulo="Categorias de estudio." />
+        <div className={styles.gridTarjetas}>
+          {renderTarjetas(contenido.slice(0, 6))}
+        </div>
+        <div className={styles.botonCategorias}>
+          <Button url="/estudios" class="boton-examenes" content="Ver todas" />
+        </div>
+      </section>
+    </>
   );
 };
 

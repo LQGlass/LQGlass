@@ -20,6 +20,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+    "/[categorieId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/[categorieId].js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,10 +35,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/procedimiento/[procedimientoId]": [
+    "/estudios": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/procedimiento/[procedimientoId].js"
+      "static/chunks/pages/estudios.js"
+    ],
+    "/examenes/[examenId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/examenes/[examenId].js"
+    ],
+    "/nosotros": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/nosotros.js"
+    ],
+    "/perfil": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/perfil.js"
     ]
   },
   "ampFirstPages": []

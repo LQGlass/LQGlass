@@ -1,6 +1,5 @@
 import styles from "./BlogSeccion.module.scss";
 import Button from "./Button";
-import ButtonOutline from "./ButtonOutline";
 import CasillaBlog from "./CasillaBlog";
 import TituloDivisor from "./TituloDivisor";
 
@@ -25,7 +24,7 @@ function BlogSeccion() {
             />
           </div>
 
-          <ButtonOutline url="/blog" content="Ver más" />
+          <Button url="/blog" content="Ver más" />
         </div>
       </section>
     </>

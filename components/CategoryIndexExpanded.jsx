@@ -1,11 +1,12 @@
 import styles from "./CategoryIndexExpanded.module.scss";
 import TarjetaDescriptiva from "./TarjetaDescriptiva";
+import Button from "./Button";
 const CategoryIndexExpanded = ({ categories }) => {
-  const renderTarjetas = (categorias) => {
+  const renderTarjetas = categorias => {
     return categorias.map((categorie, index) => (
       <TarjetaDescriptiva
         key={index}
-        image={"./images/medicalIcons/"+index+".png"}
+        image={"./images/medicalIcons/" + index + ".png"}
         nombreCategoria={categorie ? categorie : "Cargando"}
         descripcion={categorie ? categorie : "Cargando"}
       />
@@ -21,6 +22,13 @@ const CategoryIndexExpanded = ({ categories }) => {
         <div className={styles.gridTarjetas}>
           {categories && renderTarjetas(categories)}
           {!categories && <h2>Cargando...</h2>}
+        </div>
+        <div className={styles.botonCategorias}>
+          <Button
+            url="/#categorias"
+            class="boton-examenes"
+            content="Regresar"
+          />
         </div>
       </section>
     </div>

@@ -3,12 +3,13 @@ import Navbar from "../components/Navbar";
 import styles from "./nosotros.module.scss";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import TituloHeader from "../components/TituloHeader";
 
 const promociones = () => {
   return (
     <div>
       <Navbar />
-      <Header title="Promociones" />
+      <TituloHeader titulo="Promociones" />
 
       <div className={styles.nosotros}>
         <div className={styles.textoNosotros}>

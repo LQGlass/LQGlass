@@ -1,29 +1,29 @@
 body {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-p{
-    color: #071D49;
-    font-family: 'Montserrat', sans-serif;
+p {
+  color: #071d49;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 button {
-    background-color: #45B8AC;
-    width: 100px;
-    border-radius: 3px;
-    border-style: none;
-    margin: 0 5px;
-    font-size: .7rem;
-    
-
+  background-color: #45b8ac;
+  width: 100px;
+  padding: 1em;
+  border-radius: 50%;
+  border-style: none;
+  margin: 0 5px;
+  font-size: 0.7rem;
 }
 
-h1,h2,h3,h4,h5{
-    font-family: 'Montserrat', sans-serif;
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
 }

@@ -3,7 +3,6 @@
   background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 50px;
 
   h2 {
@@ -13,34 +12,31 @@
     text-align: left;
     font-family: $primary-font;
     font-weight: bold;
+  }
+
+  .botonCategorias {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border-radius: 3em;
+      box-shadow: 2px 2px 2px black;
+    }
+    button:hover {
+      box-shadow: none;
+    }
   }
 }
 .checkupIndex {
   background-image: url("http://www.diariosigloxxi.com/images/showid/3710200");
-
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-
-  h2 {
-    padding: 20px 0;
-    color: $secondary-color;
-    font-size: 2rem;
-    text-align: left;
-    font-family: $primary-font;
-    font-weight: bold;
-  }
-
-  .gridTarjetas {
-    padding: 0 10%;
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    gap: 0 2%;
-  }
 }
 
 .gridTarjetas {
+  padding: 0 10%;
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-columns: 3fr 3fr 3fr;
   gap: 0 2%;
 }

@@ -1,16 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../styles/variables";
 
 .categoryIndex {
-  
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   .gridTarjetas {
     padding: 0 10%;
@@ -26,14 +20,26 @@ $primary-font: "Montserrat", sans-serif;
   background-color: #071d49;
 }
 .container {
-    background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
-    padding: 0;
-    margin: 0;
+  background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
+  padding: 0;
+  margin: 0;
 }
 
-
 .subtitulo {
-    width: 60%;
-    background-color: rgba($color: #ffff, $alpha: .5);
-    padding: 5% 10%;
+  width: 60%;
+  background-color: rgba($color: #ffff, $alpha: 0.5);
+  padding: 5% 10%;
+}
+
+.botonCategorias {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5em;
+  button {
+    border-radius: 3em;
+    box-shadow: 2px 2px 2px black;
   }
+  button:hover {
+    box-shadow: none;
+  }
+}

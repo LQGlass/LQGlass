@@ -3,16 +3,17 @@ import Navbar from "../components/Navbar";
 import styles from "./nosotros.module.scss";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import TituloHeader from "../components/TituloHeader";
 
 const nosotros = () => {
   return (
     <div>
       <Navbar />
-      <Header title="Nosotros" />
+      <TituloHeader titulo="Nosotros" />
 
       <div className={styles.nosotros}>
         <div className={styles.imagenNosotros}>
-          <img src="/images/nosotros.jpg" width={600}/>
+          <img src="/images/nosotros.jpg" width={600} />
         </div>
         <div className={styles.textoNosotros}>
           <h2>Laboratorios Quimicos Glass</h2>

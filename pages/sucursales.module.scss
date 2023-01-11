@@ -1,19 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-$primary-color: #071D49;
-$secondary-color:#45B8AC;
-$primary-font : 'Montserrat', sans-serif;
-
-
-.sucursal {
-    display: flex;
-    color: $primary-color;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 200px;
-    align-items: center;
-}
+@import "../styles/variables";
 
 #sucursales {
-    margin-top: -200px;
+  background-color: $primary-color;
+  padding: 5em 10%;
+}
+
+.casillaWrapper {
+  display: flex;
+  justify-content: center;
 }

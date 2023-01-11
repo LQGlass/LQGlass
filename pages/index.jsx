@@ -18,10 +18,14 @@ function HomePage({ categories, paquetes }) {
     <div>
       <Head>
         <title>Laboratorios Quimicos Glass</title>
+        <meta
+          property="og:title"
+          content="Laboratorios Quimicos Glass"
+          key="title"
+        />
       </Head>
       <Navbar />
-      <WhatsappFloat />
-      <CliengoScript/>
+      <CliengoScript />
       <Hero />
       <CheckupIndex contenido={paquetes} />
       <CategoryIndex contenido={categories} />

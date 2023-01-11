@@ -1,0 +1,13 @@
+@import "../styles/variables";
+
+.botonPrimario {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border-radius: 3em;
+  box-shadow: 2px 2px 2px black;
+}
+.botonPrimario:hover {
+  background-color: $primary-color;
+  color: white;
+  box-shadow: none;
+}

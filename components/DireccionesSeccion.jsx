@@ -1,6 +1,9 @@
+import DireccionCasilla from "./DireccionCasilla";
 import styles from "./DireccionesSeccion.module.scss";
 
 function DireccionesSeccion() {
+  const direccionNaucalpan =
+    "Av. Adolfo López Mateos No. 22 Local G, Plaza Santa Cruz, Col. Santa Cruz del Monte, Naucalpan Estado de México";
   return (
     <section id={"sucursales"} className={styles.direccionesSeccion}>
       <div>
@@ -10,21 +13,10 @@ function DireccionesSeccion() {
         <div className={styles.lineaSubrayado}></div>
       </div>
       <div className={styles.direccionWrapper}>
-        <div className={styles.direccionCasilla}>
-          <h2>Naucalpan</h2>
-          <address>
-            Av. Adolfo López Mateos No. 22 Local G, Plaza Santa Cruz, Col. Santa
-            Cruz del Monte, Naucalpan estado de México,
-          </address>
-        </div>
-        <a target={"_blank"} href="https://goo.gl/maps/uJBYXhB8yJGBTHVz7">
-          <img
-            className={styles.ubicacion}
-            src="/images/ubicacion.png"
-            width={600}
-            alt="mapa"
-          />
-        </a>
+        <DireccionCasilla
+          direccion={direccionNaucalpan}
+          nombreDireccion={"Naucalpan"}
+        />
       </div>
     </section>
   );
