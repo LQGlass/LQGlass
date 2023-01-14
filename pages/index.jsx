@@ -15,14 +15,10 @@ const db = getFirestore(firebaseApp);
 
 function HomePage({ categories, paquetes }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Laboratorios Quimicos Glass</title>
-        <meta
-          property="og:title"
-          content="Laboratorios Quimicos Glass"
-          key="title"
-        />
+  <meta name="description" content="Laboratorio de estudios médicos en Lomas Verdes, Estado de México."/>
       </Head>
       <Navbar />
       <CliengoScript />
@@ -33,7 +29,7 @@ function HomePage({ categories, paquetes }) {
       <DireccionesSeccion />
       <BlogSeccion />
       <Footer />
-    </div>
+    </>
   );
 }
 

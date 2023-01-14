@@ -1,26 +1,37 @@
-import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import styles from "./nosotros.module.scss";
+import styles from "./promociones.module.scss";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import TituloHeader from "../components/TituloHeader";
 
 const promociones = () => {
   return (
-    <div>
+    <section className={styles.promocionesSeccion}>
       <Navbar />
-      <TituloHeader titulo="Promociones" />
 
-      <div className={styles.nosotros}>
-        <div className={styles.textoNosotros}>
-          <h2>Promociones proximamente</h2>
+      <TituloHeader clase={true} titulo="Promociones" />
+      <div className={styles.promocionesWrapper}>
+        <div>
+          <Image src={"/images/Promociones/promo6.jpg"} width={640} height={640} alt={"Promocion"} />
         </div>
-        <div className={styles.imagenNosotros}>
-          <Image src="/images/logo.png" width={600} height={250} />
+        <div>
+          <Image src={"/images/Promociones/promo5.jpg"} width={640} height={640} alt={"Promocion"} />
+        </div>
+        <div>
+          <Image src={"/images/Promociones/promo4.jpg"} width={640} height={640} alt={"Promocion"} />
+        </div>
+        <div>
+          <Image src={"/images/Promociones/promo3.jpg"} width={640} height={640} alt={"Promocion"} />
+        </div>
+        <div>
+          <Image src={"/images/Promociones/promo2.jpg"} width={640} height={640} alt={"Promocion"} />
+        </div>
+        <div>
+          <Image src={"/images/Promociones/promo1.jpg"} width={640} height={640} alt={"Promocion"} />
         </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 };
 

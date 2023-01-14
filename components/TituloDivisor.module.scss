@@ -25,9 +25,9 @@
 
 .containImage {
   position: relative;
-  height: 9em;
+  height: 12em;
   width: 50%;
-  background-color: rgba($color: $secondary-color, $alpha: 0.8);
+  background-color: rgba($color: $primary-color, $alpha: 0.8);
 
   img {
     position: absolute;
@@ -45,18 +45,59 @@
     width: 90%;
 
     h2 {
-      padding: 0 0;
-      color: $primary-color;
-      font-size: 2rem;
+      color: white;
+      font-size: 4rem;
       text-align: left;
       font-family: $primary-font;
       font-weight: bold;
+      margin-bottom: .5em;
     }
 
     .lineaSubrayado {
       width: 80%;
       height: 5px;
-      background-color: #071d49;
+
+      background-color: white;
     }
   }
 }
+.containSolid {
+  position: relative;
+  height: 12em;
+  width: 50%;
+  background-color: rgba($color: $primary-color, $alpha: 1);
+
+  img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .titulo {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+
+    h2 {
+      color: white;
+      font-size: 4rem;
+      text-align: left;
+      font-family: $primary-font;
+      font-weight: bold;
+      margin-bottom: .5em;
+    }
+
+    .lineaSubrayado {
+      width: 80%;
+      height: 5px;
+
+      background-color: white;
+    }
+  }
+}
+
+

@@ -1,0 +1,33 @@
+@import "../styles/variables";
+
+.promociones {
+    padding:5% 10%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+
+    .textoPromociones {
+        width:50%
+    }
+    
+}
+
+.tituloPromociones {
+    padding:500px;
+}
+
+.promocionesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5% 10%;
+    gap: 5em;
+
+    div {
+        border: 2px solid $primary-color;
+        padding: 1em;
+    }
+
+}

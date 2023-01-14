@@ -5,7 +5,8 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .blogSeccion {
-  background-image: url("https://fitivate.com/wp-content/uploads/2019/05/bigstock-206844388.jpg");
+  background-image: url("../public/images/backgrounds/background1.jpg");
+  padding: 5em 10%;
 
   button {
     margin: 2em;
@@ -16,7 +17,7 @@ $primary-font: "Montserrat", sans-serif;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   gap: 100px;
-
+padding: 10%;
   h3 {
     font-size: 2rem;
   }

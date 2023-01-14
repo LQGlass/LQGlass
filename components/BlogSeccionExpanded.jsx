@@ -1,9 +1,11 @@
 import styles from "./BlogSeccion.module.scss";
 import CasillaBlog from "./CasillaBlog";
+import TituloHeader from "./TituloHeader";
 
 function BlogSeccion() {
   return (
     <section className={styles.blogSeccion}>
+      <TituloHeader titulo="Blog" />
       <div className={styles.blogWrapper}>
         <CasillaBlog
           titulo="Titulo de la Nota"
