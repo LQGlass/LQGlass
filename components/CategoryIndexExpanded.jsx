@@ -6,7 +6,7 @@ const CategoryIndexExpanded = ({ categories }) => {
     return categorias.map((categorie, index) => (
       <TarjetaDescriptiva
         key={index}
-        image={"./images/medicalIcons/" + index + ".png"}
+        image={"./images/iconos-categoria/" + categorie + ".png"}
         nombreCategoria={categorie ? categorie : "Cargando"}
         descripcion={categorie ? categorie : "Cargando"}
       />

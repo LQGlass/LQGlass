@@ -6,7 +6,7 @@ export default function AnalisisIndividual({ examen }) {
     <div className={styles.container}>
       <div className={styles.titulo}>
         <div>
-          <img width={50} src="../images/medicalIcons/0.png" alt="" />
+          <img width={50} src={"../images/iconos-categoria/" + examen.categoria + ".png"} alt="" />
         </div>
         <div>
           <p>{examen.categoria}</p>
@@ -16,7 +16,7 @@ export default function AnalisisIndividual({ examen }) {
       <div className={styles.wrapperAnalisis}>
         <div className={styles.descripcionAnalisis}>
           <div>
-            <img width={100} src="../images/medicalIcons/10.png" alt="" />
+            <img className={styles.iconoDescripcion} width={100} src={"../images/iconos-categoria/" + examen.categoria + ".png"} alt="" />
           </div>
           <div className={styles.descripcion}>
             <p>

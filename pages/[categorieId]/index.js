@@ -11,7 +11,6 @@ import {
   collection,
   getDocs,
   query,
-  orderBy,
   where,
   limit,
 } from "firebase/firestore";
@@ -34,6 +33,7 @@ function analisis(props) {
               nombre={el.nombre}
               descripcion={el.descripcion}
               precio={el.precio}
+              categoria = {el.categoria}
             />
           );
         })}
