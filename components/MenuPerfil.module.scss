@@ -2,51 +2,65 @@
 
 .perfil {
   display: flex;
+  height: 100%;
 
   .datosPerfil {
     padding: 3rem 5rem;
-    li {
-      padding: 1rem;
-      font-weight: bold;
-    }
   }
 }
 
 .menuPerfil {
   font-family: $primary-font;
+  font-size: 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem 4rem;
+  padding: 2em 2em 20em;
   background-color: $primary-color;
-  height: 70vh;
+  box-shadow: 3px 0px 5px black;
+  border-bottom: 2px solid $secondary-color;
+  width: 25%;
 
   .menuOptions {
-    cursor: pointer;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
+    display: flex;
+    p {
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  
+    p:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      margin-right: 1em;
+      width: 2em;
+      height: 2em;
+      filter: invert(100%);
+    }
+  
+  
   }
 
-  .menuOptions:hover {
-    text-decoration: underline;
-  }
+
+
+  
 }
 
 .navMenuPerfil {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: auto;
   align-items: center;
   padding: 1rem 5rem;
   border-bottom: 1px solid #071d49;
+  box-shadow: 2px 2px 5px gray;
   button {
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin: 0;
-    font-weight: bold;
-    height: 5rem;
+    border-radius: 1em;
+    padding: 0.5em;
+    height: 5em;
   }
 }

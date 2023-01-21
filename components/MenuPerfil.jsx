@@ -35,8 +35,13 @@ function MenuPerfil({ data }) {
               setFacturationProfile(false);
             }}
           >
-            {" "}
-            Datos del Perfil
+            <img
+              src="./images/iconos-ui/corazon-pc.png"
+              width={50}
+              height={50}
+              alt=""
+            />
+            <p>Datos del Perfil</p>
           </div>
           {/* Muestra el componente ResultadosPerfil cuando se hace clic en este botón */}
           <div
@@ -47,8 +52,13 @@ function MenuPerfil({ data }) {
               setFacturationProfile(false);
             }}
           >
-            {" "}
-            Resultados
+            <img
+              src="./images/iconos-ui/resultados.png"
+              width={50}
+              height={50}
+              alt=""
+            />
+            <p>Resultados</p>
           </div>
           <div
             className={styles.menuOptions}
@@ -58,8 +68,13 @@ function MenuPerfil({ data }) {
               setFacturationProfile(true);
             }}
           >
-            {" "}
-            Facturacion
+            <img
+              src="./images/iconos-ui/facturacion.png"
+              width={50}
+              height={50}
+              alt=""
+            />
+            <p>Facturacion</p>
           </div>
         </div>
         <div>

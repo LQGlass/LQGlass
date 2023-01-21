@@ -4,12 +4,10 @@ import styles from "./IniciarSesionForm.module.scss";
 import FirebaseApp from "../firebase/firebase";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
-  signInWithCredential,
+  createUserWithEmailAndPassword
   signInWithEmailAndPassword,
 } from "firebase/auth";
 const auth = getAuth(FirebaseApp);
-import Footer from "./Footer";
 
 function IniciarSesionForm() {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -18,8 +16,10 @@ function IniciarSesionForm() {
     e.preventDefault();
     const correo = document.getElementById("formCorreo").value;
     const contra = e.target.formContra.value;
+    const name = e.target.formName.value;
+    const lName = e.target.formLName.value;
     if (isRegistering) {
-      const usuario = createUserWithEmailAndPassword(auth, correo, contra);
+      const usuario = createUserWithEmailAndPassword(auth, correo, contra,name,lName);
     } else {
       signInWithEmailAndPassword(auth, correo, contra);
     }
@@ -32,22 +32,27 @@ function IniciarSesionForm() {
           <Form.Label>Correo</Form.Label>
           <Form.Control type="email" placeholder="Ingresa tu correo" />
         </Form.Group>
-
+         {
+          isRegistering === true && <>
+          <Form.Group controlId="formName">
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="text" placeholder="Nombre" />
+        </Form.Group>
+          <Form.Group controlId="formLName">
+          <Form.Label>Apellidos</Form.Label>
+          <Form.Control type="text" placeholder="Apellidos" />
+        </Form.Group></>}
         <Form.Group controlId="formContra">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control type="password" placeholder="Contraseña" />
         </Form.Group>
-        {/*  {
-          isRegister === false && <>
-          <Form.Group controlId="formName">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña" />
-        </Form.Group>
+        {
+          isRegistering === true && <>
         <Form.Group controlId="formContraDos">
           <Form.Label>Repetir contraseña</Form.Label>
           <Form.Control type="password" placeholder="Contraseña" />
         </Form.Group></>
-        } */}
+        }
         <Button
         className={styles.signButton}
           style={{ width: "300px", display: "block" }}
