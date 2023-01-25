@@ -12,6 +12,9 @@ export default function ResultadosPerfil() {
         Recuerda que el correo con el que te registres debe ser el mismo que
         proporcionaste el dia de tus estudios.
       </p>
+      <p>
+        Y puedes ir a la seccion de datos de perfil para agregar tus folios.
+      </p>
     </>
   );
 }

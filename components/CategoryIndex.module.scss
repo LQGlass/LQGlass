@@ -1,9 +1,14 @@
 @import "../styles/variables";
 .categoryIndex {
-  background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/images/backgrounds/background3.jpg");
+  min-height: 100vh;
 
   h2 {
     padding: 20px 0;
@@ -28,10 +33,15 @@
   }
 }
 .checkupIndex {
-  background-image: url("http://www.diariosigloxxi.com/images/showid/3710200");
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/images/backgrounds/background4.webp");
+  min-height: 100vh;
 }
 
 .gridTarjetas {

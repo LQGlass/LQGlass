@@ -5,7 +5,12 @@ $secondary-color: #45b8ac;
 $primary-font: "Montserrat", sans-serif;
 
 .blogSeccion {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("../public/images/backgrounds/background1.jpg");
+  min-height: 100vh;
   padding: 5em 10%;
 
   button {
@@ -17,7 +22,7 @@ $primary-font: "Montserrat", sans-serif;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   gap: 100px;
-padding: 10%;
+  padding: 10%;
   h3 {
     font-size: 2rem;
   }

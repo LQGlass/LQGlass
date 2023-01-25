@@ -8,8 +8,9 @@ import firebaseApp from "../firebase/firebase";
 import { getAuth, signOut } from "firebase/auth";
 // Importa los componentes FormularioFacturas, DatosPerfil y ResultadosPerfil
 import FormularioFacturas from "./FormularioFacturas";
-import DatosPerfil from "./DatosPefil";
+import DatosPerfil from "./DatosPerfil";
 import ResultadosPerfil from "./ResultadosPerfil";
+import FacturasPerfil from "./FacturasPerfil";
 
 // Obtiene el objeto de autenticación de Firebase
 const auth = getAuth(firebaseApp);
@@ -20,6 +21,7 @@ function MenuPerfil({ data }) {
   const [dataProfile, setDataProfile] = useState(true);
   const [resultsProfile, setResultsProfile] = useState(false);
   const [facturationProfile, setFacturationProfile] = useState(false);
+  const [facturasProfile, setFacturasProfile] = useState(false);
 
   // Renderiza el menú y los componentes seleccionados
   return (
@@ -33,6 +35,7 @@ function MenuPerfil({ data }) {
               setDataProfile(true);
               setResultsProfile(false);
               setFacturationProfile(false);
+              setFacturasProfile(false);
             }}
           >
             <img
@@ -50,6 +53,7 @@ function MenuPerfil({ data }) {
               setDataProfile(false);
               setResultsProfile(true);
               setFacturationProfile(false);
+              setFacturasProfile(false);
             }}
           >
             <img
@@ -66,6 +70,24 @@ function MenuPerfil({ data }) {
               setDataProfile(false);
               setResultsProfile(false);
               setFacturationProfile(true);
+              setFacturasProfile(false);
+            }}
+          >
+            <img
+              src="./images/iconos-ui/solicitar-facturas.png"
+              width={50}
+              height={50}
+              alt=""
+            />
+            <p>Solicitar factura</p>
+          </div>
+          <div
+            className={styles.menuOptions}
+            onClick={() => {
+              setDataProfile(false);
+              setResultsProfile(false);
+              setFacturationProfile(false);
+              setFacturasProfile(true);
             }}
           >
             <img
@@ -74,7 +96,7 @@ function MenuPerfil({ data }) {
               height={50}
               alt=""
             />
-            <p>Facturacion</p>
+            <p>Facturas</p>
           </div>
         </div>
         <div>
@@ -82,6 +104,7 @@ function MenuPerfil({ data }) {
             {dataProfile && <DatosPerfil perfil={data} />}
             {resultsProfile && <ResultadosPerfil />}
             {facturationProfile && <FormularioFacturas />}
+            {facturasProfile && <FacturasPerfil />}
           </div>
         </div>
       </div>

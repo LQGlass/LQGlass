@@ -8,10 +8,12 @@ import MenuPerfil from "../../components/MenuPerfil";
 import LQGIcon from "../../components/LQGIcon";
 import Footer from "../../components/Footer";
 const auth = getAuth(firebaseApp);
+import { getFirestore, doc, getDoc, where } from "firebase/firestore";
+const db = getFirestore(firebaseApp);
 
-function cms() {
+function perfil() {
   const [usuario, setUsuario] = useState(null);
-  onAuthStateChanged(auth, (usuarioFirebase) => {
+  onAuthStateChanged(auth, usuarioFirebase => {
     if (usuarioFirebase) {
       setUsuario(usuarioFirebase);
     } else {
@@ -19,12 +21,13 @@ function cms() {
     }
   });
 
-  console.log(usuario)
   return (
     <>
       <nav className={styles.navMenuPerfil}>
         <LQGIcon />
-        {usuario && <button onClick={() => signOut(auth)}>Cerrar Sesión</button>}
+        {usuario && (
+          <button onClick={() => signOut(auth)}>Cerrar Sesión</button>
+        )}
       </nav>
       {usuario ? <MenuPerfil data={usuario} /> : <IniciarSesionForm />}
       <Footer />
@@ -32,4 +35,4 @@ function cms() {
   );
 }
 
-export default cms;
+export default perfil;

@@ -1,27 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$primary-color: #071d49;
-$secondary-color: #45b8ac;
-$primary-font: "Montserrat", sans-serif;
+@import "../../styles/variables";
 
 .analisisSection {
-  background-image: url("https://eurofins-megalab.com/wp-content/uploads/2020/02/2331-scaled.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../public/images/backgrounds/background3.jpg");
+  min-height: 100vh;
   color: white;
   font-family: $primary-font;
   padding: 5% 10%;
 
   .nameBox {
-    background-color: rgba($color: $secondary-color, $alpha: .8);
+    background-color: rgba($color: $secondary-color, $alpha: 0.8);
     width: 50%;
     padding: 20px;
     margin-bottom: 50px;
-    
+
     h1 {
       color: $primary-color;
     }
   }
-
-  
 
   .lineaSubrayado {
     width: 50%;
@@ -30,7 +29,7 @@ $primary-font: "Montserrat", sans-serif;
   }
 
   .casillaAnalisis {
-    background: rgba($color: #ffff, $alpha: .8);
+    background: rgba($color: #ffff, $alpha: 0.8);
     color: $primary-color;
     padding: 5%;
     border-radius: 6px;
@@ -91,7 +90,7 @@ $primary-font: "Montserrat", sans-serif;
 }
 
 .casillaAnalisis:hover {
- /*  background-image: linear-gradient(to bottom right, $secondary-color, white); */
- background-color: rgba($color: $secondary-color, $alpha: 0.8);
+  /*  background-image: linear-gradient(to bottom right, $secondary-color, white); */
+  background-color: rgba($color: $secondary-color, $alpha: 0.8);
   scale: 105%;
 }

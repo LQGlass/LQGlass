@@ -1,0 +1,39 @@
+@import "../styles/variables";
+
+.formFolios {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.foliosList {
+  padding: 0;
+  li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: decimal;
+  }
+}
+
+.deleteBtn {
+  width: 2em;
+  height: 2em;
+  font-size: 0.5em;
+  text-align: center;
+  color: white;
+  margin: 0 0 0 2em;
+  border-radius: 50%;
+  background-color: $primary-color;
+  padding: 0;
+}
+.deleteBtn:hover {
+  width: 2em;
+  height: 2em;
+  font-size: 0.5em;
+  text-align: center;
+  color: white;
+  margin: 0 0 0 2em;
+  border-radius: 50%;
+  background-color: red;
+  padding: 0;
+}

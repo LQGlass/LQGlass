@@ -12,22 +12,52 @@ const promociones = () => {
       <TituloHeader clase={true} titulo="Promociones" />
       <div className={styles.promocionesWrapper}>
         <div>
-          <Image src={"/images/Promociones/promo6.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo6.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
         <div>
-          <Image src={"/images/Promociones/promo5.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo5.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
         <div>
-          <Image src={"/images/Promociones/promo4.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo4.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
         <div>
-          <Image src={"/images/Promociones/promo3.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo3.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
         <div>
-          <Image src={"/images/Promociones/promo2.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo2.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
         <div>
-          <Image src={"/images/Promociones/promo1.jpg"} width={640} height={640} alt={"Promocion"} />
+          <Image
+            src={"/images/Promociones/promo1.jpg"}
+            width={320}
+            height={320}
+            alt={"Promocion"}
+          />
         </div>
       </div>
       <Footer />

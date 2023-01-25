@@ -67,13 +67,13 @@ function Navbar({ paquetes, categories }) {
         <div>
           <p className={styles.separador}>|</p>
         </div>
-        <Link href={"/resultados"}>
+        <Link href={"/perfil"}>
           <div className={styles.linkNavDiv}>Resultados</div>
         </Link>
         <div>
           <p className={styles.separador}>|</p>
         </div>
-        <Link href={"/perfil/facturacion"}>
+        <Link href={"/perfil"}>
           <div className={styles.linkNavDiv}>Factura</div>
         </Link>
 
