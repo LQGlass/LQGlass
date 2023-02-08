@@ -6,7 +6,7 @@
 
 .direccionCasilla {
   color: white;
-  margin: 5rem 0;
+  margin-bottom: 5em;
 }
 
 .ubicacion {
@@ -23,4 +23,10 @@
 .ubicacionImg:hover {
   cursor: pointer;
   scale: 120%;
+}
+
+.casilla {
+  background-color: rgba($color: $primary-color, $alpha: 0.8);
+  padding: 4em;
+  border-radius: 2em;
 }

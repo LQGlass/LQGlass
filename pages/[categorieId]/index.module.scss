@@ -12,19 +12,19 @@
   padding: 5% 10%;
 
   .nameBox {
-    background-color: rgba($color: $secondary-color, $alpha: 0.8);
+    background-color: rgba($color: $primary-color, $alpha: 1);
     width: 50%;
     padding: 20px;
     margin-bottom: 50px;
 
     h1 {
-      color: $primary-color;
+      color: white;
     }
   }
 
   .lineaSubrayado {
     width: 50%;
-    background-color: #071d49;
+    background-color: white;
     height: 5px;
   }
 

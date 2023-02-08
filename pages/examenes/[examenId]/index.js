@@ -20,14 +20,11 @@ export default function examenDetalles({ studio }) {
     <div>
       <Navbar />
       {studio ? (
-        <AnalisisIndividual
-
-          examen= {studio[0]}
-        />
+        <AnalisisIndividual examen={studio[0]} />
       ) : (
         <h2>Cargando...</h2>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
@@ -37,12 +34,12 @@ export async function getStaticPaths() {
   const collectionRef = query(collectionGroup(db, `examenes`));
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     examenes.push(doc.data());
   });
   return {
     fallback: true,
-    paths: examenes.map((examen) => ({
+    paths: examenes.map(examen => ({
       params: { examenId: examen.nombre },
     })),
   };
@@ -53,14 +50,14 @@ export async function getStaticProps(context) {
   const examenName = context.params.examenId;
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
-    collectionGroup(db, "examenes"), limit(5),
+    collectionGroup(db, "examenes"),
     where("nombre", "==", examenName)
   );
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  await snapshot.forEach((doc) => {
+  await snapshot.forEach(doc => {
     studio.push(doc.data());
   });
 

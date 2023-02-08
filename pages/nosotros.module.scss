@@ -1,14 +1,95 @@
 @import "../styles/variables";
 
-.nosotros {
-    padding:5% 10%;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 100px;
+.section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/images/backgrounds/background4.webp");
+  min-height: 100vh;
+}
 
-    .textoNosotros {
-        width:50%
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0 10% 0;
+  gap: 10em;
+
+  .block {
+    box-shadow: 5px 15px 15px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    background-color: white;
+
+    .imagen {
+      width: 49vw;
+      height: 500px;
+      position: relative;
     }
+
+    .slogan {
+      text-align: center;
+      margin: -2em 0 3em 0;
+    }
+
+    .texto p,
+    h3 {
+      padding: 0 3em;
+    }
+
+    .texto h2 {
+      margin-bottom: 2em;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 50vw;
+      height: 500px;
+    }
+  }
+
+  .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .valor {
+      background-color: $primary-color;
+      font-family: $primary-font;
+      border-radius: 4em;
+      margin-top: 2em;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 1em;
+      width: 80%;
+    }
+  }
+
+  .azul {
+    p,
+    h3 {
+      padding: 0 3em;
+      color: white;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+      text-align: center;
+      color: white;
+    }
+    background-color: $primary-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block > div {
+    width: 50vw;
+  }
 }

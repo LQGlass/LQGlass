@@ -1,11 +1,16 @@
 @import "../styles/variables";
 
 #sucursales {
-  background-color: $primary-color;
-  padding: 5em 10%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/images/backgrounds/background5.jpg");
+  min-height: 100vh;
 }
 
 .casillaWrapper {
+  padding: 5em 10%;
   display: flex;
   justify-content: center;
 }

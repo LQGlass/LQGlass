@@ -1,0 +1,96 @@
+@import "../styles/variables";
+
+.analisisSection {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/images/backgrounds/background3.jpg");
+  min-height: 100vh;
+  color: white;
+  font-family: $primary-font;
+  padding: 5% 10%;
+
+  .nameBox {
+    background-color: rgba($color: $primary-color, $alpha: 1);
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    h1 {
+      color: white;
+    }
+  }
+
+  .lineaSubrayado {
+    width: 50%;
+    background-color: white;
+    height: 5px;
+  }
+
+  .casillaAnalisis {
+    background: rgba($color: #ffff, $alpha: 0.8);
+    color: $primary-color;
+    padding: 5%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+    .casillaAnalisis:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+
+    dt {
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 80%;
+      /* text-shadow: 1px 1px 2px $primary-color; */
+    }
+
+    dd {
+      margin: 20px 0;
+      width: 80%;
+      border: 1px solid $primary-color;
+      padding: 10px;
+    }
+
+    .costoAntes {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: red;
+      justify-self: center;
+      text-decoration: line-through;
+    }
+
+    .precios {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-left: auto;
+      /* text-shadow: 2px 2px 2px $secondary-color; */
+    }
+
+    .costoAhorro {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+
+    .imagenCasillaAnalisis img {
+      width: 100px;
+      height: 100px;
+      margin-right: 100px;
+    }
+  }
+}
+
+.casillaAnalisis:hover {
+  /*  background-image: linear-gradient(to bottom right, $secondary-color, white); */
+  background-color: rgba($color: $secondary-color, $alpha: 0.8);
+  scale: 105%;
+}

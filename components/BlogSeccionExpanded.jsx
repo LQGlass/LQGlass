@@ -5,7 +5,7 @@ import TituloHeader from "./TituloHeader";
 function BlogSeccion() {
   return (
     <section className={styles.blogSeccion}>
-      <TituloHeader titulo="Blog" />
+      <TituloHeader clase={true} titulo="Blog" />
       <div className={styles.blogWrapper}>
         <CasillaBlog
           titulo="Titulo de la Nota"

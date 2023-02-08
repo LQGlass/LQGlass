@@ -1,22 +1,29 @@
 @import "../styles/variables";
 
 .logComponent {
-    padding: 5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    h1 {
-        color: $primary-color;
-    }
-    .signButton {
-        margin: 2rem 0;
-        align-self: center;
-        background-color: #45b8ac;
-    }
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    input::placeholder {
-        color:#071d49;
-    }
+  .forget {
+    cursor: pointer;
+
+    text-align: center;
+    color: #071d49;
+  }
+
+  h1 {
+    color: $primary-color;
+  }
+  .signButton {
+    margin: 2rem 0;
+    align-self: center;
+    background-color: #45b8ac;
+  }
+
+  input::placeholder {
+    color: #071d49;
+  }
 }

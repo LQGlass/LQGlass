@@ -29,6 +29,20 @@ function IniciarSesionForm() {
       console.error("Error adding document: ", e);
     }
   }
+
+  function passwordRecoverHandler(e) {
+    e.preventDefault();
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        // Password reset email sent!
+        location.reload();
+      })
+      .catch(error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  }
   async function submitHandler(e) {
     e.preventDefault();
     const correo = document.getElementById("formCorreo").value;
@@ -99,6 +113,9 @@ function IniciarSesionForm() {
             ? "¿Ya tienes cuenta? Inicia Sesión"
             : "¿No tienes cuenta? Registrate"}
         </Button>
+        <p className={styles.forget} onClick={passwordRecoverHandler}>
+          ¿Olvidaste la contraseña?
+        </p>
       </Form>
     </Container>
   );

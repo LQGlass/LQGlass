@@ -9,7 +9,7 @@ const sucursales = () => {
     <>
       <Navbar />
       <section id={styles.sucursales}>
-        <TituloHeader titulo="Sucursales" />
+        <TituloHeader clase={true} titulo="Sucursales" />
         <div className={styles.casillaWrapper}>
           <DireccionCasilla
             nombreDireccion={"Naucalpan"}

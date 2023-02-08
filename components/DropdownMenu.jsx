@@ -10,14 +10,7 @@ function DropdownMenu({ titulo }) {
     }
   }, []);
 
-  const paquetes = [
-    "Check up",
-    "Para El",
-    "Para Ella",
-    "Adulto Mayor",
-    "Kids",
-    "Perfiles",
-  ];
+  const paquetes = ["Check up", "Para El", "Para Ella", "Adulto Mayor", "Kids"];
 
   const categorias = [
     "Biología molecular",
@@ -56,6 +49,11 @@ function DropdownMenu({ titulo }) {
                     </Link>
                   );
                 })}
+              {isPaquetes && (
+                <Link href={`/perfiles`}>
+                  <li>Perfiles</li>
+                </Link>
+              )}
 
               {!isPaquetes &&
                 categorias.map(categoria => {

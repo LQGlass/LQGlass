@@ -1,7 +1,7 @@
 import styles from "./DireccionCasilla.module.scss";
 export default function DireccionCasilla({ nombreDireccion, direccion }) {
   return (
-    <div>
+    <div className={styles.casilla}>
       <div className={styles.direccionCasilla}>
         <h2>{nombreDireccion}</h2>
         <address>{direccion}</address>
