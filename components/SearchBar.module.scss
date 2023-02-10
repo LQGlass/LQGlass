@@ -1,0 +1,24 @@
+@import "../styles/variables";
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 3em 0;
+  input {
+    border-radius: 5em;
+    padding: 1em;
+    color: gray;
+    width: 50%;
+    border: none;
+  }
+
+  .enterButton {
+    border-radius: 5em;
+    margin-left: 2em;
+    background-color: $primary-color;
+    color: white;
+    box-shadow: 2px 2px 2px grey;
+  }
+  .enterButton:hover {
+    background-color: $secondary-color;
+  }
+}

@@ -5,25 +5,34 @@ import Navbar from "../components/Navbar";
 import DireccionesSeccion from "../components/DireccionesSeccion.jsx";
 import BlogSeccion from "../components/BlogSeccion";
 import Footer from "../components/Footer";
-import WhatsappFloat from "../components/WhatsappFloat";
 import CheckupIndex from "../components/CheckupIndex";
 import firebaseApp from "../firebase/firebase";
 import Head from "next/head";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  collectionGroup,
+} from "firebase/firestore";
 import CliengoScript from "../components/CliengoScript";
+import SearchBar from "../components/SearchBar";
 const db = getFirestore(firebaseApp);
 
-function HomePage({ categories, paquetes }) {
+function HomePage({ categories, paquetes, examenes }) {
+  console.log(examenes);
   return (
     <>
       <Head>
         <title>Laboratorios Quimicos Glass</title>
-  <meta name="description" content="Laboratorio de estudios médicos en Lomas Verdes, Estado de México."/>
+        <meta
+          name="description"
+          content="Laboratorio de estudios médicos en Lomas Verdes, Estado de México."
+        />
       </Head>
       <Navbar />
       <CliengoScript />
       <Hero />
-      <CheckupIndex contenido={paquetes} />
+      <CheckupIndex contenido={paquetes} examenes={examenes} />
       <CategoryIndex contenido={categories} />
       <InformesSeccion />
       <DireccionesSeccion />
@@ -39,12 +48,15 @@ export const getStaticProps = async () => {
   //se declara un array vacio para almacenar los datos
   let categories = [];
   let paquetes = [];
+  let examenes = [];
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = collection(db, "categorias");
   const collectionRef2 = collection(db, "grupo-paquetes");
+  const collectionRef3 = collectionGroup(db, "examenes");
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
   const snapshot2 = await getDocs(collectionRef2);
+  const snapshot3 = await getDocs(collectionRef3);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
   snapshot.forEach(doc => {
@@ -53,11 +65,15 @@ export const getStaticProps = async () => {
   snapshot2.forEach(doc => {
     paquetes.push(doc.id);
   });
+  snapshot3.forEach(doc => {
+    examenes.push(doc.data().nombre);
+  });
   return {
     //return the props as "categories"
     props: {
       categories,
       paquetes,
+      examenes,
     },
   };
 };

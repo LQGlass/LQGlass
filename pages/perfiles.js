@@ -10,7 +10,7 @@ const estudios = ({ perfiles }) => {
   return (
     <div>
       <Head>
-        <title>Categorias</title>
+        <title>Perfiles</title>
       </Head>
       <Navbar />
       <PerfilesIndex perfiles={perfiles} />

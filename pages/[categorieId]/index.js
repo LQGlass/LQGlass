@@ -33,7 +33,7 @@ function analisis(props) {
               nombre={el.nombre}
               descripcion={el.descripcion}
               precio={el.precio}
-              categoria = {el.categoria}
+              categoria={el.categoria}
             />
           );
         })}
@@ -67,7 +67,6 @@ export const getStaticProps = async context => {
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
     collectionGroup(db, "examenes"),
-    limit(5),
     where("categoria", "==", categorieName)
   );
   //se genera un snapshor con todos los documentos

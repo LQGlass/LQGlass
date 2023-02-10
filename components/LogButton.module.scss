@@ -8,14 +8,14 @@
   border-radius: 2em;
   box-shadow: 3px 3px 3px gray;
   transition: all 0.3s;
-  background-color: $secondary-color;
-  color: $primary-color;
+  background-color: $primary-color;
+  color: white;
 }
 
 .logIn:hover {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   cursor: pointer;
-  color: $secondary-color;
+  color: $primary-color;
 }
 
 .logIn:active {

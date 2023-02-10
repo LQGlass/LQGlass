@@ -3,8 +3,8 @@ import TarjetaDescriptivaPaquetes from "./TarjetaDescriptivaPaquetes";
 import TituloDivisor from "./TituloDivisor";
 import Link from "next/link";
 import styles2 from "./TarjetaDescriptiva.module.scss";
-
-const CheckupIndex = ({ contenido }) => {
+import SearchBar from "./SearchBar";
+const CheckupIndex = ({ contenido, examenes }) => {
   //function for the creation of the description blocks for the category section
   const renderTarjetas = paquetes => {
     return paquetes.map((paquete, index) => (
@@ -19,6 +19,8 @@ const CheckupIndex = ({ contenido }) => {
   return (
     <section id="paquetes" className={styles.checkupIndex}>
       <TituloDivisor titulo="Estudios clinicos para cuidar tu salud." />
+
+      <SearchBar contenido={examenes} placeholder="Busca tu análisis" />
       <div className={styles.gridTarjetas}>
         {renderTarjetas(contenido)}
         <Link href={`/perfiles`}>

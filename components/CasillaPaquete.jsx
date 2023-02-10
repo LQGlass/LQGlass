@@ -15,7 +15,7 @@ function CasillaPaquete({
       <div className={styles.imagenCasillaAnalisis}>
         <img
           className={styles.imagenAnalisis}
-          src={"/images/medicalIcons/10.png"}
+          src={"/images/iconos-ui/resultados.png"}
           alt=""
           width={200}
         />
@@ -28,16 +28,18 @@ function CasillaPaquete({
             {descripcion}
           </dd>
         )}
-        <dd>
-          <strong>Incluye: </strong>
-          <ul>
-            {incluye?.map((el) => (
-              <Link href={"/examenes/" + el}>
-                <li className={styles.incluyeEl}>{el}</li>
-              </Link>
-            ))}
-          </ul>
-        </dd>
+        {incluye && (
+          <dd>
+            <strong>Incluye: </strong>
+            <ul>
+              {incluye?.map(el => (
+                <Link href={"/examenes/" + el}>
+                  <li className={styles.incluyeEl}>{el}</li>
+                </Link>
+              ))}
+            </ul>
+          </dd>
+        )}
         <dd>
           <strong>Indicaciones: </strong> <br />
           {indicaciones}

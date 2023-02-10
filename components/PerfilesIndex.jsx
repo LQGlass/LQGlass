@@ -1,9 +1,9 @@
-import styles from "../pages/perfiles.module.scss";
-import CasillaAnalisisPerfil from "./CasillaAnalisisPerfil";
+import styles from "../pages/[categorieId]/index.module.scss";
+import CasillaPaquete from "./CasillaPaquete";
 import Footer from "./Footer";
 import { Fragment } from "react";
+import SearchBar from "./SearchBar";
 const PerfilesIndex = ({ perfiles }) => {
-  console.log(perfiles);
   return (
     <Fragment>
       <div className={styles.analisisSection}>
@@ -11,12 +11,15 @@ const PerfilesIndex = ({ perfiles }) => {
           <h1>Perfiles</h1>
           <div className={styles.lineaSubrayado}></div>
         </div>
+        <SearchBar contenido={perfiles} placeholder="Buscar perfil" />
         {perfiles.map(el => {
           return (
-            <CasillaAnalisisPerfil
+            <CasillaPaquete
               nombre={el.Nombre}
-              descripcion={el.Descripción}
+              descripcion={el.Descripcion}
               precio={el.Precio}
+              indicaciones={el.Indicaciones}
+              procedimiento={el.Procedimiento}
             />
           );
         })}
@@ -27,3 +30,24 @@ const PerfilesIndex = ({ perfiles }) => {
 };
 
 export default PerfilesIndex;
+
+{
+  /* <Fragment>
+  <div className={styles.analisisSection}>
+    <div className={styles.nameBox}>
+      <h1>Perfiles</h1>
+      <div className={styles.lineaSubrayado}></div>
+    </div>
+    {perfiles.map(el => {
+      return (
+        <CasillaAnalisisPerfil
+          nombre={el.Nombre}
+          descripcion={el.Descripción}
+          precio={el.Precio}
+        />
+      );
+    })}
+  </div>
+  <Footer />
+</Fragment> */
+}
