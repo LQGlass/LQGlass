@@ -13,7 +13,7 @@ const promociones = () => {
       <div className={styles.promocionesWrapper}>
         <div>
           <Image
-            src={"/images/Promociones/promo6.jpg"}
+            src={"/images/Promociones/promo6.png"}
             width={320}
             height={320}
             alt={"Promocion"}
@@ -21,7 +21,7 @@ const promociones = () => {
         </div>
         <div>
           <Image
-            src={"/images/Promociones/promo5.jpg"}
+            src={"/images/Promociones/promo5.png"}
             width={320}
             height={320}
             alt={"Promocion"}
@@ -29,7 +29,7 @@ const promociones = () => {
         </div>
         <div>
           <Image
-            src={"/images/Promociones/promo4.jpg"}
+            src={"/images/Promociones/promo4.png"}
             width={320}
             height={320}
             alt={"Promocion"}
@@ -37,7 +37,7 @@ const promociones = () => {
         </div>
         <div>
           <Image
-            src={"/images/Promociones/promo3.jpg"}
+            src={"/images/Promociones/promo3.png"}
             width={320}
             height={320}
             alt={"Promocion"}
@@ -45,7 +45,7 @@ const promociones = () => {
         </div>
         <div>
           <Image
-            src={"/images/Promociones/promo2.jpg"}
+            src={"/images/Promociones/promo2.png"}
             width={320}
             height={320}
             alt={"Promocion"}
@@ -53,7 +53,7 @@ const promociones = () => {
         </div>
         <div>
           <Image
-            src={"/images/Promociones/promo1.jpg"}
+            src={"/images/Promociones/promo1.png"}
             width={320}
             height={320}
             alt={"Promocion"}
