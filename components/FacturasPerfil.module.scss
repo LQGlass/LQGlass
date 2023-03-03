@@ -1,0 +1,12 @@
+@import "../styles/variables";
+.facturas {
+  border-radius: 2em;
+  padding: 1em;
+  width: auto;
+  margin-top: 2em;
+  background-color: #f1f1f1;
+  td {
+    border-top: solid 1px black;
+    padding-right: 4em;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../styles/variables";
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2em;
+  input {
+    border-radius: 2em;
+    padding: 0.5em;
+    width: 50%;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .customFileUpload {
+    border: 1px solid #ccc;
+    background-color: $secondary-color;
+    border-radius: 2em;
+    text-align: center;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 10em;
+  }
+}

@@ -16,6 +16,15 @@ function IniciarSesionForm() {
   const [Logged, setLogged] = useState(null);
 
   async function registerUser(user, correo, name, lname) {
+    if (!user || !user.uid) {
+      console.error("User ID not found");
+      return;
+    }
+    if (!name || !lname || !correo) {
+      console.error("Invalid user information");
+      return;
+    }
+
     try {
       await setDoc(doc(db, "users", user.uid), {
         name: name,
@@ -47,24 +56,36 @@ function IniciarSesionForm() {
     e.preventDefault();
     const correo = document.getElementById("formCorreo").value;
     const contra = e.target.formContra.value;
-    if (isRegistering) {
-      const name = e.target.formName.value;
-      const lName = e.target.formLName.value;
-      createUserWithEmailAndPassword(auth, correo, contra)
-        .then(userCredential => {
-          // Signed in
-          const user = userCredential.user;
-          // ...
-          registerUser(user, correo, name, lName);
-        })
-        .catch(error => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
-    } else {
-      signInWithEmailAndPassword(auth, correo, contra);
+
+    if (!correo || correo.trim() === "") {
+      alert("Por favor ingresa tu correo.");
+      return;
+    }
+
+    if (!contra || contra.trim() === "") {
+      alert("Por favor ingresa tu contraseña.");
+      return;
+    }
+
+    try {
+      await signInWithEmailAndPassword(auth, correo, contra);
+      setLogged(true);
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+      if (errorCode === "auth/user-not-found") {
+        alert("No se encontró un usuario con este correo electrónico.");
+      } else if (errorCode === "auth/wrong-password") {
+        alert("La contraseña ingresada es incorrecta.");
+      } else {
+        alert(errorMessage);
+      }
+
+      setLogged(false);
     }
   }
+
   return (
     <Container className={styles.logComponent}>
       <h1>{isRegistering ? "Registrate" : "Iniciar Sesión"}</h1>

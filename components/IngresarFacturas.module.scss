@@ -1,0 +1,26 @@
+@import "../styles/variables";
+.facturasInput {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  input[type="text"],
+  input[type="email"] {
+    border-radius: 2em;
+    padding: 0.5em;
+    width: 30%;
+  }
+  input[type="file"] {
+    display: none;
+  }
+
+  .customFileUpload {
+    border: 1px solid #ccc;
+    background-color: $secondary-color;
+    border-radius: 2em;
+    text-align: center;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 10em;
+  }
+}

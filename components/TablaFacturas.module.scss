@@ -1,0 +1,19 @@
+@import "../styles/variables";
+
+.facturasWrapper {
+  margin-top: 2em;
+}
+.facturas {
+  background-color: #f1f1f1;
+  border-radius: 2em;
+  padding: 1em;
+  width: 100%;
+  overflow-x: scroll;
+  margin-top: 2em;
+  tr {
+    border-top: solid 1px black;
+    td {
+      padding-right: 2em;
+    }
+  }
+}

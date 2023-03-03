@@ -32,16 +32,16 @@ export default function DatosPerfil({ perfil }) {
     }
 
     getData();
-  }, [perfil.uid]);
+  }, [perfil.uid, user.folio]);
 
   const foliosHandler = e => {
     e.preventDefault();
     console.log(folio);
-    if (user.folios.length >= 5) {
+    if (user.folios && user.folios.length >= 5) {
       alert(
         "No se pueden usar mas de 5 folios a la vez, favor de eliminar uno"
       );
-    } else {
+    } else if (folio.length > 2) {
       const userRef = doc(db, "users", perfil.uid);
       updateDoc(userRef, {
         folios: arrayUnion(folio),
@@ -56,6 +56,8 @@ export default function DatosPerfil({ perfil }) {
         });
       });
       setFolio("");
+    } else {
+      alert("El folio debe ser un número de más de 3 digitos.");
     }
   };
 
@@ -90,41 +92,45 @@ export default function DatosPerfil({ perfil }) {
           <strong>Apellidos:</strong>
         </p>
         <p>{user && user.last}</p>
-        <p>
-          <strong>Folios:</strong>
-        </p>
-        {user && user.folios ? (
-          <ol className={styles.foliosList}>
-            {user.folios.map(el => (
-              <li key={el}>
-                {el}
-                <button
-                  className={styles.deleteBtn}
-                  onClick={() => deleteFolio(el)}
-                >
-                  X
-                </button>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          "No se han ingresado folios"
-        )}
+        {!user.doctor ? (
+          user && user.folios ? (
+            <ol className={styles.foliosList}>
+              <p>
+                <strong>Folios:</strong>
+              </p>
+              {user.folios.map(el => (
+                <li key={el}>
+                  {el}
+                  <button
+                    className={styles.deleteBtn}
+                    onClick={() => deleteFolio(el)}
+                  >
+                    X
+                  </button>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            "No se han ingresado folios"
+          )
+        ) : null}
       </div>
-      <form className={styles.formFolios} onSubmit={foliosHandler}>
-        <label htmlFor="folios">
-          <strong>Ingresar nuevo folio:</strong>
-        </label>
-        <input
-          type="text"
-          name="folios"
-          value={folio}
-          onChange={e => setFolio(e.target.value)}
-        />
-        <button type="submit" className={styles.folioBtn}>
-          Añadir
-        </button>
-      </form>
+      {!user.doctor && (
+        <form className={styles.formFolios} onSubmit={foliosHandler}>
+          <label htmlFor="folios">
+            <strong>Ingresar nuevo folio:</strong>
+          </label>
+          <input
+            type="text"
+            name="folios"
+            value={folio}
+            onChange={e => setFolio(e.target.value)}
+          />
+          <button type="submit" className={styles.folioBtn}>
+            Añadir
+          </button>
+        </form>
+      )}
     </>
   );
 }
