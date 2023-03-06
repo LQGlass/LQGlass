@@ -41,19 +41,14 @@ function MenuPerfil({ data }) {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists) {
-        console.log("Document data:", docSnap.data());
         //se actualiza el estado con la informacion obtenida.
         setUser(docSnap.data());
         setIsDoctor(docSnap.data().doctor);
-      } else {
-        console.log("No such document!");
       }
     }
 
     getData();
   }, [data.uid]);
-
-  console.log(isDoctor);
 
   // Renderiza el menú y los componentes seleccionados
   return (

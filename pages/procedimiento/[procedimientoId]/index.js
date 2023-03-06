@@ -1,4 +1,4 @@
-import firebaseApp from "../../../firebase/firebase"
+import firebaseApp from "../../../firebase/firebase";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ProcedimientoIndividual from "../../../components/ProcedimientoIndividual";
@@ -15,21 +15,18 @@ import {
 } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
-export default function examenDetalles({ studio }) {
+export default function ExamenDetalles({ studio }) {
   const router = useRouter();
   const examenName = router.query.procedimientoId;
   return (
     <div>
       <Navbar />
       {studio ? (
-        <ProcedimientoIndividual
-
-          examen= {studio[0]}
-        />
+        <ProcedimientoIndividual examen={studio[0]} />
       ) : (
         <h2>Cargando...</h2>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
@@ -39,12 +36,12 @@ export async function getStaticPaths() {
   const collectionRef = query(collectionGroup(db, "examenes"));
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     examenes.push(doc.data());
   });
   return {
     fallback: true,
-    paths: examenes.map((examen) => ({
+    paths: examenes.map(examen => ({
       params: { procedimientoId: examen.nombre },
     })),
   };
@@ -62,7 +59,7 @@ export async function getStaticProps(context) {
   const snapshot = await getDocs(collectionRef);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  await snapshot.forEach((doc) => {
+  await snapshot.forEach(doc => {
     studio.push(doc.data());
   });
 

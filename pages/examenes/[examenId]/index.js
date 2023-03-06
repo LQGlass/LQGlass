@@ -7,13 +7,14 @@ import {
   collectionGroup,
   getDocs,
   query,
+  doc,
+  getDoc,
   where,
-  limit,
 } from "firebase/firestore";
 import AnalisisIndividual from "../../../components/AnalisisIndividual";
 const db = getFirestore(firebaseApp);
 
-export default function examenDetalles({ studio }) {
+export default function ExamenDetalles({ studio }) {
   const router = useRouter();
   const examenName = router.query.examenId;
   return (
@@ -32,7 +33,6 @@ export default function examenDetalles({ studio }) {
 export async function getStaticPaths() {
   let examenes = [];
   const collectionRef = query(collectionGroup(db, `examenes`));
-  //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
   snapshot.forEach(doc => {
     examenes.push(doc.data());

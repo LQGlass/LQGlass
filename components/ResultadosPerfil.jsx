@@ -21,8 +21,6 @@ export default function ResultadosPerfil({ perfil }) {
   const month = d.toLocaleString("es-US", { month: "long" });
   const year = d.getFullYear();
   const monthNum = d.getMonth();
-  console.log(pdfArr);
-  console.log(perfil);
   useEffect(() => {
     async function getData() {
       let resultados = [];
@@ -42,11 +40,8 @@ export default function ResultadosPerfil({ perfil }) {
 
   const uploadFile = async (document, folio) => {
     const storageRef = ref(storage, `resultados/${year}/${month}/${folio}`);
-    await uploadBytes(storageRef, document).then(snapshot => {
-      console.log(snapshot);
-    });
+    await uploadBytes(storageRef, document);
     const url = await getDownloadURL(storageRef).then(url => {
-      console.log(url);
       return url;
     });
     return url;
@@ -65,8 +60,6 @@ export default function ResultadosPerfil({ perfil }) {
       alert("El tamaño del archivo debe ser menor a 1 MB");
       return;
     }
-    console.log(folio);
-    console.log(file);
     if (file) {
       const uri = await uploadFile(file, folio);
       await setDoc(doc(db, "resultados", year + "-" + monthNum + "-" + folio), {

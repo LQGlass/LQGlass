@@ -18,7 +18,6 @@ import styles from "./FacturasPerfil.module.scss";
 
 export default function FacturasPerfil({ user }) {
   const [facturas, setFacturas] = useState();
-  console.log(user.email);
   useEffect(() => {
     async function getData() {
       let facturasRecibidas = [];
@@ -37,7 +36,6 @@ export default function FacturasPerfil({ user }) {
       setFacturas(facturasRecibidas);
     }
     getData();
-    console.log("Facturas", facturas);
   }, [user]);
   return (
     <>

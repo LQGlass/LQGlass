@@ -16,7 +16,9 @@ const nosotros = () => {
           <div className={styles.texto}>
             <div>
               <h2>Laboratorios Químicos Glass</h2>
-              <p className={styles.slogan}>"Al cuidado de tu salud"</p>
+              <p className={styles.slogan}>
+                &ldquo;Al cuidado de tu salud&rdquo;
+              </p>
             </div>
             <h3>¿Quiénes somos?</h3>
             <p>

@@ -23,11 +23,8 @@ export default function DatosPerfil({ perfil }) {
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists) {
-        console.log("Document data:", docSnap.data());
         //se actualiza el estado con la informacion obtenida.
         setUser(docSnap.data());
-      } else {
-        console.log("No such document!");
       }
     }
 
@@ -36,7 +33,6 @@ export default function DatosPerfil({ perfil }) {
 
   const foliosHandler = e => {
     e.preventDefault();
-    console.log(folio);
     if (user.folios && user.folios.length >= 5) {
       alert(
         "No se pueden usar mas de 5 folios a la vez, favor de eliminar uno"

@@ -25,7 +25,6 @@ export default function IngresarFacturas() {
   const [solicitadas, setSolicitadas] = useState(null);
   const [sending, setSending] = useState(false);
   const [file, setFile] = useState(null);
-  console.log(solicitadas);
   useEffect(() => {
     async function getData() {
       let facturasSolicitadas = [];
@@ -48,11 +47,8 @@ export default function IngresarFacturas() {
 
   const uploadFile = async (document, id) => {
     const storageRef = ref(storage, `facturas/${year}/${month}/${id}`);
-    await uploadBytes(storageRef, document).then(snapshot => {
-      console.log(snapshot);
-    });
+    await uploadBytes(storageRef, document);
     const url = await getDownloadURL(storageRef).then(url => {
-      console.log(url);
       return url;
     });
     return url;
@@ -72,7 +68,6 @@ export default function IngresarFacturas() {
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach(doc => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
       facturaId = doc.id;
       facturaSolicitada = doc.data();
     });
@@ -84,9 +79,6 @@ export default function IngresarFacturas() {
       alert("El tamaño del archivo debe ser menor a 1 MB");
       return;
     }
-    console.log(ticket);
-    console.log(file);
-    console.log("Documento", facturaSolicitada, facturaId);
     if (file) {
       const uri = await uploadFile(file, facturaId);
       await updateDoc(doc(db, `facturas-solicitadas/${facturaId}`), {

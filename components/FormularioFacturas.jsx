@@ -21,7 +21,6 @@ function FormularioFacturas({ user }) {
   const [solicitadas, setSolicitadas] = useState(null);
   const [ticket, setticket] = useState(null);
   const isDoctor = user.doctor;
-  console.log(solicitadas);
   useEffect(() => {
     async function getData() {
       let facturasSolicitadas = [];
@@ -59,8 +58,6 @@ function FormularioFacturas({ user }) {
     const tieneTicket = solicitadas.some(
       solicitada => solicitada.ticket === ticket
     );
-    console.log(tieneTicket);
-    console.log(rfc, name, calle, colonia, cpp, municipio, regimen, cfdi);
     if (
       ticket.trim().length === 0 ||
       rfc.trim().length === 0 ||
@@ -80,9 +77,9 @@ function FormularioFacturas({ user }) {
       alert(
         "Este ticket ya fue ingresado anteriormente, revise en su bandeja de facturas."
       );
+      console.warn("Ticket already registered.");
       return;
     } else {
-      console.log("No incluye");
       await setDoc(
         doc(db, "facturas-solicitadas", year + "-" + monthNum + "-" + ticket),
         {
@@ -132,7 +129,7 @@ function FormularioFacturas({ user }) {
               <strong>Facturas solicitadas:</strong>
             </p>
             {solicitadas ? (
-              solicitadas.map(el => <p>Ticket: {el.ticket}</p>)
+              solicitadas.map(el => <p key={el}>Ticket: {el.ticket}</p>)
             ) : (
               <p>No se han solicitado facturas aún.</p>
             )}

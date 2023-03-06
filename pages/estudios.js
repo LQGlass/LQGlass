@@ -9,9 +9,9 @@ const db = getFirestore(firebaseApp);
 const estudios = ({ categories }) => {
   return (
     <div>
-    <Head>
-      <title>Categorias</title>
-    </Head>
+      <Head>
+        <title>Categorias</title>
+      </Head>
       <Navbar />
       <CategoryIndexExpanded categories={categories} />
       <Footer />
@@ -28,11 +28,9 @@ export async function getStaticProps() {
   const snapshot = await getDocs(collectionRef);
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
-  snapshot.forEach((doc) => {
-    console.log(doc.id);
+  snapshot.forEach(doc => {
     categories.push(doc.id);
   });
-  console.log(categories);
 
   return {
     //return the props as "categories"

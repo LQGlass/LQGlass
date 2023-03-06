@@ -44,7 +44,7 @@ function DropdownMenu({ titulo }) {
               {isPaquetes &&
                 paquetes.map(paquete => {
                   return (
-                    <Link href={`/grupo-paquetes/${paquete}`}>
+                    <Link key={paquete} href={`/grupo-paquetes/${paquete}`}>
                       <li>{paquete}</li>
                     </Link>
                   );
@@ -58,7 +58,7 @@ function DropdownMenu({ titulo }) {
               {!isPaquetes &&
                 categorias.map(categoria => {
                   return (
-                    <Link href={`//${categoria}`}>
+                    <Link key={categoria} href={`//${categoria}`}>
                       <li>{categoria}</li>
                     </Link>
                   );

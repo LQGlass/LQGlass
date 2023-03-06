@@ -11,7 +11,7 @@ const auth = getAuth(firebaseApp);
 import { getFirestore, doc, getDoc, where } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
-function perfil() {
+function Perfil() {
   const [usuario, setUsuario] = useState(null);
   onAuthStateChanged(auth, usuarioFirebase => {
     if (usuarioFirebase) {
@@ -35,4 +35,4 @@ function perfil() {
   );
 }
 
-export default perfil;
+export default Perfil;

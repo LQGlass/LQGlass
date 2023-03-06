@@ -19,7 +19,7 @@ export default function TablaFacturas({ data }) {
             {data
               ? data.map(el => {
                   return (
-                    <tr>
+                    <tr key={el.ticket}>
                       <td>{el.ticket}</td>
                       <td>{el.email}</td>
                       <td>{el.name}</td>

@@ -12,9 +12,10 @@ const PerfilesIndex = ({ perfiles }) => {
           <div className={styles.lineaSubrayado}></div>
         </div>
         <SearchBar contenido={perfiles} placeholder="Buscar perfil" />
-        {perfiles.map(el => {
+        {perfiles.map((el, index) => {
           return (
             <CasillaPaquete
+              key={index}
               nombre={el.Nombre}
               descripcion={el.Descripcion}
               precio={el.Precio}

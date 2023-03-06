@@ -12,7 +12,7 @@ export default function TableDocuments({ documents }) {
           <tbody>
             {documents &&
               documents.map(el => (
-                <tr>
+                <tr key={el.folio}>
                   <td>{el.folio}</td>
                   <td>{el.subido}</td>
                   <td>{el.email}</td>

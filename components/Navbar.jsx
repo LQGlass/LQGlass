@@ -13,7 +13,7 @@ function Navbar({ paquetes, categories }) {
     <Fragment>
       <div className={styles.cintilla}>
         <div className={styles.tituloCintilla}>
-          CDMX y Area Metropolitana | Haz tu cita : 5539847270
+          CDMX y Area Metropolitana | Haz tu cita : 55 4672 2581 ó 55 5562 5267
         </div>
         <div className={styles.idiomas}>
           <img
@@ -101,8 +101,6 @@ export const getStaticProps = async () => {
   snapshot2.forEach(doc => {
     paquetes.push(doc.id);
   });
-
-  console.log("Hola la funcion esta corriendo");
 
   return {
     //return the props as "categories"

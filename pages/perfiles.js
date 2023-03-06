@@ -29,10 +29,8 @@ export async function getStaticProps() {
   //se mapea cada documento para hacer push de
   //sus datos en el array categorias
   snapshot.forEach(doc => {
-    console.log(doc.id);
     perfiles.push(doc.data());
   });
-  console.log(perfiles);
 
   return {
     //return the props as "perfiles"

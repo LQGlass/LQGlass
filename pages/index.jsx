@@ -15,11 +15,9 @@ import {
   collectionGroup,
 } from "firebase/firestore";
 import CliengoScript from "../components/CliengoScript";
-import SearchBar from "../components/SearchBar";
 const db = getFirestore(firebaseApp);
 
 function HomePage({ categories, paquetes, examenes }) {
-  console.log(examenes);
   return (
     <>
       <Head>

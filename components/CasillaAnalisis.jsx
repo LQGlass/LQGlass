@@ -1,7 +1,7 @@
 import styles from "../pages/[categorieId]/index.module.scss";
 import Link from "next/link";
 
-function CasillaAnalisis({ nombre, descripcion, precio, categoria }) {
+function CasillaAnalisis({ nombre, descripcion, precio, categoria, id }) {
   const index = Math.floor(Math.random() * 10);
   return (
     <Link href={"/examenes/" + nombre}>

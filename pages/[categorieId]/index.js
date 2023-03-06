@@ -16,7 +16,7 @@ import {
 } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
-function analisis(props) {
+function Analisis(props) {
   const router = useRouter();
   const categorieName = router.query.categorieId;
   return (
@@ -27,9 +27,11 @@ function analisis(props) {
           <h1>{categorieName}</h1>
           <div className={styles.lineaSubrayado}></div>
         </div>
-        {props.studies.map(el => {
+        {props.studies.map((el, index) => {
           return (
             <CasillaAnalisis
+              key={index}
+              id={el.id}
               nombre={el.nombre}
               descripcion={el.descripcion}
               precio={el.precio}
@@ -83,4 +85,4 @@ export const getStaticProps = async context => {
     },
   };
 };
-export default analisis;
+export default Analisis;

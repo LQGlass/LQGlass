@@ -10,14 +10,12 @@ import {
   collection,
   getDocs,
   query,
-  orderBy,
   where,
-  limit,
 } from "firebase/firestore";
 import CasillaPaquete from "../../../components/CasillaPaquete";
 const db = getFirestore(firebaseApp);
 
-function analisis(props) {
+function Analisis(props) {
   const router = useRouter();
   const grupoName = router.query.grupoPaquetesId;
   return (
@@ -28,9 +26,10 @@ function analisis(props) {
           <h1>{grupoName}</h1>
           <div className={styles.lineaSubrayado}></div>
         </div>
-        {props.paquetes.map(el => {
+        {props.paquetes.map((el, index) => {
           return (
             <CasillaPaquete
+              key={index}
               nombre={el.nombre}
               descripcion={el.descripcion}
               precio={el.precio}
@@ -86,4 +85,4 @@ export const getStaticProps = async context => {
     },
   };
 };
-export default analisis;
+export default Analisis;
