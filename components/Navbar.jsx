@@ -9,8 +9,24 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import BurgerMenu from "./BurgerMenu";
 const db = getFirestore(firebaseApp);
 
-function Navbar({ paquetes, categories }) {
-  console.log("Data en componente: ", paquetes, categories);
+function Navbar() {
+  const paquetes = ["Para El", "Para Ella", "Kids", "Check up", "Adulto Mayor"];
+  const categories = [
+    "Biología molecular",
+    "COVID",
+    "Coagulación",
+    "Coprología",
+    "Endocrinología (hormonas)",
+    "Hematología",
+    "Inmunología-serología",
+    "Microbiología",
+    "Parasitología",
+    "Patología",
+    "Pruebas especiales",
+    "Química clínica-Bioquímica",
+    "Toxicología",
+    "Uroanálisis",
+  ];
   return (
     <Fragment>
       <div className={styles.cintilla}>
@@ -32,9 +48,9 @@ function Navbar({ paquetes, categories }) {
       </div>
       <nav className={styles.nav}>
         <LQGIcon />
-        <BurgerMenu categories={categories} paquetes={paquetes} />
+        <BurgerMenu categorias={categories} paquetes={paquetes} />
         <div className={styles.menu}>
-          <DropDownMenu categories={categories} titulo={"Estudios"} />
+          <DropDownMenu categorias={categories} titulo={"Estudios"} />
           <div>
             <p className={styles.separador}>|</p>
           </div>
@@ -84,29 +100,5 @@ function Navbar({ paquetes, categories }) {
     </Fragment>
   );
 }
-
-export const getStaticProps = async () => {
-  // Obtiene todas las categorías con subcolecciones de exámenes
-  const collectionRef = collection(db, "categorias");
-  const collectionRef2 = collection(db, "grupo-paquetes");
-
-  // Genera un snapshot con todos los documentos de cada colección
-  const [categoriesSnapshot, paquetesSnapshot] = await Promise.all([
-    getDocs(collectionRef),
-    getDocs(collectionRef2),
-  ]);
-
-  // Mapea cada documento para hacer push de sus datos en el array de categorías o paquetes
-  const data = {
-    navbarData: {
-      categories: categoriesSnapshot.docs.map(doc => doc.id),
-      paquetes: paquetesSnapshot.docs.map(doc => doc.id),
-    },
-  };
-
-  console.log("Datos: ", data);
-
-  return { props: { ...data }, revalidate: 10 };
-};
 
 export default Navbar;

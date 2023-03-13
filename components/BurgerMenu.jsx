@@ -8,9 +8,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import LogButtons from "./LogButtons";
 
-function ResponsiveExample({ categories, paquetes }) {
+function ResponsiveExample({ categorias, paquetes }) {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -36,24 +35,36 @@ function ResponsiveExample({ categories, paquetes }) {
             </Link>
             <DropdownButton
               variant="dark"
-              id="dropdown-button-drop-end"
+              id="dropdown-basic-button"
               title="Categorias"
               size="lg"
             >
-              {categories &&
-                categories.map((el, index) => {
-                  <Dropdown.Item key={index}> {el.nombre} </Dropdown.Item>;
+              {categorias &&
+                categorias.map(categoria => {
+                  return (
+                    <Link key={categoria} href={`//${categoria}`}>
+                      <li onClick={handleClose} className={styles.linksMenu}>
+                        {categoria}
+                      </li>
+                    </Link>
+                  );
                 })}
             </DropdownButton>
             <DropdownButton
               variant="dark"
-              id="dropdown-button-drop-end"
+              id="dropdown-basic-button"
               title="Paquetes"
               size="lg"
             >
               {paquetes &&
-                paquetes.map((el, index) => {
-                  <Dropdown.Item key={index}> {el.nombre} </Dropdown.Item>;
+                paquetes.map(paquete => {
+                  return (
+                    <Link key={paquete} href={`/grupo-paquetes/${paquete}`}>
+                      <li onClick={handleClose} className={styles.linksMenu}>
+                        {paquete}
+                      </li>
+                    </Link>
+                  );
                 })}
             </DropdownButton>
             <Link href={"/promociones"}>
