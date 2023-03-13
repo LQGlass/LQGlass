@@ -46,3 +46,14 @@
     color: $primary-color;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .casillaAnalisis {
+    flex-direction: column;
+    align-items: center;
+
+    .incluyeEl {
+      width: auto;
+    }
+  }
+}

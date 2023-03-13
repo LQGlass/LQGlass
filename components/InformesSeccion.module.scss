@@ -53,3 +53,30 @@ $primary-font: "Montserrat", sans-serif;
     border-radius: 20px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .informesSeccion {
+    padding: 5em 0;
+    h2 {
+      font-size: 1em;
+    }
+    .informes {
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input {
+      margin-right: 1em;
+      width: 90%;
+    }
+
+    .informesWrapper {
+      height: auto;
+      padding: 1em;
+    }
+
+    .imagenCorreo {
+      padding: 0 1em;
+    }
+  }
+}

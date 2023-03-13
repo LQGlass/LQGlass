@@ -11,7 +11,6 @@ export default function DireccionCasilla({ nombreDireccion, direccion }) {
           <img
             className={styles.ubicacionImg}
             src="/images/ubicacion.png"
-            width={600}
             alt="mapa"
           />
         </a>

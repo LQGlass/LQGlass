@@ -39,3 +39,9 @@
   cursor: pointer;
   scale: 120%;
 }
+
+@media screen and (max-width: 768px) {
+  .direccionWrapper {
+    width: auto;
+  }
+}

@@ -9,8 +9,8 @@
   padding: 5%;
 
   img {
-    scale:100%;
-    transition: all .3s;
+    scale: 100%;
+    transition: all 0.3s;
     margin-bottom: 2em;
   }
 
@@ -72,5 +72,13 @@
     font-family: $primary-font;
     color: white;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 8em;
+    flex-direction: column-reverse;
+    gap: 2em;
   }
 }

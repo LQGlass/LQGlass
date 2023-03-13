@@ -47,7 +47,7 @@
 
   .linkNavDiv:hover {
     color: $secondary-color;
-    scale: 150%;
+    scale: 120%;
   }
   li:hover {
     color: $secondary-color;
@@ -65,8 +65,6 @@
     padding: 0;
     margin: 0;
     border: 0;
-  }
-  .separador {
     cursor: default;
   }
 }
@@ -100,9 +98,32 @@
   }
 }
 
+.menu {
+  display: flex;
+  gap: 1.5em;
+}
+
 .subtitulo {
   color: white;
   font-family: $primary-font;
   font-weight: bold;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    height: 10vh;
+  }
+  .menu {
+    display: none;
+  }
+
+  .cintilla {
+    width: auto;
+    padding: 1px 1rem;
+  }
+
+  .logButtons {
+    display: none;
+  }
 }

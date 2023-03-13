@@ -18,14 +18,6 @@ const Hero = () => {
           alt="Primer imagen"
         /> */}
         <picture>
-          <source
-            srcset="https://via.placeholder.com/400"
-            media="(max-width: 500px)"
-          />
-          <source
-            srcset="./images/slider/slide3.jpg"
-            media="(max-width: 1000px)"
-          />
           <img
             className="d-block w-100"
             src="./images/slider/slideAnimation1.gif"
@@ -39,10 +31,6 @@ const Hero = () => {
       </Carousel.Item>
       <Carousel.Item>
         <picture>
-          <source
-            srcset="https://via.placeholder.com/400"
-            media="(max-width: 500px)"
-          />
           <img
             className="d-block w-100"
             src="./images/slider/slideAnimation2.gif"
@@ -52,10 +40,6 @@ const Hero = () => {
       </Carousel.Item>
       <Carousel.Item>
         <picture>
-          <source
-            srcset="https://via.placeholder.com/400"
-            media="(max-width: 500px)"
-          />
           <img
             className="d-block w-100"
             src="./images/slider/slideAnimation3.gif"
@@ -65,10 +49,6 @@ const Hero = () => {
       </Carousel.Item>
       <Carousel.Item>
         <picture>
-          <source
-            srcset="https://via.placeholder.com/400"
-            media="(max-width: 500px)"
-          />
           <img
             className="d-block w-100"
             src="./images/slider/slideAnimation4.gif"

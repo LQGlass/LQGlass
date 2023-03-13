@@ -94,3 +94,9 @@
   background-color: rgba($color: $secondary-color, $alpha: 0.8);
   scale: 105%;
 }
+
+@media screen and (max-width: 768px) {
+  .casillaAnalisis {
+    flex-direction: column;
+  }
+}

@@ -2,33 +2,20 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
 
-function DropdownMenu({ titulo }) {
+function DropdownMenu({ titulo, packs, categories }) {
   const [isPaquetes, setIsPaquetes] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     if (titulo === "Paquetes") {
       setIsPaquetes(true);
     }
   }, []);
 
-  const paquetes = ["Check up", "Para El", "Para Ella", "Adulto Mayor", "Kids"];
+  const paquetes = packs ? [...packs] : ["No hay paquetes disponibles"];
 
-  const categorias = [
-    "Biología molecular",
-    "COVID",
-    "Coagulación",
-    "Coprología",
-    "Endocrinología (hormonas)",
-    "Hematología",
-    "Inmunología-serología",
-    "Microbiología",
-    "Parasitología",
-    "Patología",
-    "Pruebas especiales",
-    "Química clínica-Bioquímica",
-    "Toxicología",
-    "Uroanálisis",
-  ];
-  const [isVisible, setIsVisible] = useState(false);
+  const categorias = categories
+    ? [...categories]
+    : ["No hay categorias disponibles"];
   return (
     <div
       className={styles.dropMenuWrapper}

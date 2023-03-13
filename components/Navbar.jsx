@@ -6,9 +6,11 @@ import { Fragment } from "react";
 import DropDownMenu from "./DropdownMenu";
 import firebaseApp from "../firebase/firebase";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import BurgerMenu from "./BurgerMenu";
 const db = getFirestore(firebaseApp);
 
 function Navbar({ paquetes, categories }) {
+  console.log("Data en componente: ", paquetes, categories);
   return (
     <Fragment>
       <div className={styles.cintilla}>
@@ -26,89 +28,85 @@ function Navbar({ paquetes, categories }) {
             src="/images/flags/united-states.png"
             alt="bandera de estados unidos"
           />
-          {/*   <img
-            className={styles.flag}
-            src="/images/flags/china.png"
-            alt="bandera de china"
-          /> */}
         </div>
       </div>
       <nav className={styles.nav}>
         <LQGIcon />
-        <DropDownMenu categorias={categories} titulo={"Estudios"} />
-        <div>
-          <p className={styles.separador}>|</p>
+        <BurgerMenu categories={categories} paquetes={paquetes} />
+        <div className={styles.menu}>
+          <DropDownMenu categories={categories} titulo={"Estudios"} />
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/promociones"}>
+            <div className={styles.linkNavDiv}>Promociones</div>
+          </Link>
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/sucursales"}>
+            <div className={styles.linkNavDiv}>Sucursales</div>
+          </Link>
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/blog"}>
+            <div className={styles.linkNavDiv}>Blog</div>
+          </Link>
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/nosotros"}>
+            <div className={styles.linkNavDiv}>Nosotros</div>
+          </Link>
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/perfil"}>
+            <div className={styles.linkNavDiv}>Resultados</div>
+          </Link>
+          <div>
+            <p className={styles.separador}>|</p>
+          </div>
+          <Link href={"/perfil"}>
+            <div className={styles.linkNavDiv}>Factura</div>
+          </Link>
         </div>
-        <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/promociones"}>
-          <div className={styles.linkNavDiv}>Promociones</div>
-        </Link>
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/sucursales"}>
-          <div className={styles.linkNavDiv}>Sucursales</div>
-        </Link>
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/blog"}>
-          <div className={styles.linkNavDiv}>Blog</div>
-        </Link>
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/nosotros"}>
-          <div className={styles.linkNavDiv}>Nosotros</div>
-        </Link>
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/perfil"}>
-          <div className={styles.linkNavDiv}>Resultados</div>
-        </Link>
-        <div>
-          <p className={styles.separador}>|</p>
-        </div>
-        <Link href={"/perfil"}>
-          <div className={styles.linkNavDiv}>Factura</div>
-        </Link>
 
-        <LogButtons />
+        <div className={styles.logButtons}>
+          <LogButtons />
+        </div>
       </nav>
     </Fragment>
   );
 }
 
 export const getStaticProps = async () => {
-  //se declara un array vacio para almacenar los datos
-  let categories = [];
-  let paquetes = [];
-  //se llama a todas las categorias con subcoleccion de examenes
+  // Obtiene todas las categorías con subcolecciones de exámenes
   const collectionRef = collection(db, "categorias");
   const collectionRef2 = collection(db, "grupo-paquetes");
-  //se genera un snapshor con todos los documentos
-  const snapshot = await getDocs(collectionRef);
-  const snapshot2 = await getDocs(collectionRef2);
-  //se mapea cada documento para hacer push de
-  //sus datos en el array categorias
-  snapshot.forEach(doc => {
-    categories.push(doc.id);
-  });
-  snapshot2.forEach(doc => {
-    paquetes.push(doc.id);
-  });
 
-  return {
-    //return the props as "categories"
-    props: {
-      categories,
-      paquetes,
+  // Genera un snapshot con todos los documentos de cada colección
+  const [categoriesSnapshot, paquetesSnapshot] = await Promise.all([
+    getDocs(collectionRef),
+    getDocs(collectionRef2),
+  ]);
+
+  // Mapea cada documento para hacer push de sus datos en el array de categorías o paquetes
+  const data = {
+    navbarData: {
+      categories: categoriesSnapshot.docs.map(doc => doc.id),
+      paquetes: paquetesSnapshot.docs.map(doc => doc.id),
     },
   };
+
+  console.log("Datos: ", data);
+
+  return { props: { ...data }, revalidate: 10 };
 };
 
 export default Navbar;

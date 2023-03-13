@@ -17,3 +17,9 @@ $primary-font: "Montserrat", sans-serif;
   border-radius: 5em;
   padding: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 150px;
+  }
+}

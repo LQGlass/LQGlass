@@ -111,3 +111,15 @@
 .iconoDescripcion {
   filter: invert(100%);
 }
+
+@media screen and (max-width: 768px) {
+  .descripcionAnalisis {
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 4em;
+    .descripcion {
+      width: auto;
+      padding: 1em;
+    }
+  }
+}

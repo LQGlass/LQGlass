@@ -1,0 +1,30 @@
+@import "../styles/variables";
+.burger-menu {
+  display: none; /* oculta el menú en pantallas mayores a 768px */
+}
+
+@media (max-width: 992px) {
+  .btn button {
+    background-color: $primary-color;
+    border: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-bottom: 2em;
+    button {
+      width: auto;
+      background: none;
+      color: $primary-color;
+      border: none;
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .linkNavDiv {
+    font-size: 2em;
+  }
+}

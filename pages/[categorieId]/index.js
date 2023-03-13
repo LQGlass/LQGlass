@@ -28,16 +28,7 @@ function Analisis(props) {
           <div className={styles.lineaSubrayado}></div>
         </div>
         {props.studies.map((el, index) => {
-          return (
-            <CasillaAnalisis
-              key={index}
-              id={el.id}
-              nombre={el.nombre}
-              descripcion={el.descripcion}
-              precio={el.precio}
-              categoria={el.categoria}
-            />
-          );
+          return <CasillaAnalisis key={index} {...el} />;
         })}
       </div>
       <Footer />
@@ -69,7 +60,8 @@ export const getStaticProps = async context => {
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
     collectionGroup(db, "examenes"),
-    where("categoria", "==", categorieName)
+    where("categoria", "==", categorieName),
+    limit(5)
   );
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
