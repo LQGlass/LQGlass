@@ -1,20 +1,25 @@
-import { useState } from "react";
-import DropdownMenu from "./DropdownMenu";
+import { useState, useEffect } from "react";
 import styles from "./BurgerMenu.module.scss";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Link from "next/link";
-import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import LogButtons from "./LogButtons";
+
+import { useRouter } from "next/router";
 
 function ResponsiveExample({ categorias, paquetes }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    setShow(false);
+  }, [router.asPath]);
 
   return (
-    <div div className={styles.btn}>
+    <div div className={styles.burgerMenu}>
       <Button className="d-lg-none" onClick={handleShow}>
         Menu
       </Button>

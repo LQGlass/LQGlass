@@ -1,10 +1,13 @@
 @import "../styles/variables";
-.burger-menu {
+.burgerMenu {
   display: none; /* oculta el menú en pantallas mayores a 768px */
 }
 
 @media (max-width: 992px) {
-  .btn button {
+  .burgerMenu {
+    display: block;
+  }
+  .burgerMenu button {
     background-color: $primary-color;
     border: none;
   }
@@ -18,19 +21,21 @@
       background: none;
       color: $primary-color;
       border: none;
-      font-size: 2em;
+      font-size: 1em;
       padding: 0;
       margin: 0;
     }
   }
-
+  .menuLateral {
+    padding-bottom: 5em;
+  }
   .linkNavDiv {
-    font-size: 2em;
+    font-size: 1em;
   }
   .linksMenu {
     background-color: $primary-color;
     color: white;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0.5em;
   }
 
