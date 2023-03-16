@@ -15,11 +15,14 @@ import {
   collectionGroup,
 } from "firebase/firestore";
 import CliengoScript from "../components/CliengoScript";
+import Cintilla from "../components/Cintilla";
 const db = getFirestore(firebaseApp);
 
 function HomePage({ categories, paquetes, examenes }) {
   return (
     <>
+      <Cintilla />
+      <Navbar />
       <Head>
         <title>Laboratorios Quimicos Glass</title>
         <meta
@@ -27,14 +30,13 @@ function HomePage({ categories, paquetes, examenes }) {
           content="Laboratorio de estudios médicos en Lomas Verdes, Estado de México."
         />
       </Head>
-      <Navbar />
-      <CliengoScript />
       <Hero />
       <CheckupIndex contenido={paquetes} examenes={examenes} />
       <CategoryIndex contenido={categories} />
       <InformesSeccion />
       <DireccionesSeccion />
       <BlogSeccion />
+      <CliengoScript />
       <Footer />
     </>
   );

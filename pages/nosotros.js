@@ -1,7 +1,5 @@
-import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import styles from "./nosotros.module.scss";
-import Image from "next/image";
 import Footer from "../components/Footer";
 import TituloHeader from "../components/TituloHeader";
 

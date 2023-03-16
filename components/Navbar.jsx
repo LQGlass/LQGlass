@@ -2,7 +2,6 @@ import LQGIcon from "./LQGIcon";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
 import LogButtons from "./LogButtons";
-import { Fragment } from "react";
 import DropDownMenu from "./DropdownMenu";
 import firebaseApp from "../firebase/firebase";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
@@ -28,24 +27,7 @@ function Navbar() {
     "Uroanálisis",
   ];
   return (
-    <Fragment>
-      <div className={styles.cintilla}>
-        <div className={styles.tituloCintilla}>
-          CDMX y Area Metropolitana | Haz tu cita : 55 4672 2581 ó 55 5562 5267
-        </div>
-        <div className={styles.idiomas}>
-          <img
-            className={styles.flag}
-            src="/images/flags/mexico.png"
-            alt="bandera de méxico"
-          />
-          <img
-            className={styles.flag}
-            src="/images/flags/united-states.png"
-            alt="bandera de estados unidos"
-          />
-        </div>
-      </div>
+    <>
       <nav className={styles.nav}>
         <LQGIcon />
         <BurgerMenu categorias={categories} paquetes={paquetes} />
@@ -97,7 +79,7 @@ function Navbar() {
           <LogButtons />
         </div>
       </nav>
-    </Fragment>
+    </>
   );
 }
 

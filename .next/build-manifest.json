@@ -30,10 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/nosotros": [
+    "/blog": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/nosotros.js"
+      "static/chunks/pages/blog.js"
+    ],
+    "/promociones": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/promociones.js"
     ],
     "/sucursales": [
       "static/chunks/webpack.js",
