@@ -1,30 +1,4 @@
 @import "../styles/variables";
-
-.cintilla {
-  background-color: $primary-color;
-  width: auto;
-  height: 7vh;
-  display: flex;
-  padding: 5px 5rem;
-  justify-content: space-between;
-  align-items: center;
-
-  .tituloCintilla {
-    color: white;
-    font-family: $primary-font;
-    font-weight: bold;
-  }
-
-  .idiomas {
-    display: flex;
-    gap: 5px;
-  }
-  .flag {
-    width: 1.5rem;
-    height: 1.5rem;
-    cursor: pointer;
-  }
-}
 .nav {
   display: flex;
   padding: 10px 5%;
