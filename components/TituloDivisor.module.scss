@@ -108,4 +108,14 @@
       font-size: 1.5em;
     }
   }
+
+  .containSolid {
+    height: 6em;
+    width: 80%;
+    .titulo {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
 }
