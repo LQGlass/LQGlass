@@ -93,3 +93,44 @@
     width: 50vw;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .nosotros {
+    .block {
+      flex-direction: column;
+      height: auto;
+      padding: 1em;
+
+      .imagen {
+        width: 100%;
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .texto p,
+      h3 {
+        padding: 0;
+      }
+    }
+
+    .block > div {
+      width: 100%;
+    }
+  }
+
+  .azul {
+    p,
+    h3 {
+      padding: 0 1em;
+    }
+  }
+
+  .valores {
+    padding-bottom: 2em;
+  }
+}

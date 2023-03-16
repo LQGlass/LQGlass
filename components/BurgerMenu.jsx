@@ -73,22 +73,64 @@ function ResponsiveExample({ categorias, paquetes }) {
                 })}
             </DropdownButton>
             <Link href={"/promociones"}>
-              <div className={styles.linkNavDiv}>Promociones</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Promociones
+              </li>
             </Link>
             <Link href={"/sucursales"}>
-              <div className={styles.linkNavDiv}>Sucursales</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Sucursales
+              </li>
             </Link>
             <Link href={"/blog"}>
-              <div className={styles.linkNavDiv}>Blog</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Blog
+              </li>
             </Link>
             <Link href={"/nosotros"}>
-              <div className={styles.linkNavDiv}>Nosotros</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Nosotros
+              </li>
             </Link>
             <Link href={"/perfil"}>
-              <div className={styles.linkNavDiv}>Resultados</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Resultados
+              </li>
             </Link>
             <Link href={"/perfil"}>
-              <div className={styles.linkNavDiv}>Factura</div>
+              <li
+                onClick={() => {
+                  handleClose();
+                }}
+                className={styles.linkNavDiv}
+              >
+                Factura
+              </li>
             </Link>
           </div>
           <LogButtons />
