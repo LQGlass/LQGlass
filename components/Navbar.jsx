@@ -8,7 +8,7 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import BurgerMenu from "./BurgerMenu";
 const db = getFirestore(firebaseApp);
 
-function Navbar() {
+export default function Navbar({ navbarLanguage }) {
   const paquetes = ["Para El", "Para Ella", "Kids", "Check up", "Adulto Mayor"];
   const categories = [
     "Biología molecular",
@@ -32,46 +32,51 @@ function Navbar() {
         <LQGIcon />
         <BurgerMenu categorias={categories} paquetes={paquetes} />
         <div className={styles.menu}>
-          <DropDownMenu categorias={categories} titulo={"Estudios"} />
+          <DropDownMenu
+            categories={categories}
+            titulo={navbarLanguage.estudios}
+          />
           <div>
             <p className={styles.separador}>|</p>
           </div>
-          <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
+          <DropDownMenu titulo={navbarLanguage.paquetes} packs={paquetes} />
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/promociones"}>
-            <div className={styles.linkNavDiv}>Promociones</div>
+            <div className={styles.linkNavDiv}>
+              {navbarLanguage.promociones}
+            </div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/sucursales"}>
-            <div className={styles.linkNavDiv}>Sucursales</div>
+            <div className={styles.linkNavDiv}>{navbarLanguage.sucursales}</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/blog"}>
-            <div className={styles.linkNavDiv}>Blog</div>
+            <div className={styles.linkNavDiv}>{navbarLanguage.blog}</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/nosotros"}>
-            <div className={styles.linkNavDiv}>Nosotros</div>
+            <div className={styles.linkNavDiv}>{navbarLanguage.nosotros}</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/perfil"}>
-            <div className={styles.linkNavDiv}>Resultados</div>
+            <div className={styles.linkNavDiv}>{navbarLanguage.resultados}</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/perfil"}>
-            <div className={styles.linkNavDiv}>Factura</div>
+            <div className={styles.linkNavDiv}>{navbarLanguage.facturas}</div>
           </Link>
         </div>
 
@@ -82,5 +87,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;

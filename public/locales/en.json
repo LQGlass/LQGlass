@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "estudios": "Analysis",
+    "paquetes": "Packages",
+    "blog": "Blog",
+    "nosotros": "About us",
+    "resultados": "Results",
+    "sucursales": "Branches",
+    "promociones": "Promotions",
+    "facturas": "Invoices",
+    "iniciar_sesion": "Log in"
+  }
+}

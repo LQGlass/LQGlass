@@ -6,8 +6,10 @@ function DropdownMenu({ titulo, packs, categories }) {
   const [isPaquetes, setIsPaquetes] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    if (titulo === "Paquetes") {
+    if (packs) {
       setIsPaquetes(true);
+    } else {
+      setIsPaquetes(false);
     }
   }, []);
 
@@ -45,7 +47,7 @@ function DropdownMenu({ titulo, packs, categories }) {
               {!isPaquetes &&
                 categorias.map(categoria => {
                   return (
-                    <Link key={categoria} href={`//${categoria}`}>
+                    <Link key={categoria} href={`/${categoria}`}>
                       <li>{categoria}</li>
                     </Link>
                   );
