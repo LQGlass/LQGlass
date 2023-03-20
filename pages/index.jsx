@@ -53,12 +53,12 @@ export const getStaticProps = async ({ locale }) => {
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = collection(db, "categorias");
   const collectionRef2 = collection(db, "grupo-paquetes");
-  /* const collectionRef3 = collectionGroup(db, "examenes"); */
+  const collectionRef3 = collectionGroup(db, "examenes");
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
   const snapshot2 = await getDocs(collectionRef2);
-  /*   const snapshot3 = await getDocs(collectionRef3);
-   */ //se mapea cada documento para hacer push de
+  const snapshot3 = await getDocs(collectionRef3);
+  //se mapea cada documento para hacer push de
   //sus datos en el array categorias
   snapshot.forEach(doc => {
     categories.push(doc.id);
@@ -66,15 +66,15 @@ export const getStaticProps = async ({ locale }) => {
   snapshot2.forEach(doc => {
     paquetes.push(doc.id);
   });
-  /* snapshot3.forEach(doc => {
+  snapshot3.forEach(doc => {
     examenes.push(doc.data().nombre);
-  }); */
+  });
   return {
     //return the props as "categories"
     props: {
       categories,
       paquetes,
-      /*  examenes, */
+      examenes,
       navbarLanguage: response.default.nav,
     },
   };
