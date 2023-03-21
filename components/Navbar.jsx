@@ -36,44 +36,42 @@ export default function Navbar({ navbarLanguage }) {
           <div>
             <p className={styles.separador}>|</p>
           </div>
-          <DropDownMenu titulo={navbarLanguage.paquetes} packs={paquetes} />
+          <DropDownMenu titulo={"Paquetes"} packs={paquetes} />
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/promociones"}>
-            <div className={styles.linkNavDiv}>
-              {navbarLanguage.promociones}
-            </div>
+            <div className={styles.linkNavDiv}>Promociones</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/sucursales"}>
-            <div className={styles.linkNavDiv}>{navbarLanguage.sucursales}</div>
+            <div className={styles.linkNavDiv}>Sucursales</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/blog"}>
-            <div className={styles.linkNavDiv}>{navbarLanguage.blog}</div>
+            <div className={styles.linkNavDiv}>Blog</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/nosotros"}>
-            <div className={styles.linkNavDiv}>{navbarLanguage.nosotros}</div>
+            <div className={styles.linkNavDiv}>Nosotros</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/perfil"}>
-            <div className={styles.linkNavDiv}>{navbarLanguage.resultados}</div>
+            <div className={styles.linkNavDiv}>Resultados</div>
           </Link>
           <div>
             <p className={styles.separador}>|</p>
           </div>
           <Link href={"/perfil"}>
-            <div className={styles.linkNavDiv}>{navbarLanguage.facturas}</div>
+            <div className={styles.linkNavDiv}>Perfil</div>
           </Link>
         </div>
 
