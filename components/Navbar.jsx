@@ -32,7 +32,7 @@ function Navbar() {
         <LQGIcon />
         <BurgerMenu categorias={categories} paquetes={paquetes} />
         <div className={styles.menu}>
-          <DropDownMenu categorias={categories} titulo={"Estudios"} />
+          <DropDownMenu categories={categories} titulo={"Estudios"} />
           <div>
             <p className={styles.separador}>|</p>
           </div>
