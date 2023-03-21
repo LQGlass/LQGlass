@@ -64,3 +64,34 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Ignorar archivos y carpetas generados por Next.js
+node_modules
+.next
+out
+
+# Ignorar archivos de configuración de Firebase
+firebase.json
+firestore.rules
+storage.rules
+
+# Ignorar archivos generados por Firebase CLI
+*.firebase.json
+*.firebaserc
+
+# Ignorar archivos y carpetas generados por Netlify
+/.netlify
+/node_modules
+/public
+/build
+
+# Ignorar archivos de caché
+.DS_Store
+*.log
+
+# Ignorar variables de entorno sensibles
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+

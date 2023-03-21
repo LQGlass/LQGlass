@@ -34,7 +34,7 @@ function BurgerMenu({ categorias, paquetes }) {
           <Offcanvas.Body className="d-lg-none">
             <div className={styles.menu}>
               <Link href={"/"}>
-                <div className={styles.linkNavDiv}>Inicio</div>
+                <li className={styles.linkNavDiv}>Inicio</li>
               </Link>
               <DropdownButton
                 variant="dark"
