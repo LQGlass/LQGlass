@@ -2,7 +2,7 @@
 .formularioFacturas {
   display: flex;
   justify-content: space-around;
-  
+
   form {
     display: flex;
     flex-direction: column;
@@ -19,14 +19,14 @@
     border: 1px solid $primary-color;
     border-radius: 2em;
     padding: 1rem 1rem;
-    color:#071d49;
+    color: #071d49;
   }
 
   input::placeholder {
     color: $primary-color;
   }
 
-  .radio{
+  .radio {
     margin-left: 3rem;
   }
 
@@ -37,5 +37,11 @@
 
   button {
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formularioFacturas {
+    flex-direction: column;
   }
 }

@@ -90,9 +90,9 @@ export default function ResultadosPerfil({ perfil }) {
 
   return (
     <>
-      <h2>{perfil.doctor ? "Subir resultados" : "Resultados"}</h2>
+      <h2>{perfil && perfil.doctor ? "Subir resultados" : "Resultados"}</h2>
 
-      {!perfil.doctor && (
+      {!perfil?.doctor && (
         <div>
           <p>
             <strong>
@@ -106,11 +106,11 @@ export default function ResultadosPerfil({ perfil }) {
           <p>
             Y puedes ir a la seccion de datos de perfil para agregar tus folios.
           </p>
-          <MisResultados folios={perfil.folios} user={perfil} />
+          <MisResultados folios={perfil?.folios} user={perfil} />
         </div>
       )}
 
-      {perfil.doctor && (
+      {perfil?.doctor && (
         <div>
           <form className={styles.upload} onSubmit={submitHandler}>
             <label for="fileInput" className={styles.customFileUpload}>

@@ -30,7 +30,7 @@
       font-weight: bold;
       font-size: 1.5rem;
     }
-  
+
     p:hover {
       text-decoration: underline;
     }
@@ -41,13 +41,7 @@
       height: 2em;
       filter: invert(100%);
     }
-  
-  
   }
-
-
-
-  
 }
 
 .navMenuPerfil {
@@ -62,5 +56,32 @@
     border-radius: 1em;
     padding: 0.5em;
     height: 5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuPerfil {
+    gap: 1em;
+    width: 100%;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    p {
+      display: none;
+    }
+
+    img {
+      margin-right: 0;
+      width: 1em;
+      height: 1em;
+    }
+  }
+  .perfil {
+    flex-direction: column;
+    .datosPerfil {
+      padding: 2em 2em 5em;
+    }
   }
 }

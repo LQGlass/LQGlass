@@ -20,14 +20,15 @@ function FormularioFacturas({ user }) {
   const monthNum = d.getMonth();
   const [solicitadas, setSolicitadas] = useState(null);
   const [ticket, setticket] = useState(null);
-  const isDoctor = user.doctor;
+  const isDoctor = user?.doctor;
+  const userEmail = user?.email;
   useEffect(() => {
     async function getData() {
       let facturasSolicitadas = [];
       //funcion para llamar los datos desde firestore
       const collectionRef = query(
         collection(db, "facturas-solicitadas"),
-        where("email", "==", user.email)
+        where("email", "==", userEmail)
       );
       //se genera un snapshor con todos los documentos
       const snapshot = await getDocs(collectionRef);
@@ -96,16 +97,8 @@ function FormularioFacturas({ user }) {
           send: false,
         }
       ).then(() => {
-        ticket = "";
-        rfc = "";
-        name = "";
-        calle = "";
-        colonia = "";
-        cpp = "";
-        municipio = "";
-        regimen = "";
-        cfdi = "";
-        email = "";
+        alert("Factura solicitada con exito");
+        e.target.reset();
       });
       setticket(ticket);
     }
@@ -120,7 +113,8 @@ function FormularioFacturas({ user }) {
       )}
       {!isDoctor && (
         <div className={styles.formularioFacturas}>
-          <div>
+          <div className={styles.facturasListas}>
+            <h2>Solicitar facturas</h2>
             <p>
               Rellena el formulario para poder enviar la factura <br /> a el
               correo electrónico con el que iniciaste sesion.
@@ -128,13 +122,14 @@ function FormularioFacturas({ user }) {
             <p>
               <strong>Facturas solicitadas:</strong>
             </p>
-            {solicitadas ? (
+            {solicitadas && solicitadas.length > 0 ? (
               solicitadas.map(el => <p key={el}>Ticket: {el.ticket}</p>)
             ) : (
               <p>No se han solicitado facturas aún.</p>
             )}
           </div>
           <form onSubmit={submitHandler}>
+            <h3>Solicitar nueva factura:</h3>
             <input
               type="text"
               name="ticket"

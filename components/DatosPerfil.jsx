@@ -13,7 +13,7 @@ import styles from "./DatosPerfil.module.scss";
 const db = getFirestore(firebaseApp);
 //Componente para mostrar en pantalla los datos del usuario desde firestore
 export default function DatosPerfil({ perfil }) {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState({});
   const [folio, setFolio] = useState("");
   //Se llama a la database firestore desde el hook para evitar que se renderize multiples veces
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function DatosPerfil({ perfil }) {
     }
 
     getData();
-  }, [perfil.uid, user.folio]);
+  }, [perfil.uid, user && user.folio]);
 
   const foliosHandler = e => {
     e.preventDefault();
@@ -88,30 +88,28 @@ export default function DatosPerfil({ perfil }) {
           <strong>Apellidos:</strong>
         </p>
         <p>{user && user.last}</p>
-        {!user.doctor ? (
-          user && user.folios ? (
-            <ol className={styles.foliosList}>
-              <p>
-                <strong>Folios:</strong>
-              </p>
-              {user.folios.map(el => (
-                <li key={el}>
-                  {el}
-                  <button
-                    className={styles.deleteBtn}
-                    onClick={() => deleteFolio(el)}
-                  >
-                    X
-                  </button>
-                </li>
-              ))}
-            </ol>
-          ) : (
-            "No se han ingresado folios"
-          )
-        ) : null}
+        {user && user.doctor ? null : user && user.folios ? (
+          <ol className={styles.foliosList}>
+            <p>
+              <strong>Folios:</strong>
+            </p>
+            {user.folios.map(el => (
+              <li key={el}>
+                {el}
+                <button
+                  className={styles.deleteBtn}
+                  onClick={() => deleteFolio(el)}
+                >
+                  X
+                </button>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          "No se han ingresado folios"
+        )}
       </div>
-      {!user.doctor && (
+      {user && !user.doctor && (
         <form className={styles.formFolios} onSubmit={foliosHandler}>
           <label htmlFor="folios">
             <strong>Ingresar nuevo folio:</strong>

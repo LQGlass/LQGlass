@@ -16,7 +16,7 @@ export default function MisResultados({ folios, user }) {
     async function getData() {
       let resultados = [];
       //funcion para llamar los datos desde firestore
-      folios.forEach(async element => {
+      folios?.forEach(async element => {
         const collectionRef = query(
           collection(db, "resultados"),
           where("folio", "==", element),

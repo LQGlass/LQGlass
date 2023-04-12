@@ -22,9 +22,6 @@ import ResultadosPerfil from "./ResultadosPerfil";
 import FacturasPerfil from "./FacturasPerfil";
 const db = getFirestore(firebaseApp);
 
-// Obtiene el objeto de autenticación de Firebase
-const auth = getAuth(firebaseApp);
-
 // Declara la función MenuPerfil
 function MenuPerfil({ data }) {
   // Establece el estado inicial de los componentes a mostrar
@@ -43,7 +40,7 @@ function MenuPerfil({ data }) {
       if (docSnap.exists) {
         //se actualiza el estado con la informacion obtenida.
         setUser(docSnap.data());
-        setIsDoctor(docSnap.data().doctor);
+        setIsDoctor(data && data.doctor);
       }
     }
 
