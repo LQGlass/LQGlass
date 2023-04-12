@@ -60,7 +60,7 @@ export const getStaticProps = async context => {
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = query(
     collectionGroup(db, "examenes"),
-    where("categoria", "==", categorieName).limit(5)
+    where("categoria", "==", categorieName)
   );
   //se genera un snapshor con todos los documentos
   const snapshot = await getDocs(collectionRef);
