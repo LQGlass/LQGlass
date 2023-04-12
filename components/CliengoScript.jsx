@@ -6,7 +6,7 @@ function CliengoScript() {
     script.type = "text/javascript";
     script.async = true;
     script.src =
-      "https://s.cliengo.com/weboptimizer/63bc916f1d90ab002ac34a95/63bc91721d90ab002ac34a9c.js?platform=dashboard";
+      "https://s.cliengo.com/weboptimizer/6436f4869de955002520ad9f/6436f9789de955002520b046.js?platform=onboarding_modular";
 
     // Inserta el elemento script en el DOM
     const firstScript = document.getElementsByTagName("script")[0];
