@@ -4,11 +4,12 @@
   justify-content: center;
   margin: 0 0 3em 0;
   input {
+    box-shadow: 2px 2px 5px black;
     border-radius: 5em;
     padding: 1em;
     color: gray;
     width: 50%;
-    border: none;
+    border: 2px solid $primary-color;
   }
 
   .enterButton {
@@ -20,5 +21,24 @@
   }
   .enterButton:hover {
     background-color: $secondary-color;
+  }
+}
+
+.autocomplete {
+  background-color: $primary-color;
+  color: white;
+  top: 36em;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2em;
+  padding: 1em;
+  gap: 1em;
+  margin: -2em 2em 2em;
+
+  .enlaceExamen:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 2em;
   }
 }
