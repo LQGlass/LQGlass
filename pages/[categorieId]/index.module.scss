@@ -98,5 +98,13 @@
 @media screen and (max-width: 768px) {
   .casillaAnalisis {
     flex-direction: column;
+    .precios {
+      margin-left: 0;
+    }
+  }
+  .analisisSection {
+    .nameBox {
+      width: 80%;
+    }
   }
 }

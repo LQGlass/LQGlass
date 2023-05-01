@@ -40,8 +40,7 @@ function Footer() {
         <Link href={"/perfil"}>Perfil</Link>
         <Link href={"/perfil"}>Mis Resultados</Link>
         <Link href={"/perfil"}>Facturas</Link>
-        <Link href={"/legal"}>Legal</Link>
-        <Link href={"/politica-privacidad"}>Politica de Privacidad</Link>
+        <Link href={"/aviso-privacidad"}>Politica de Privacidad</Link>
       </div>
       <div>
         <select

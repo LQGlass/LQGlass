@@ -1,5 +1,6 @@
 import styles from "./CasillaPaquete.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 function CasillaPaquete({
   nombre,
@@ -13,11 +14,12 @@ function CasillaPaquete({
   return (
     <div className={styles.casillaAnalisis}>
       <div className={styles.imagenCasillaAnalisis}>
-        <img
+        <Image
           className={styles.imagenAnalisis}
           src={"/images/iconos-ui/resultados.png"}
-          alt=""
+          alt="icono de resultados"
           width={200}
+          height={200}
         />
       </div>
       <div className={styles.textosCasilla}>

@@ -6,10 +6,13 @@ export default function SearchBar({ contenido, placeholder }) {
   const [query, setQuery] = useState("");
   const [matchingObjects, setMatchingObjects] = useState([]);
 
+  //busca en el contenido de la base de datos
   const handleQueryChange = e => {
+    //guarda el valor del input en minúsculas
     const value = e.target.value.toLowerCase();
     setQuery(value);
 
+    //si el valor es mayor a 0, busca en la base de datos
     if (value.length > 0) {
       const matches = contenido
         .filter(object => object.toLowerCase().includes(value))
@@ -20,12 +23,14 @@ export default function SearchBar({ contenido, placeholder }) {
     }
   };
 
+  //redirecciona a la página del objeto seleccionado
   const handleObjectClick = object => {
     Router.push(`/examenes/${object}`);
     setMatchingObjects([]);
     setQuery("");
   };
 
+  //redirecciona a la página del objeto seleccionado
   const handleSubmit = () => {
     if (matchingObjects.length === 1) {
       Router.push(`/examenes/${matchingObjects[0]}`);
@@ -51,6 +56,7 @@ export default function SearchBar({ contenido, placeholder }) {
           onChange={handleQueryChange}
         />
       </div>
+      {/* si hay resultados, muestra la lista de resultados */}
       {matchingObjects.length > 0 && (
         <div className={styles.autocomplete}>
           {matchingObjects.map((object, i) => (

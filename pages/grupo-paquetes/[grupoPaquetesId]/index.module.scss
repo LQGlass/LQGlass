@@ -11,14 +11,12 @@ $primary-font: "Montserrat", sans-serif;
   padding: 5% 10%;
 
   .nameBox {
-    background-color: rgba($color: #ffff, $alpha: 1.0);
+    background-color: rgba($color: #ffff, $alpha: 1);
     padding: 20px;
     margin-bottom: 50px;
     h1 {
       color: $primary-color;
     }
-
-    
   }
 
   .casillaAnalisis {
@@ -90,4 +88,18 @@ $primary-font: "Montserrat", sans-serif;
 
 .casillaAnalisis:hover {
   background-image: linear-gradient(to bottom right, $secondary-color, white);
+}
+
+@media screen and (max-width: 768px) {
+  .analisisSection {
+    .nameBox {
+      width: 80%;
+    }
+  }
+
+  .casillaAnalisis {
+    dt {
+      font-size: 2rem;
+    }
+  }
 }

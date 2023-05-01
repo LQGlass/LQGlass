@@ -41,6 +41,10 @@
       height: 2em;
       filter: invert(100%);
     }
+    img:hover,
+    img:active {
+      filter: invert(0%);
+    }
   }
 }
 
