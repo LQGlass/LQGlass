@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./InformesSeccion.module.scss";
 import Image from "next/image";
 
+//mailchimp key: 5da28080676561ecab2b69b8b1da9b72-us12
+
 function InformesSeccion() {
   // Declare state variables to store form input values
   const [nombre, setNombre] = useState("");
@@ -12,33 +14,33 @@ function InformesSeccion() {
   const handleSubmit = async event => {
     // Prevent default form submission behavior
     event.preventDefault();
-
-    // Create object with form data to send to Mailchimp
-    const data = {
-      email_address: email,
-      status: "subscribed",
-      merge_fields: {
-        FNAME: nombre,
-        ESTUDIO: estudio,
-      },
-    };
-
-    // Send form data to Mailchimp API using fetch
-    const response = await fetch("/api/mailchimp", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-
-    // Handle response from Mailchimp API
-    if (response.ok) {
-      // Show success message and clear form input values
-      alert("Thank you for requesting information!");
+    console.log(nombre, estudio, email);
+    try {
+      //send data form to mailchimp
+      await fetch(
+        `https://us12.api.mailchimp.com/3.0/lists/4e50c83e86/members`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email_address: email,
+            status: "subscribed",
+            merge_fields: {
+              FNAME: nombre,
+              LNAME: estudio,
+            },
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "apikey 5da28080676561ecab2b69b8b1da9b72-us12",
+          },
+        }
+      );
+      // Clear form input values
       setNombre("");
       setEstudio("");
       setEmail("");
-    } else {
-      // Show error message
-      alert("An error has occurred. Please try again later.");
+    } catch (error) {
+      console.error("Hubo un error al enviar el formulario: ", error);
     }
   };
 
