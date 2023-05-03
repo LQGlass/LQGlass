@@ -59,6 +59,7 @@ function IniciarSesionForm() {
         last: formattedLname,
         id: user.uid,
         email: formattedCorreo,
+        doctor: false,
       });
       setLogged(true);
       return {
@@ -66,6 +67,7 @@ function IniciarSesionForm() {
         last: formattedLname,
         id: user.uid,
         email: formattedCorreo,
+        doctor: false,
       };
     } catch (e) {
       console.error("Error adding document: ", e);

@@ -52,6 +52,11 @@ $primary-font: "Montserrat", sans-serif;
     color: white;
     border-radius: 20px;
   }
+
+  .errorMessage {
+    color: red;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: 768px) {

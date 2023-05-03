@@ -20,6 +20,8 @@ import FormularioFacturas from "./FormularioFacturas";
 import DatosPerfil from "./DatosPerfil";
 import ResultadosPerfil from "./ResultadosPerfil";
 import FacturasPerfil from "./FacturasPerfil";
+import Image from "next/image";
+import AdminPanel from "./AdminPanel";
 const db = getFirestore(firebaseApp);
 
 // Declara la función MenuPerfil
@@ -29,8 +31,10 @@ function MenuPerfil({ data }) {
   const [resultsProfile, setResultsProfile] = useState(false);
   const [facturationProfile, setFacturationProfile] = useState(false);
   const [facturasProfile, setFacturasProfile] = useState(false);
+  const [adminPanel, setAdminPanel] = useState(false);
   const [user, setUser] = useState(null);
   const [isDoctor, setIsDoctor] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     //funcion para llamar los datos desde firestore
     async function getData() {
@@ -40,7 +44,8 @@ function MenuPerfil({ data }) {
       if (docSnap.exists) {
         //se actualiza el estado con la informacion obtenida.
         setUser(docSnap.data());
-        setIsDoctor(data && data.doctor);
+        setIsDoctor(docSnap.data().doctor);
+        setIsAdmin(docSnap.data().admin);
       }
     }
 
@@ -62,11 +67,11 @@ function MenuPerfil({ data }) {
               setFacturasProfile(false);
             }}
           >
-            <img
-              src="./images/iconos-ui/corazon-pc.png"
+            <Image
+              src="/images/iconos-ui/corazon-pc.png"
               width={50}
               height={50}
-              alt=""
+              alt="icono"
             />
             <p>Datos del Perfil</p>
           </div>
@@ -80,11 +85,11 @@ function MenuPerfil({ data }) {
               setFacturasProfile(false);
             }}
           >
-            <img
-              src="./images/iconos-ui/resultados.png"
+            <Image
+              src="/images/iconos-ui/resultados.png"
               width={50}
               height={50}
-              alt=""
+              alt="icono"
             />
             <p>{isDoctor ? "Subir Resultados" : "Resultados"}</p>
           </div>
@@ -97,11 +102,11 @@ function MenuPerfil({ data }) {
               setFacturasProfile(false);
             }}
           >
-            <img
-              src="./images/iconos-ui/solicitar-facturas.png"
+            <Image
+              src="/images/iconos-ui/solicitar-facturas.png"
               width={50}
               height={50}
-              alt=""
+              alt="icono"
             />
             <p>{isDoctor ? "Subir factura" : "Solicitar factura"}</p>
           </div>
@@ -113,16 +118,44 @@ function MenuPerfil({ data }) {
                   setDataProfile(false);
                   setResultsProfile(false);
                   setFacturationProfile(false);
-                  setFacturasProfile(true);
+                  if (!isDoctor) {
+                    setFacturasProfile(true);
+                  }
                 }}
               >
-                <img
-                  src="./images/iconos-ui/facturacion.png"
+                <Image
+                  src="/images/iconos-ui/facturacion.png"
                   width={50}
                   height={50}
-                  alt=""
+                  alt="icono"
                 />
                 <p>Facturas</p>
+              </div>
+            </>
+          )}
+          {isAdmin && (
+            <>
+              <div
+                className={styles.menuOptions}
+                onClick={() => {
+                  setDataProfile(false);
+                  setResultsProfile(false);
+                  setFacturationProfile(false);
+                  if (!isDoctor) {
+                    setFacturasProfile(true);
+                  }
+                  if (isAdmin) {
+                    setAdminPanel(true);
+                  }
+                }}
+              >
+                <Image
+                  src="/images/iconos-ui/facturacion.png"
+                  width={50}
+                  height={50}
+                  alt="icono"
+                />
+                <p>Panel Admin</p>
               </div>
             </>
           )}
@@ -133,6 +166,7 @@ function MenuPerfil({ data }) {
             {resultsProfile && <ResultadosPerfil perfil={user} />}
             {facturationProfile && <FormularioFacturas user={user} />}
             {facturasProfile && <FacturasPerfil user={user} />}
+            {adminPanel && <AdminPanel />}
           </div>
         </div>
       </div>

@@ -1,8 +1,12 @@
 import { useState } from "react";
 import styles from "./InformesSeccion.module.scss";
 import Image from "next/image";
-
-//mailchimp key: 5da28080676561ecab2b69b8b1da9b72-us12
+import emailjs from "emailjs-com";
+import {
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_USER_ID,
+} from "..//utils//emailjs";
 
 function InformesSeccion() {
   // Declare state variables to store form input values
@@ -12,35 +16,47 @@ function InformesSeccion() {
 
   // Define function to handle form submission
   const handleSubmit = async event => {
-    // Prevent default form submission behavior
+    const errorMessage = document.getElementById("errorMessage");
+    const butonSubmit = document.getElementById("botonSubmit");
     event.preventDefault();
-    console.log(nombre, estudio, email);
+
+    var templateParams = {
+      name: nombre,
+      message: estudio,
+      email: email,
+    };
+    //enviar email
     try {
-      //send data form to mailchimp
-      await fetch(
-        `https://us12.api.mailchimp.com/3.0/lists/4e50c83e86/members`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email_address: email,
-            status: "subscribed",
-            merge_fields: {
-              FNAME: nombre,
-              LNAME: estudio,
-            },
-          }),
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "apikey 5da28080676561ecab2b69b8b1da9b72-us12",
+      emailjs
+        .send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          templateParams,
+          EMAILJS_USER_ID
+        )
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
           },
-        }
-      );
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
       // Clear form input values
       setNombre("");
       setEstudio("");
       setEmail("");
+      botonSubmit.textContent = "Enviado";
+      //cambia el color de el boton a verde y lo deshabilita
+      botonSubmit.disabled = true;
+      botonSubmit.style.backgroundColor = "#4CAF50";
+      errorMessage.textContent = "";
     } catch (error) {
       console.error("Hubo un error al enviar el formulario: ", error);
+      errorMessage.textContent = "Error intente mas tarde";
+      setNombre("");
+      setEstudio("");
+      setEmail("");
     }
   };
 
@@ -80,10 +96,11 @@ function InformesSeccion() {
                 value={email}
                 onChange={event => setEmail(event.target.value)}
               />
-              <button className={styles.submit} type="submit">
+              <button id="botonSubmit" className={styles.submit} type="submit">
                 Enviar
               </button>
             </form>
+            <p id="errorMessage" className={styles.errorMessage}></p>
           </div>
         </div>
       </div>

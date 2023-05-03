@@ -77,6 +77,7 @@ export const getStaticProps = async ({ locale }) => {
       examenes,
       navbarLanguage: response.default.nav,
     },
+    revalidate: 21600,
   };
 };
 

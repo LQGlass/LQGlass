@@ -1,18 +1,11 @@
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { useState } from "react";
+import FooterFormulario from ".//FooterFormulario";
 
 function Footer() {
-  const [informes, setinformes] = useState(false);
-  const informesHandler = () => {
-    setinformes(!informes);
-  };
-  let year = 1999;
-  function getYearFooter() {
-    const d = new Date();
-    year = d.getFullYear();
-  }
-  getYearFooter();
+  const d = new Date();
+  let year = d.getFullYear();
   return (
     <section className={styles.footer}>
       <div>
@@ -42,24 +35,7 @@ function Footer() {
         <Link href={"/perfil"}>Facturas</Link>
         <Link href={"/aviso-privacidad"}>Politica de Privacidad</Link>
       </div>
-      <div>
-        <select
-          name="informes"
-          onChange={informesHandler}
-          id="informes"
-          defaultValue={"value2"}
-        >
-          <option value="value1">Quejas</option>
-          <option value="value2">Informes</option>
-        </select>
-        <form>
-          <input placeholder="Nombre" type="text" />
-          <input placeholder="Email" type="email" />
-          {!informes && <input placeholder="Estudio" type="text" />}
-          {informes && <input placeholder="Queja" type="text" />}
-          <button>Enviar</button>
-        </form>
-      </div>
+      <FooterFormulario />
     </section>
   );
 }
