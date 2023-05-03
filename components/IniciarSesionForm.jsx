@@ -6,6 +6,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 const auth = getAuth(firebaseApp);
 import { getFirestore, doc, setDoc } from "firebase/firestore";
@@ -88,7 +89,13 @@ function IniciarSesionForm() {
     }
 
     if (!validatePassword(contra)) {
-      setErrorStatus("La contraseña debe tener al menos 6 caracteres.");
+      if (contra.length < 8) {
+        setErrorStatus("La contraseña debe tener al menos 8 caracteres.");
+      } else {
+        setErrorStatus(
+          "La contraseña debe contener al menos 1 letra mayúscula, 1 letra minúscula y 1 número."
+        );
+      }
       return;
     }
 
@@ -180,19 +187,35 @@ function IniciarSesionForm() {
   }
 
   //Recovery password function
-  function passwordRecoverHandler(e) {
-    e.preventDefault();
+  const passwordRecoverHandler = () => {
+    if (!email) {
+      setErrorStatus("Por favor ingresa un correo electrónico válido.");
+    }
+    const email = document.querySelector("#formCorreo").value;
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        // Password reset email sent!
-        location.reload();
+        setErrorStatus(
+          "Se ha enviado un correo para recuperar tu contraseña. Revisa tu bandeja de spam"
+        );
       })
       .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        if (errorCode === "auth/invalid-email") {
+          setErrorStatus("Por favor ingresa un correo electrónico válido.");
+        } else if (errorCode === "auth/user-not-found") {
+          setErrorStatus(
+            "No se encontró un usuario con este correo electrónico."
+          );
+        } else if (errorCode === "auth/missing-email") {
+          setErrorStatus(
+            "Ingresa un correo electronico para recuperar tu contraseña."
+          );
+        } else {
+          setErrorStatus(errorMessage);
+        }
       });
-  }
+  };
 
   return (
     <Container className={styles.logComponent}>

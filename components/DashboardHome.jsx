@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ModalAdd from ".//componentsPanel/ModalAdd";
 import deleteItem from "../funciones/deleteItem";
 import ModalEdit from "./componentsPanel/ModalEdit";
+import PromocionesModal from "./componentsPanel/PromocionesModal";
 
 export default function DashboardHome({ usuario }) {
   const [examenes, setexamenes] = useState([]);
@@ -16,10 +17,11 @@ export default function DashboardHome({ usuario }) {
   const [perfilesActive, setPerfilesActive] = useState(false);
   let veces = 0;
 
+  //funcion para abrir modal para añadir producto
   function añadirProductoHome() {
     setIsModalAdd(true);
   }
-
+  //actualiza el estado de los productos
   function actualizarEstadoProductos() {
     getAllProducts().then(examenes => {
       setexamenes(examenes);
@@ -28,7 +30,7 @@ export default function DashboardHome({ usuario }) {
       console.log(veces);
     });
   }
-
+  //filtra los productos
   function filter(searchTerm) {
     const searchResults = examenes.filter(el => {
       const criteria1 =
@@ -46,7 +48,7 @@ export default function DashboardHome({ usuario }) {
     });
     setExamSearch(searchResults);
   }
-
+  //funcion de manejo para la busqueda
   function searchHandler(e) {
     e.preventDefault();
     setSearch(e.target.value);
@@ -78,9 +80,6 @@ export default function DashboardHome({ usuario }) {
       )}
       <Stack direction="horizontal" className="justify-content-between">
         <p style={{ fontSize: 24 }}>Bienvenido, {usuario.email} </p>
-        {/* <Button variant="secondary" onClick={perfilesHandler}>
-          Perfiles
-        </Button> */}
         <Button onClick={signOut}>Cerrar Sesión</Button>
       </Stack>
       <hr />
@@ -96,17 +95,11 @@ export default function DashboardHome({ usuario }) {
           </Form.Group>
         </Stack>
       </Form>
-
       <hr />
       <Button onClick={añadirProductoHome}>
         {perfilesActive ? "Añadir perfil" : "Añadir examen"}
       </Button>
-      {/* {perfilesActive && (
-        <Button variant="danger" onClick={maravilla}>
-          Maravilla
-        </Button>
-      )} */}
-
+      <PromocionesModal />
       {perfilesActive ? (
         "Hola"
       ) : (
