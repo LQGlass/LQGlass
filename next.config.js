@@ -7,4 +7,11 @@ module.exports = {
   images: {
     domains: ["firebasestorage.googleapis.com"],
   },
+  distDir: "build",
+  trailingSlash: true,
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+    };
+  },
 };
