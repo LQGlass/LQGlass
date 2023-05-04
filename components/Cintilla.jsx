@@ -7,7 +7,7 @@ export default function Cintilla() {
         <div className={styles.tituloCintilla}>
           CDMX y Area Metropolitana | Haz tu cita : 55 4672 2581 ó 55 5562 5267
         </div>
-        <LanguageSelector />
+        {/* <LanguageSelector /> */}
       </div>
     </>
   );

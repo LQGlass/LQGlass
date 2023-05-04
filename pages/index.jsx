@@ -49,7 +49,6 @@ export const getStaticProps = async ({ locale }) => {
   let categories = [];
   let paquetes = [];
   let examenes = [];
-  const response = await import(`../public/locales/${locale}.json`);
   //se llama a todas las categorias con subcoleccion de examenes
   const collectionRef = collection(db, "categorias");
   const collectionRef2 = collection(db, "grupo-paquetes");
@@ -75,7 +74,6 @@ export const getStaticProps = async ({ locale }) => {
       categories,
       paquetes,
       examenes,
-      navbarLanguage: response.default.nav,
     },
     revalidate: 21600,
   };
