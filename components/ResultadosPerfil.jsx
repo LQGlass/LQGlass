@@ -120,6 +120,8 @@ export default function ResultadosPerfil({ perfil }) {
               id="fileInput"
               type="file"
               onChange={e => setFile(e.target.files[0])}
+              required
+              accept="application/pdf"
             />
             <p>
               Si el archivo es mayor a 1 MB se recomienda comprimirlo en el
@@ -132,9 +134,9 @@ export default function ResultadosPerfil({ perfil }) {
               </a>
             </p>
             <label htmlFor="folio">Folio:</label>
-            <input name="folio" type="text" />
+            <input required name="folio" type="text" />
             <label htmlFor="email">Correo del cliente:</label>
-            <input name="email" type="email" />
+            <input required name="email" type="email" />
             <button>Subir</button>
           </form>
           <div>

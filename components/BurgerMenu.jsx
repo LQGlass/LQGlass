@@ -16,7 +16,7 @@ function BurgerMenu({ categorias, paquetes }) {
   }, []);
 
   return (
-    <div div className={styles.burgerMenu}>
+    <div className={styles.burgerMenu}>
       <Button className="d-lg-none" onClick={handleShow}>
         Menu
       </Button>

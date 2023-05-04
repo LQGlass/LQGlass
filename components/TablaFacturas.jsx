@@ -5,16 +5,20 @@ export default function TablaFacturas({ data }) {
       <h3>Facturas solicitadas via web</h3>
       <div className={styles.facturas}>
         <table>
-          <th>Ticket</th>
-          <th>Email cliente</th>
-          <th>Nombre</th>
-          <th>Calle</th>
-          <th>Colonia</th>
-          <th>Código postal</th>
-          <th>Municipio</th>
-          <th>Regimen Fiscal</th>
-          <th>Uso de CFDI</th>
-          <th>Enviada</th>
+          <thead>
+            <tr>
+              <td>Ticket</td>
+              <td>Email cliente</td>
+              <td>Nombre</td>
+              <td>Calle</td>
+              <td>Colonia</td>
+              <td>Código postal</td>
+              <td>Municipio</td>
+              <td>Regimen Fiscal</td>
+              <td>Uso de CFDI</td>
+              <td>Enviada</td>
+            </tr>
+          </thead>
           <tbody>
             {data
               ? data.map(el => {

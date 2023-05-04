@@ -1,5 +1,12 @@
 @import "../styles/variables";
 
+.datosWrapper {
+  .correo {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
 .formFolios {
   display: flex;
   flex-direction: column;

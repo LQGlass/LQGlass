@@ -75,11 +75,11 @@ export default function DatosPerfil({ perfil }) {
   return (
     <>
       <h2>Datos del Perfil</h2>
-      <div className="datosWrapper">
+      <div className={styles.datosWrapper}>
         <p>
           <strong>Correo:</strong>
         </p>
-        <p>{user && user.email}</p>
+        <p className={styles.correo}>{user && user.email}</p>
         <p>
           <strong>Nombre:</strong>
         </p>

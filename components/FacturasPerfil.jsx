@@ -60,7 +60,8 @@ export default function FacturasPerfil({ user }) {
             <tr>
               <th>Ticket</th>
               <th>Fecha de subida</th>
-              <th>Archivo</th>
+              <th>Archivo PDF</th>
+              <th>Archivo XML</th>
             </tr>
           </thead>
           <tbody>
@@ -71,6 +72,13 @@ export default function FacturasPerfil({ user }) {
                     <td>{el.uploadDate}</td>
                     <td>
                       {el.url ? <a href={el.url}>Ver</a> : "No disponible aún"}
+                    </td>
+                    <td>
+                      {el.url2 ? (
+                        <a href={el.url2}>Ver</a>
+                      ) : (
+                        "No disponible aún"
+                      )}
                     </td>
                   </tr>
                 ))

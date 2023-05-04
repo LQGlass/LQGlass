@@ -223,7 +223,7 @@ function FormularioFacturas({ user }) {
                 Honorarios médicos, dentales y gastos hospitalarios
               </option>
               <option value="D01">
-                Gasots médicos por incapacidad o discapacidad
+                Gastos médicos por incapacidad o discapacidad
               </option>
               <option value="D02">Gastos funerales</option>
               <option value="D04">Donativos</option>

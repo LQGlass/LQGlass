@@ -13,8 +13,47 @@
   td {
     padding-top: 1em;
     padding-right: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
     a {
       color: $secondary-color;
+    }
+  }
+  thead tr th {
+    font-weight: bold;
+    padding-right: 2em;
+  }
+  @media only screen and (max-width: 767px) {
+    display: block;
+    tr {
+      border-top: 0;
+      display: block;
+      margin-bottom: 3em;
+    }
+    td {
+      display: block;
+      text-align: right;
+      padding: 0.5em;
+      &:before {
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    td:nth-of-type(1):before {
+      content: "Folio: ";
+    }
+    td:nth-of-type(2):before {
+      content: "Subido por: ";
+    }
+    td:nth-of-type(3):before {
+      content: "Fecha de subida: ";
+    }
+    td:nth-of-type(4):before {
+      content: "Archivo: ";
+    }
+    thead {
+      display: none;
     }
   }
 }

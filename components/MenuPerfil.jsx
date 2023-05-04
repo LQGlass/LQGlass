@@ -65,6 +65,12 @@ function MenuPerfil({ data }) {
               setResultsProfile(false);
               setFacturationProfile(false);
               setFacturasProfile(false);
+              if (!isDoctor) {
+                setFacturasProfile(false);
+              }
+              if (isAdmin) {
+                setAdminPanel(false);
+              }
             }}
           >
             <Image
@@ -83,6 +89,12 @@ function MenuPerfil({ data }) {
               setResultsProfile(true);
               setFacturationProfile(false);
               setFacturasProfile(false);
+              if (!isDoctor) {
+                setFacturasProfile(false);
+              }
+              if (isAdmin) {
+                setAdminPanel(false);
+              }
             }}
           >
             <Image
@@ -100,6 +112,12 @@ function MenuPerfil({ data }) {
               setResultsProfile(false);
               setFacturationProfile(true);
               setFacturasProfile(false);
+              if (!isDoctor) {
+                setFacturasProfile(false);
+              }
+              if (isAdmin) {
+                setAdminPanel(false);
+              }
             }}
           >
             <Image
@@ -120,6 +138,9 @@ function MenuPerfil({ data }) {
                   setFacturationProfile(false);
                   if (!isDoctor) {
                     setFacturasProfile(true);
+                  }
+                  if (isAdmin) {
+                    setAdminPanel(false);
                   }
                 }}
               >
@@ -142,7 +163,7 @@ function MenuPerfil({ data }) {
                   setResultsProfile(false);
                   setFacturationProfile(false);
                   if (!isDoctor) {
-                    setFacturasProfile(true);
+                    setFacturasProfile(false);
                   }
                   if (isAdmin) {
                     setAdminPanel(true);

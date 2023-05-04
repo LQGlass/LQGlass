@@ -1,12 +1,28 @@
 @import "../styles/variables";
+
 .facturas {
   border-radius: 2em;
   padding: 1em;
   width: auto;
   margin-top: 2em;
   background-color: #f1f1f1;
+
   td {
     border-top: solid 1px black;
     padding-right: 4em;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    overflow-x: auto;
+
+    td {
+      padding: 0.5em;
+      &:before {
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
   }
 }
