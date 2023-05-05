@@ -10,6 +10,8 @@ import {
   collection,
   query,
   getDocs,
+  limit,
+  orderBy,
 } from "firebase/firestore";
 import TableDocuments from "./TableDocuments";
 import MisResultados from "./MisResultados";
@@ -25,7 +27,11 @@ export default function ResultadosPerfil({ perfil }) {
     async function getData() {
       let resultados = [];
       //funcion para llamar los datos desde firestore
-      const collectionRef = query(collection(db, "resultados"));
+      const collectionRef = query(
+        collection(db, "resultados"),
+        orderBy("uploadDate"),
+        limit(25)
+      );
       //se genera un snapshor con todos los documentos
       const snapshot = await getDocs(collectionRef);
       //se mapea cada documento para hacer push de
@@ -133,13 +139,25 @@ export default function ResultadosPerfil({ perfil }) {
                 Comprimir
               </a>
             </p>
+            <label htmlFor="email">Email cliente:</label>
+            <input
+              placeholder="Email cliente"
+              required
+              name="email"
+              type="email"
+            />
             <label htmlFor="folio">Folio:</label>
-            <input required name="folio" type="text" />
-            <label htmlFor="email">Correo del cliente:</label>
-            <input required name="email" type="email" />
+            <input
+              placeholder="Folio (minimo 3 digitos)"
+              required
+              name="folio"
+              type="text"
+            />
             <button>Subir</button>
           </form>
           <div>
+            <hr />
+            <h3>Resultados ya enviados:</h3>
             <TableDocuments documents={pdfArr} />
           </div>
         </div>

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import TituloHeader from "../components/TituloHeader";
 import firebaseApp from "../firebase/firebase";
 import { getStorage, ref, getDownloadURL, listAll } from "firebase/storage";
-import PromocionesGallery from "../components/promocionesGallery";
+import PromocionesGallery from "../components/PromocionesGallery";
 const storage = getStorage(firebaseApp); // Se inicializa Firebase Storage
 
 const promociones = ({ urls }) => {

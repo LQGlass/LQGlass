@@ -222,7 +222,7 @@ export default function IngresarFacturas() {
           <button>Enviar</button>
         </form>
       </div>
-
+      <hr />
       <TablaFacturas data={solicitadas} />
     </>
   );

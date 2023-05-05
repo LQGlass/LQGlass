@@ -9,6 +9,8 @@ import {
   query,
   getDocs,
   updateDoc,
+  orderBy,
+  limit,
 } from "firebase/firestore";
 const storage = getStorage(firebaseApp);
 import { getStorage, uploadBytes, ref, getDownloadURL } from "firebase/storage";
@@ -24,7 +26,9 @@ export default function FacturasPerfil({ user }) {
       //funcion para llamar los datos desde firestore
       const collectionRef = query(
         collection(db, "facturas-solicitadas"),
-        where("email", "==", user.email)
+        where("email", "==", user.email),
+        orderBy("uploadDate"),
+        limit(25)
       );
       //se genera un snapshor con todos los documentos
       const snapshot = await getDocs(collectionRef);

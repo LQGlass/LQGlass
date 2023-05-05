@@ -2,13 +2,13 @@ import styles from "./TablaFacturas.module.scss";
 export default function TablaFacturas({ data }) {
   return (
     <div className={styles.facturasWrapper}>
-      <h3>Facturas solicitadas via web</h3>
+      <h3>Facturas solicitadas por clientes via web</h3>
       <div className={styles.facturas}>
         <table>
           <thead>
             <tr>
               <td>Ticket</td>
-              <td>Email cliente</td>
+              <td>Pedido por</td>
               <td>Nombre</td>
               <td>Calle</td>
               <td>Colonia</td>
@@ -37,7 +37,7 @@ export default function TablaFacturas({ data }) {
                     </tr>
                   );
                 })
-              : null}
+              : "No hay facturas solicitadas"}
           </tbody>
         </table>
       </div>
