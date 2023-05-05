@@ -95,3 +95,8 @@ storage.rules
 .env.test.local
 .env.production.local
 
+# Ignorar archivo de Firebase
+/firebase/firebase.js
+
+# Ignorar archivo de EmailJS
+/utils/emailjs.js
