@@ -54,11 +54,11 @@ export default function articulo3() {
               <li>
                 <strong>Perfil de lípidos:</strong> El perfil de lípidos es un
                 análisis que mide los niveles de colesterol total, colesterol
-                LDL ("malo"), colesterol HDL ("bueno") y triglicéridos. Este
-                análisis es útil para la detección temprana de enfermedades
-                cardiovasculares, como enfermedad coronaria y accidente
-                cerebrovascular. Las enfermedades cardiovasculares son una de
-                las principales causas de muerte en todo el mundo.
+                LDL, colesterol HDL y triglicéridos. Este análisis es útil para
+                la detección temprana de enfermedades cardiovasculares, como
+                enfermedad coronaria y accidente cerebrovascular. Las
+                enfermedades cardiovasculares son una de las principales causas
+                de muerte en todo el mundo.
               </li>
               <li>
                 <strong>Función renal:</strong> La evaluación de la función
