@@ -5,7 +5,8 @@ import Footer from "../components/Footer";
 import TituloHeader from "../components/TituloHeader";
 import firebaseApp from "../firebase/firebase";
 import { getStorage, ref, getDownloadURL, listAll } from "firebase/storage";
-const storage = getStorage(firebaseApp);
+import PromocionesGallery from "../components/promocionesGallery";
+const storage = getStorage(firebaseApp); // Se inicializa Firebase Storage
 
 const promociones = ({ urls }) => {
   return (
@@ -13,20 +14,7 @@ const promociones = ({ urls }) => {
       <Navbar />
       <TituloHeader clase={true} titulo="Promociones" />
       {/* Wrapper para contener las imágenes de las promociones */}
-      <div className={styles.promocionesWrapper}>
-        {/* Se hace un map para recorrer el arreglo de las urls de las promociones */}
-        {urls.map((url, index) => (
-          <div key={index}>
-            {/* Se utiliza el componente Image de Next.js para mostrar cada imagen */}
-            <Image
-              src={url}
-              width={320}
-              height={320}
-              alt={`Promoción ${index + 1}`}
-            />
-          </div>
-        ))}
-      </div>
+      <PromocionesGallery urls={urls} />
       <Footer />
     </section>
   );
@@ -35,8 +23,7 @@ const promociones = ({ urls }) => {
 // Función para obtener las urls de las imágenes de las promociones
 export async function getStaticProps() {
   const urls = [];
-  const storage = getStorage(firebaseApp); // Se inicializa Firebase Storage
-  const storageRef = ref(storage, "imagenespromo/"); // Se obtiene la referencia del directorio de las imágenes de las promociones
+  const storageRef = ref(storage, "images/promociones/"); // Se obtiene la referencia del directorio de las imágenes de las promociones
   const listResult = await listAll(storageRef); // Se obtienen todos los archivos del directorio
   // Se recorre el arreglo de archivos y se obtiene la url de descarga de cada uno de ellos
   for (const item of listResult.items) {

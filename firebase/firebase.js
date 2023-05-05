@@ -12,11 +12,10 @@ const firebaseConfig = {
   storageBucket: "lqglasscms.appspot.com",
   messagingSenderId: "88545366466",
   appId: "1:88545366466:web:9f498df615c169eebfc65b",
-  measurementId: "G-P4BZ7JZCW7"
+  measurementId: "G-P4BZ7JZCW7",
 };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
 export default firebaseApp;
-

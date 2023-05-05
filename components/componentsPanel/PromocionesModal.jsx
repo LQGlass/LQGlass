@@ -21,7 +21,7 @@ const PromocionesModal = () => {
   const [refreshUrls, setRefreshUrls] = useState(false);
 
   const getUrls = async refresh => {
-    const listRef = ref(storage, "imagenespromo/"); // Se obtiene la referencia del directorio de las imágenes de las promociones
+    const listRef = ref(storage, "images/promociones"); // Se obtiene la referencia del directorio de las imágenes de las promociones
     const links = [];
     try {
       const res = await listAll(listRef);
@@ -30,11 +30,15 @@ const PromocionesModal = () => {
         links.push(url);
       }
       setUrls(links);
+      console.log(urls);
       if (refresh) {
         setRefreshUrls(false);
       }
     } catch (error) {
       console.error(error);
+      if (error.code === "storage/unknown") {
+        console.log("Detalles del error:", error.customData.serverResponse);
+      }
     }
   };
 

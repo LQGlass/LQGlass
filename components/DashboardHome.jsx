@@ -15,7 +15,6 @@ export default function DashboardHome({ usuario }) {
   const [examSearch, setExamSearch] = useState([]);
   const [search, setSearch] = useState(null);
   const [perfilesActive, setPerfilesActive] = useState(false);
-  let veces = 0;
 
   //funcion para abrir modal para añadir producto
   function añadirProductoHome() {
@@ -26,8 +25,6 @@ export default function DashboardHome({ usuario }) {
     getAllProducts().then(examenes => {
       setexamenes(examenes);
       setExamSearch(examenes);
-      veces++;
-      console.log(veces);
     });
   }
   //filtra los productos
@@ -100,65 +97,61 @@ export default function DashboardHome({ usuario }) {
         {perfilesActive ? "Añadir perfil" : "Añadir examen"}
       </Button>
       <PromocionesModal />
-      {perfilesActive ? (
-        "Hola"
-      ) : (
-        <Table>
-          <thead>
-            <tr>
-              <th>{examSearch.length}</th>
-              <th>Examen</th>
-              <th>Categoria</th>
-              <th>Descripcion</th>
-              <th>Indicaciones</th>
-              <th>Procedimiento</th>
-              <th>Precio</th>
-            </tr>
-          </thead>
-          <tbody>
-            {examSearch &&
-              examSearch.map((examen, index) => (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{examen?.nombre}</td>
-                  <td>{examen?.categoria}</td>
-                  <td>{examen?.descripcion}</td>
-                  <td>{examen?.indicaciones}</td>
-                  <td>{examen?.procedimiento}</td>
-                  <td>${examen?.precio}.00</td>
-                  <td>
-                    <Button
-                      variant="dark"
-                      onClick={() => {
-                        setExamEdit({ ...examen });
-                        setIsModalEdit(true);
-                      }}
-                    >
-                      Editar
-                    </Button>
-                    <Button
-                      variant="danger"
-                      onClick={() => {
-                        // Emitir una alerta de confirmación
-                        const confirmacion = window.confirm(
-                          "¿Estás seguro de eliminar este examen?"
-                        );
-                        // Si el usuario acepta, eliminar el examen
-                        if (confirmacion) {
-                          deleteItem(examen).then(() => {
-                            actualizarEstadoProductos();
-                          });
-                        }
-                      }}
-                    >
-                      Eliminar
-                    </Button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </Table>
-      )}
+      <Table>
+        <thead>
+          <tr>
+            <th>{examSearch.length}</th>
+            <th>Examen</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
+            <th>Indicaciones</th>
+            <th>Procedimiento</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {examSearch &&
+            examSearch.map((examen, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{examen?.nombre}</td>
+                <td>{examen?.categoria}</td>
+                <td>{examen?.descripcion}</td>
+                <td>{examen?.indicaciones}</td>
+                <td>{examen?.procedimiento}</td>
+                <td>${examen?.precio}.00</td>
+                <td>
+                  <Button
+                    variant="dark"
+                    onClick={() => {
+                      setExamEdit({ ...examen });
+                      setIsModalEdit(true);
+                    }}
+                  >
+                    Editar
+                  </Button>
+                  <Button
+                    variant="danger"
+                    onClick={() => {
+                      // Emitir una alerta de confirmación
+                      const confirmacion = window.confirm(
+                        "¿Estás seguro de eliminar este examen?"
+                      );
+                      // Si el usuario acepta, eliminar el examen
+                      if (confirmacion) {
+                        deleteItem(examen).then(() => {
+                          actualizarEstadoProductos();
+                        });
+                      }
+                    }}
+                  >
+                    Eliminar
+                  </Button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </Table>
     </Container>
   );
 }

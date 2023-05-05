@@ -47,6 +47,7 @@ function MenuPerfil({ data }) {
         setIsDoctor(docSnap.data().doctor);
         setIsAdmin(docSnap.data().admin);
       }
+      console.log(user);
     }
 
     getData();
