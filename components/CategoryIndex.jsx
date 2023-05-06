@@ -9,7 +9,7 @@ const CategoryIndex = ({ contenido }) => {
     return categories.map((categorie, index) => (
       <TarjetaDescriptiva
         key={index}
-        image={"/images/iconos-categoria/" + categorie + ".png"}
+        imageCategorie={"/images/iconos-categoria/" + categorie + ".png"}
         nombreCategoria={categorie ? categorie : "Cargando"}
         descripcion={categorie ? categorie : "Cargando"}
       />
