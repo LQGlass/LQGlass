@@ -20,10 +20,10 @@ const articulo1 = () => {
         <Row>
           <Col>
             <Image
+              src={"/images/blog/blog.jpg"}
               alt="imagen de laboratorio"
               width={800}
               height={600}
-              src={"/images/blog/blog.jpg"}
             />
           </Col>
         </Row>

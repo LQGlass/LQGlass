@@ -82,7 +82,6 @@ storage.rules
 # Ignorar archivos y carpetas generados por Netlify
 /.netlify
 /node_modules
-/public
 /build
 
 # Ignorar archivos de caché

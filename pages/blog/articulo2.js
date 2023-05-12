@@ -20,10 +20,10 @@ export default function articulo2() {
         <Row>
           <Col>
             <Image
+              src={"/images/blog/blog1.jpg"}
               alt="imagen de laboratorio"
               width={800}
               height={600}
-              src={"/images/blog/blog1.jpg"}
             />
           </Col>
         </Row>
