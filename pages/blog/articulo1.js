@@ -12,7 +12,7 @@ const articulo1 = () => {
         <Row>
           <Col>
             <h1>
-              Análisis de laboratorio: la herramienta clave para la prevención
+              Análisis de laboratorios: la herramienta clave para la prevención
               de enfermedades en todas las edades
             </h1>
           </Col>
